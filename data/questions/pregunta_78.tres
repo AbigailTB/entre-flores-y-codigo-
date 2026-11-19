@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación"
+tipo = "Pregunta"
+enunciado = "¿Qué es la recursividad en programación?"
+opciones = Array[String](["Un ciclo infinito obligatorio", "Un tipo de dato numérico", "Una función que se llama a sí misma", "Una variable global"])
+respuesta_correcta = 2
+explicacion = "Una función recursiva se invoca a sí misma hasta llegar a un caso base."
+puntos = 10

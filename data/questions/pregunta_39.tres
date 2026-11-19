@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Web"
+enunciado = "¿Qué significa HTML?"
+opciones = Array[String](["HyperText Markup Language", "High Tech Modern Language", "Home Tool Markup Language", "Hyperlink Text Manager"])
+respuesta_correcta = 0
+explicacion = "HTML (HyperText Markup Language) estructura el contenido de las páginas web."
+puntos = 10

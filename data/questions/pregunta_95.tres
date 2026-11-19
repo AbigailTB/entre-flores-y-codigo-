@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Metodología de la Investigación"
+tipo = "Acertijo"
+enunciado = "Soy el apartado de unas 150 a 250 palabras que resume todo tu trabajo al inicio. ¿Quién soy?"
+opciones = Array[String](["El resumen (abstract)", "La introducción", "El anexo", "Las conclusiones"])
+respuesta_correcta = 0
+explicacion = "El resumen sintetiza objetivo, método, resultados y conclusiones del trabajo."
+puntos = 15

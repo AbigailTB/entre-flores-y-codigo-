@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Metodología de la Investigación"
+tipo = "Pregunta"
+enunciado = "¿Qué interlineado pide APA 7 para el cuerpo de un trabajo de estudiante?"
+opciones = Array[String](["1.15", "Sencillo", "Doble", "Triple"])
+respuesta_correcta = 2
+explicacion = "APA 7 indica interlineado doble en todo el trabajo, incluidas las referencias."
+puntos = 10

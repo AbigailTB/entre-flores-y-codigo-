@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Metodología de la Investigación"
+tipo = "Acertijo"
+enunciado = "Tengo DOI y me pones al final de la referencia. ¿Con qué formato me escribe APA 7?"
+opciones = Array[String](["https://doi.org/xxxx", "Recuperado de doi xxxx", "(DOI xxxx) al inicio", "doi: [xxxx]"])
+respuesta_correcta = 0
+explicacion = "APA 7 presenta el DOI como enlace: https://doi.org/..."
+puntos = 15

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación"
+tipo = "Acertijo"
+enunciado = "¿Qué imprime este código?"
+codigo = "texto = \"hola mundo\"\nprint(texto.upper().split())"
+opciones = Array[String](["['hola', 'mundo']", "['HOLA MUNDO']", "HOLA MUNDO", "['HOLA', 'MUNDO']"])
+respuesta_correcta = 3
+explicacion = "upper() convierte todo a mayúsculas y split() sin argumentos corta por espacios, devolviendo una lista con 2 palabras."
+puntos = 15

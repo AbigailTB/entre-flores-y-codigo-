@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Administración de Proyectos"
+tipo = "Pregunta"
+enunciado = "Contratar un seguro ante un posible riesgo es una estrategia de:"
+opciones = Array[String](["Explotar el riesgo", "Evitar el riesgo", "Aceptar el riesgo", "Transferir el riesgo"])
+respuesta_correcta = 3
+explicacion = "Transferir pasa el impacto del riesgo a un tercero, como una aseguradora."
+puntos = 10

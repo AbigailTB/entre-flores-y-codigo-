@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Diseño de Interfaces"
+enunciado = "¿Qué significa UX?"
+opciones = Array[String](["User Experience", "User Extension", "Universal Xchange", "Unit Export"])
+respuesta_correcta = 0
+explicacion = "UX (User Experience) se refiere a la experiencia del usuario al usar un producto."
+puntos = 10

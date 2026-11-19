@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Desarrollo de Software"
+tipo = "Pregunta"
+enunciado = "¿Qué significa el principio DRY?"
+opciones = Array[String](["Depura siempre en producción", "Usa recursión en todo", "No te repitas: evita duplicar lógica", "Documenta cada línea de código"])
+respuesta_correcta = 2
+explicacion = "DRY (Don't Repeat Yourself) busca una sola fuente para cada conocimiento."
+puntos = 10

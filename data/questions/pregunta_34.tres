@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Sistemas Operativos"
+enunciado = "¿Qué es un proceso en un sistema operativo?"
+opciones = Array[String](["Un programa en ejecución", "Un tipo de archivo", "Un dispositivo físico", "Un lenguaje de programación"])
+respuesta_correcta = 0
+explicacion = "Un proceso es una instancia de un programa que se está ejecutando."
+puntos = 10

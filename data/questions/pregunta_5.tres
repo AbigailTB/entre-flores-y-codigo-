@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+enunciado = "¿Cuál de estas es una metodología ágil de desarrollo de software?"
+opciones = Array[String](["Scrum", "Word", "Photoshop", "Excel"])
+respuesta_correcta = 0
+explicacion = "Scrum es un marco de trabajo ágil para gestionar proyectos de desarrollo de software."
+puntos = 10

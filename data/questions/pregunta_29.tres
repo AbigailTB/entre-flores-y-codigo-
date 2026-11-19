@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Matemáticas"
+enunciado = "¿Cuál es el resultado de 2 elevado a la 3 (2³)?"
+opciones = Array[String](["8", "6", "9", "5"])
+respuesta_correcta = 0
+explicacion = "2³ = 2 × 2 × 2 = 8."
+puntos = 10

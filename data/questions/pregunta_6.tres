@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+enunciado = "¿Qué es una variable en programación?"
+opciones = Array[String](["Un espacio en memoria para guardar datos", "Un tipo de error", "Un lenguaje de programación", "Una base de datos"])
+respuesta_correcta = 0
+explicacion = "Una variable es un espacio en memoria que almacena un valor que puede cambiar."
+puntos = 10

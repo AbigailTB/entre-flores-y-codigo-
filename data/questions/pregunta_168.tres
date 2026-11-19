@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Web"
+tipo = "Pregunta"
+enunciado = "¿Qué permite un service worker en una PWA?"
+opciones = Array[String](["Interceptar peticiones y funcionar sin conexión", "Ejecutar SQL en el servidor", "Compilar código Java", "Dar estilos a la página"])
+respuesta_correcta = 0
+explicacion = "El service worker actúa como proxy y puede responder desde la caché."
+puntos = 10

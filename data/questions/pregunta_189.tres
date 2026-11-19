@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Bases de Datos"
+tipo = "Pregunta"
+enunciado = "¿Qué devuelve un INNER JOIN?"
+opciones = Array[String](["Todas las filas de ambas tablas", "Todas las combinaciones sin condición", "Solo las filas con coincidencia en ambas tablas", "Todas las filas de la tabla izquierda"])
+respuesta_correcta = 2
+explicacion = "INNER JOIN conserva solo las filas que cumplen la condición de unión."
+puntos = 10

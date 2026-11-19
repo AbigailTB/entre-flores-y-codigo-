@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+enunciado = "¿Para qué sirve la etapa de 'Pruebas' en el desarrollo de software?"
+opciones = Array[String](["Para verificar que el programa funcione correctamente", "Para diseñar el logo", "Para vender el producto", "Para contratar personal"])
+respuesta_correcta = 0
+explicacion = "En la etapa de pruebas se verifica que el software funcione como se espera y se detectan errores."
+puntos = 10

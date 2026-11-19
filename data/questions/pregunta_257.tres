@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Desarrollo de Software"
+tipo = "Pregunta"
+enunciado = "Debería imprimir -2 pero imprime 0. ¿En qué línea está el bug?"
+codigo = "def maximo(nums):\n    mayor = 0\n    for n in nums:\n        if n > mayor:\n            mayor = n\n    return mayor\nprint(maximo([-5, -2, -9]))"
+opciones = Array[String](["Línea 3", "Línea 4", "Línea 2", "Línea 6"])
+respuesta_correcta = 2
+explicacion = "Iniciar mayor en 0 falla si todos son negativos: ninguno supera al 0. Lo correcto es mayor = nums[0]."
+puntos = 10

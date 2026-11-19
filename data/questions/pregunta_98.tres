@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Móvil"
+tipo = "Pregunta"
+enunciado = "¿Qué lenguaje de programación usa Flutter?"
+opciones = Array[String](["C#", "JavaScript", "Kotlin", "Dart"])
+respuesta_correcta = 3
+explicacion = "Flutter, de Google, se programa en Dart."
+puntos = 10

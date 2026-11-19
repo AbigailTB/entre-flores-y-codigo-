@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Bases de Datos"
+tipo = "Pregunta"
+enunciado = "¿Qué instrucción SQL elimina filas de una tabla sin borrar la tabla?"
+opciones = Array[String](["DELETE", "DROP", "REMOVE", "ERASE"])
+respuesta_correcta = 0
+explicacion = "DELETE borra filas; DROP elimina la tabla completa."
+puntos = 10

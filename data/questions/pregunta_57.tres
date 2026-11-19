@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Ética Profesional"
+enunciado = "¿Por qué es importante respetar la privacidad de los datos de los usuarios?"
+opciones = Array[String](["Porque es un derecho y una responsabilidad profesional", "Porque hace el software más rápido", "Porque reduce el tamaño del código", "No es importante"])
+respuesta_correcta = 0
+explicacion = "Proteger la privacidad de los datos es una obligación ética y, en muchos casos, legal."
+puntos = 10

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+enunciado = "¿Qué estructura se usa para repetir un bloque de código varias veces?"
+opciones = Array[String](["Un bucle (for/while)", "Una variable", "Un comentario", "Una base de datos"])
+respuesta_correcta = 0
+explicacion = "Los bucles (for/while) permiten repetir instrucciones sin escribirlas varias veces."
+puntos = 10

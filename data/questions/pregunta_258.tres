@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Desarrollo de Software"
+tipo = "Acertijo"
+enunciado = "Git marca error con estos comandos. ¿En qué línea está?"
+codigo = "git init\ngit add .\ngit commit \"Primer commit\"\ngit push origin main"
+opciones = Array[String](["Línea 4", "Línea 3", "Línea 2", "Línea 1"])
+respuesta_correcta = 1
+explicacion = "El mensaje del commit va con la opción -m: git commit -m \"Primer commit\". Sin -m, Git interpreta el texto como nombre de archivo."
+puntos = 15

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Bases de Datos"
+enunciado = "¿Qué es una llave primaria (primary key)?"
+opciones = Array[String](["Un campo que identifica de forma única cada registro", "Un tipo de gráfico", "Un lenguaje de consulta", "Un servidor web"])
+respuesta_correcta = 0
+explicacion = "La llave primaria garantiza que cada registro de una tabla sea único e identificable."
+puntos = 10

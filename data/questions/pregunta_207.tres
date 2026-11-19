@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación"
+tipo = "Pregunta"
+enunciado = "¿Qué imprime este código?"
+codigo = "nums = [3, 7, 2, 9]\ntotal = 0\nfor n in nums:\n    if n > 4:\n        total += n\nprint(total)"
+opciones = Array[String](["16", "9", "7", "21"])
+respuesta_correcta = 0
+explicacion = "Solo 7 y 9 son mayores que 4, así que total = 7 + 9 = 16. El 3 y el 2 no cumplen el if y no se suman."
+puntos = 10

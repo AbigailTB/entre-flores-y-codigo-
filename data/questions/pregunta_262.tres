@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Desarrollo de Software"
+tipo = "Acertijo"
+enunciado = "Para deshacer el commit b72e4d SIN borrar historial, ¿qué usas?"
+codigo = "$ git log --oneline\nc3f9a1 Arregla estilos\nb72e4d Agrega login con error\na1d0c8 Primer commit"
+opciones = Array[String](["git rm b72e4d", "git checkout b72e4d", "git revert b72e4d", "git reset --hard a1d0c8"])
+respuesta_correcta = 2
+explicacion = "revert crea un commit nuevo que deshace a b72e4d y conserva la historia. reset --hard borraría también c3f9a1."
+puntos = 15

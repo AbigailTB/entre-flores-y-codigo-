@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Seguridad Informática"
+tipo = "Pregunta"
+enunciado = "¿Qué vulnerabilidad tiene este código?"
+codigo = "user = input(\"Usuario: \")\nsql = \"SELECT * FROM usuarios \" \\\n      \"WHERE nombre = '\" + user + \"'\"\ncursor.execute(sql)"
+opciones = Array[String](["Desbordamiento de búfer", "Cross-Site Scripting (XSS)", "Contraseña en el código", "Inyección SQL"])
+respuesta_correcta = 3
+explicacion = "Pega el texto del usuario directo en el SQL. Si escribe ' OR '1'='1 cambia la consulta. Se corrige con consultas parametrizadas."
+puntos = 10

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Web"
+tipo = "Acertijo"
+enunciado = "En JavaScript, ¿qué imprime console.log(typeof null)?"
+opciones = Array[String](["undefined", "null", "object", "number"])
+respuesta_correcta = 2
+explicacion = "Es un error histórico de JS: typeof null devuelve \"object\"."
+puntos = 15

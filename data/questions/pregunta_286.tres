@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Cálculo"
+tipo = "Pregunta"
+enunciado = "Viendo la tendencia, ¿a qué valor tiende r(x) cuando x crece sin límite?"
+codigo = "def r(x):\n    return (3 * x + 1) / (x + 2)\nfor x in [10, 1000, 100000]:\n    print(round(r(x), 4))"
+opciones = Array[String](["1", "1.5", "3", "0"])
+respuesta_correcta = 2
+explicacion = "Imprime 2.5833, 2.995 y 3.0. Con x muy grande, el +1 y el +2 casi no pesan, así que queda 3x/x = 3."
+puntos = 10

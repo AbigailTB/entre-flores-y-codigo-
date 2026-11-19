@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Móvil"
+tipo = "Pregunta"
+enunciado = "¿Qué es una Activity en Android?"
+opciones = Array[String](["Una base de datos local", "Una pantalla con la que interactúa el usuario", "Un servicio en segundo plano", "Un tipo de permiso"])
+respuesta_correcta = 1
+explicacion = "Una Activity representa una pantalla con interfaz de usuario."
+puntos = 10

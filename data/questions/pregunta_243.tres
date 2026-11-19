@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Redes de Computadoras"
+tipo = "Acertijo"
+enunciado = "Esta configuración no funciona. ¿En qué línea está el error?"
+codigo = "IP:        192.168.1.300\nMáscara:   255.255.255.0\nGateway:   192.168.1.1\nDNS:       8.8.8.8"
+opciones = Array[String](["Línea 1", "Línea 3", "Línea 2", "Línea 4"])
+respuesta_correcta = 0
+explicacion = "Cada octeto de una IPv4 tiene 8 bits, así que va de 0 a 255. El 300 de la línea 1 no es válido."
+puntos = 15

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Matemáticas"
+tipo = "Pregunta"
+enunciado = "En lógica, la conjunción p ∧ q es verdadera solamente cuando:"
+opciones = Array[String](["p es falsa", "Al menos una es verdadera", "Ambas son falsas", "p y q son verdaderas"])
+respuesta_correcta = 3
+explicacion = "La conjunción (Y) solo es verdadera si ambas proposiciones lo son."
+puntos = 10

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+enunciado = "Verdadero o falso: Un error de sintaxis ocurre cuando el código no sigue las reglas del lenguaje."
+opciones = Array[String](["Verdadero", "Falso"])
+respuesta_correcta = 0
+explicacion = "Verdadero: por ejemplo, olvidar cerrar un paréntesis o una llave."
+puntos = 10

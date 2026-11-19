@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Análisis y Documentación"
+tipo = "Pregunta"
+enunciado = "En este diagrama de clases UML, ¿qué significan el - y el +?"
+codigo = "Alumno\n    - matricula: String\n    - nombre: String\n    + inscribir(materia): void"
+opciones = Array[String](["- es privado y + es público", "- es atributo y + es clase", "- se borra y + se agrega", "- es opcional y + es obligatorio"])
+respuesta_correcta = 0
+explicacion = "En UML la visibilidad se marca con símbolos: - privado (solo la clase lo ve), + público y # protegido."
+puntos = 10

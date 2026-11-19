@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CodeBug" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/code_bug.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+codigo = Array[String](["Rosas = 3", "Margaritas = 2", "Total = Rosas + Girasoles"])
+linea_incorrecta = 2
+pista = "Revisá que todas las variables usadas estén definidas antes."
+explicacion = "La variable 'Girasoles' nunca fue definida. Debería ser 'Margaritas'."

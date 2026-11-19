@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CodeBug" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/code_bug.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+codigo = Array[String](["if precio > 100", "    descuento = true", "print(descuento)"])
+linea_incorrecta = 0
+pista = "Revisá la sintaxis de la condición."
+explicacion = "A la línea 'if precio > 100' le falta el símbolo ':' al final para ser válida."

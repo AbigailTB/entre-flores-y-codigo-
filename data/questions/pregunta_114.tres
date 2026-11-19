@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Cálculo"
+tipo = "Acertijo"
+enunciado = "Si f(x) = x² + 3x, ¿cuánto vale f'(2)?"
+opciones = Array[String](["4", "5", "7", "10"])
+respuesta_correcta = 2
+explicacion = "f'(x) = 2x + 3, y f'(2) = 4 + 3 = 7."
+puntos = 15

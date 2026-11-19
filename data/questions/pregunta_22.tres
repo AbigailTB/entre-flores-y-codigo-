@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Bases de Datos"
+enunciado = "¿Qué significa la sigla SQL?"
+opciones = Array[String](["Structured Query Language", "Simple Query List", "System Quality Level", "Secure Query Login"])
+respuesta_correcta = 0
+explicacion = "SQL (Structured Query Language) es el lenguaje estándar para consultar y administrar bases de datos."
+puntos = 10

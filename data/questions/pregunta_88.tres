@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Metodología de la Investigación"
+tipo = "Pregunta"
+enunciado = "En APA 7, al citar en el texto una obra de tres o más autores se escribe:"
+opciones = Array[String](["Solo el último autor", "El primer autor seguido de \"et al.\"", "Todos los autores siempre", "Solo el año, sin autores"])
+respuesta_correcta = 1
+explicacion = "Desde APA 7, con tres o más autores se usa el primero y \"et al.\" desde la primera cita."
+puntos = 10

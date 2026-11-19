@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Análisis y Documentación"
+tipo = "Acertijo"
+enunciado = "Soy una flecha UML de línea continua con triángulo hueco: el hijo hereda del padre. ¿Quién soy?"
+opciones = Array[String](["Asociación", "Dependencia", "Generalización", "Composición"])
+respuesta_correcta = 2
+explicacion = "La generalización representa la herencia entre clases."
+puntos = 15

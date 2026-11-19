@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Móvil"
+tipo = "Pregunta"
+enunciado = "Con null safety de Dart, ¿en qué línea está el error?"
+codigo = "void main() {\n    String nombre = null;\n    print(nombre);\n}"
+opciones = Array[String](["Línea 3", "No hay error", "Línea 2", "Línea 1"])
+respuesta_correcta = 2
+explicacion = "Con null safety, el tipo String no acepta null. Para permitirlo se declara como String? nombre = null;"
+puntos = 10

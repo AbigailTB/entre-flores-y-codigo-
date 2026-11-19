@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Metodologías Ágiles"
+tipo = "Pregunta"
+enunciado = "Según la Guía Scrum, ¿cuál es la duración máxima de un Sprint?"
+opciones = Array[String](["Un mes o menos", "No tiene límite", "Un año", "Seis meses"])
+respuesta_correcta = 0
+explicacion = "Los Sprints son eventos de duración fija de un mes o menos."
+puntos = 10

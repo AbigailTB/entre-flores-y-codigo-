@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Web"
+tipo = "Acertijo"
+enunciado = "En JavaScript, ¿qué imprime console.log(1 + \"2\" + 3)?"
+opciones = Array[String](["123", "6", "33", "15"])
+respuesta_correcta = 0
+explicacion = "1 + \"2\" concatena \"12\" y luego se le pega 3: \"123\"."
+puntos = 15

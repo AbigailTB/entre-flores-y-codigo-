@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación"
+tipo = "Pregunta"
+enunciado = "¿Qué tipo de dato usarías para guardar un valor de verdadero o falso?"
+opciones = Array[String](["Booleano", "Carácter (char)", "Cadena (string)", "Flotante"])
+respuesta_correcta = 0
+explicacion = "El tipo booleano solo admite verdadero o falso."
+puntos = 10

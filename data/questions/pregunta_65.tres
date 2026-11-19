@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Móvil"
+enunciado = "¿Qué es una app nativa?"
+opciones = Array[String](["Una aplicación desarrollada específicamente para un sistema operativo móvil", "Una app que solo funciona en navegador", "Un tipo de base de datos", "Un archivo de texto plano"])
+respuesta_correcta = 0
+explicacion = "Una app nativa se desarrolla específicamente para la plataforma móvil en la que corre, como Android o iOS."
+puntos = 10

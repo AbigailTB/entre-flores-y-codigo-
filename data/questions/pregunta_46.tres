@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Inteligencia Artificial"
+enunciado = "¿Qué se necesita para entrenar un modelo de inteligencia artificial?"
+opciones = Array[String](["Datos de entrenamiento", "Solo un teclado", "Solo una impresora", "Solo un mouse"])
+respuesta_correcta = 0
+explicacion = "Los modelos de IA aprenden a partir de datos de entrenamiento."
+puntos = 10

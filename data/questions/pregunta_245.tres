@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Redes de Computadoras"
+tipo = "Acertijo"
+enunciado = "¿Cuál es la dirección de red de este equipo?"
+codigo = "Equipo:   PC-Laboratorio-3\nIP:       172.16.37.5\nMáscara:  /20"
+opciones = Array[String](["172.16.36.0", "172.16.32.0", "172.16.0.0", "172.16.37.0"])
+respuesta_correcta = 1
+explicacion = "/20 deja 4 bits de red en el tercer octeto: bloques de 16 (0, 16, 32, 48...). El 37 cae en el bloque que empieza en 32."
+puntos = 15

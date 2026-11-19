@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Bases de Datos"
+tipo = "Pregunta"
+enunciado = "¿Qué exige la Primera Forma Normal (1FN)?"
+opciones = Array[String](["Que toda llave sea compuesta", "Que no haya dependencias transitivas", "Valores atómicos, sin grupos repetidos", "Que cada tabla tenga índices"])
+respuesta_correcta = 2
+explicacion = "En 1FN cada celda guarda un solo valor indivisible."
+puntos = 10

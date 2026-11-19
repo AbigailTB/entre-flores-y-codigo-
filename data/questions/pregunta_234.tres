@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Bases de Datos"
+tipo = "Acertijo"
+enunciado = "Esta consulta marca error. ¿En qué línea está?"
+codigo = "SELECT carrera, AVG(promedio)\nFROM alumnos\nWHERE AVG(promedio) > 8\nGROUP BY carrera;"
+opciones = Array[String](["Línea 3", "Línea 1", "Línea 4", "Línea 2"])
+respuesta_correcta = 0
+explicacion = "WHERE filtra filas antes de agrupar y no admite funciones como AVG. Para filtrar grupos se usa HAVING AVG(promedio) > 8 después del GROUP BY."
+puntos = 15

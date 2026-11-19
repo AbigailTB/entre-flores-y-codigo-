@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Bases de Datos"
+tipo = "Pregunta"
+enunciado = "Esta consulta marca error. ¿En qué línea está?"
+codigo = "SELECT nombre, promedio\nFROM alumnos\nWHERE carrera = 'TI'\nORDER promedio DESC;"
+opciones = Array[String](["Línea 3", "Línea 1", "Línea 2", "Línea 4"])
+respuesta_correcta = 3
+explicacion = "ORDER siempre va acompañado de BY. La línea correcta es ORDER BY promedio DESC;"
+puntos = 10

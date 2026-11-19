@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Móvil"
+tipo = "Acertijo"
+enunciado = "En Flutter, ¿cómo se acomodan estos dos textos en pantalla?"
+codigo = "Column(\n    children: [\n        Text(\"Hola\"),\n        Text(\"UTHH\"),\n    ],\n)"
+opciones = Array[String](["Encimados", "Solo se ve el último", "Uno debajo del otro", "Uno al lado del otro"])
+respuesta_correcta = 2
+explicacion = "Column acomoda a sus hijos en vertical. Row los pondría en horizontal y Stack los pondría encimados."
+puntos = 15

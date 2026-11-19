@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Bases de Datos"
+tipo = "Acertijo"
+enunciado = "La tabla bolsa tiene sabores: limón, queso, limón, chile, limón. ¿Qué da SELECT COUNT(*) FROM bolsa WHERE sabor = 'limón';?"
+opciones = Array[String](["3", "2", "5", "1"])
+respuesta_correcta = 0
+explicacion = "Solo cuenta las filas cuyo sabor es limón: 3."
+puntos = 15

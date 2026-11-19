@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Metodologías Ágiles"
+tipo = "Acertijo"
+enunciado = "Soy una gráfica que baja día a día mostrando el trabajo que le falta al Sprint. ¿Quién soy?"
+opciones = Array[String](["Diagrama de Pareto", "Diagrama de Gantt", "Histograma", "Burndown chart"])
+respuesta_correcta = 3
+explicacion = "El burndown muestra el trabajo restante contra el tiempo."
+puntos = 15

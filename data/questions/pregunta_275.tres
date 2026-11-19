@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Matemáticas"
+tipo = "Acertijo"
+enunciado = "Este código no corre. ¿En qué línea está el error?"
+codigo = "n = 7\nif n % 2 = 0:\n    print(\"par\")\nelse:\n    print(\"impar\")"
+opciones = Array[String](["Línea 1", "Línea 3", "Línea 5", "Línea 2"])
+respuesta_correcta = 3
+explicacion = "Para comparar se usa == ; un solo = es asignación y en un if marca SyntaxError. Lo correcto es if n % 2 == 0:"
+puntos = 15

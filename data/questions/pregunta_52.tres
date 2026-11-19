@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Diseño de Interfaces"
+enunciado = "¿Por qué es importante la consistencia visual en una interfaz?"
+opciones = Array[String](["Ayuda al usuario a entender y usar la aplicación más fácilmente", "Hace que el código sea más rápido", "Reduce el tamaño del archivo", "No tiene ningún efecto"])
+respuesta_correcta = 0
+explicacion = "La consistencia visual facilita que el usuario reconozca patrones y use la interfaz con confianza."
+puntos = 10

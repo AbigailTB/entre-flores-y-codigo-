@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Web"
+tipo = "Acertijo"
+enunciado = "¿Qué se imprime PRIMERO en la consola?"
+codigo = "fetch(\"/api/alumnos\")\n    .then(res => res.json())\n    .then(d => console.log(d.length));\nconsole.log(\"Listo\");"
+opciones = Array[String](["El número de alumnos", "Nada, fetch bloquea la página", "Ambos al mismo tiempo", "Listo"])
+respuesta_correcta = 3
+explicacion = "fetch es asíncrono: lanza la petición y el código sigue. \"Listo\" se imprime de inmediato y los .then corren cuando llega la respuesta."
+puntos = 15

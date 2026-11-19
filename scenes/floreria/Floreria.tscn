@@ -1,0 +1,535 @@
+[gd_scene load_steps=80 format=3]
+
+[ext_resource type="Script" path="res://scripts/scene_music.gd" id="c_music"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/floreria_detallada.png" id="t_bg"]
+[ext_resource type="Texture2D" path="res://assets/sprites/floreria/shelf_a.png" id="t_shelfa"]
+[ext_resource type="Texture2D" path="res://assets/sprites/floreria/shelf_b.png" id="t_shelfb"]
+[ext_resource type="Texture2D" path="res://assets/sprites/floreria/bucket_a.png" id="t_bucka"]
+[ext_resource type="Texture2D" path="res://assets/sprites/floreria/bucket_b.png" id="t_buckb"]
+[ext_resource type="Texture2D" path="res://assets/sprites/floreria/bucket_c.png" id="t_buckc"]
+[ext_resource type="Texture2D" path="res://assets/sprites/floreria/counter.png" id="t_counter"]
+[ext_resource type="Texture2D" path="res://assets/sprites/floreria/table.png" id="t_table"]
+[ext_resource type="Texture2D" path="res://assets/sprites/school/plant.png" id="t_plant"]
+[ext_resource type="Texture2D" path="res://assets/sprites/school/star.png" id="t_star"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/flora_idle.png" id="t_flora"]
+[ext_resource type="PackedScene" path="res://scenes/player/Player.tscn" id="s_player"]
+[ext_resource type="PackedScene" path="res://scenes/door/Door.tscn" id="s_door"]
+[ext_resource type="PackedScene" path="res://scenes/ui/BouquetPanel.tscn" id="s_bp"]
+[ext_resource type="PackedScene" path="res://scenes/ui/ProyectoFinalPanel.tscn" id="s_pf"]
+[ext_resource type="Script" path="res://scripts/mostrador_floreria.gd" id="c_most"]
+[ext_resource type="Script" path="res://scripts/pedido_especial.gd" id="c_pedido"]
+[ext_resource type="Script" path="res://scripts/proyecto_final.gd" id="c_final"]
+[ext_resource type="Script" path="res://scripts/npc.gd" id="c_npc"]
+[ext_resource type="Script" path="res://scripts/bob.gd" id="c_bob"]
+[ext_resource type="Script" path="res://scripts/hide_if_completed.gd" id="c_hide"]
+[ext_resource type="Texture2D" path="res://assets/sprites/floreria/wardrobe.png" id="t_ward"]
+[ext_resource type="Script" path="res://scripts/ropero.gd" id="c_ropero"]
+[ext_resource type="PackedScene" path="res://scenes/ui/OutfitPanel.tscn" id="s_outfit"]
+[ext_resource type="Texture2D" path="res://assets/portraits/flora_normal.png" id="p_flora"]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/floreria/props/cubeta_rosa_roja.png" id="t_prop_cubeta_rosa_roja"]
+[ext_resource type="Texture2D" path="res://assets/sprites/floreria/props/cubeta_girasol.png" id="t_prop_cubeta_girasol"]
+[ext_resource type="Texture2D" path="res://assets/sprites/floreria/props/cubeta_tulipan.png" id="t_prop_cubeta_tulipan"]
+[ext_resource type="Texture2D" path="res://assets/sprites/floreria/props/cubeta_lirio.png" id="t_prop_cubeta_lirio"]
+[ext_resource type="Texture2D" path="res://assets/sprites/floreria/props/cubeta_gerbera.png" id="t_prop_cubeta_gerbera"]
+[ext_resource type="Texture2D" path="res://assets/sprites/floreria/props/cubeta_clavel.png" id="t_prop_cubeta_clavel"]
+[ext_resource type="Texture2D" path="res://assets/sprites/floreria/props/cubeta_margarita.png" id="t_prop_cubeta_margarita"]
+[ext_resource type="Texture2D" path="res://assets/sprites/floreria/props/cubeta_lavanda.png" id="t_prop_cubeta_lavanda"]
+[ext_resource type="Texture2D" path="res://assets/sprites/floreria/props/cubeta_hortensia.png" id="t_prop_cubeta_hortensia"]
+[ext_resource type="Texture2D" path="res://assets/sprites/floreria/props/cubeta_rosa_blanca.png" id="t_prop_cubeta_rosa_blanca"]
+[ext_resource type="Texture2D" path="res://assets/sprites/floreria/props/exhibidor.png" id="t_prop_exhibidor"]
+[ext_resource type="Texture2D" path="res://assets/sprites/floreria/props/exhibidor_b.png" id="t_prop_exhibidor_b"]
+[ext_resource type="Texture2D" path="res://assets/sprites/floreria/props/planta_grande.png" id="t_prop_planta_grande"]
+[sub_resource type="RectangleShape2D" id="WN"]
+size = Vector2(1580, 300)
+
+[sub_resource type="RectangleShape2D" id="WSL"]
+size = Vector2(690, 50)
+
+[sub_resource type="RectangleShape2D" id="WSR"]
+size = Vector2(690, 50)
+
+[sub_resource type="RectangleShape2D" id="WW"]
+size = Vector2(50, 1080)
+
+[sub_resource type="RectangleShape2D" id="WE"]
+size = Vector2(50, 1080)
+
+[sub_resource type="RectangleShape2D" id="ShelfBody"]
+size = Vector2(170, 40)
+
+[sub_resource type="RectangleShape2D" id="CounterBody"]
+size = Vector2(230, 50)
+
+[sub_resource type="RectangleShape2D" id="MostShape"]
+size = Vector2(330, 110)
+
+[sub_resource type="RectangleShape2D" id="TrigShape"]
+size = Vector2(240, 120)
+
+[sub_resource type="RectangleShape2D" id="NpcShape"]
+size = Vector2(140, 100)
+
+[sub_resource type="RectangleShape2D" id="WardBody"]
+size = Vector2(96, 36)
+
+[sub_resource type="RectangleShape2D" id="WardTrig"]
+size = Vector2(190, 100)
+
+[sub_resource type="RectangleShape2D" id="DecoShape0"]
+size = Vector2(67, 22)
+
+[sub_resource type="RectangleShape2D" id="DecoShape1"]
+size = Vector2(67, 22)
+
+[sub_resource type="RectangleShape2D" id="DecoShape2"]
+size = Vector2(67, 22)
+
+[sub_resource type="RectangleShape2D" id="DecoShape3"]
+size = Vector2(67, 22)
+
+[sub_resource type="RectangleShape2D" id="DecoShape4"]
+size = Vector2(67, 22)
+
+[sub_resource type="RectangleShape2D" id="DecoShape5"]
+size = Vector2(67, 22)
+
+[sub_resource type="RectangleShape2D" id="DecoShape6"]
+size = Vector2(67, 22)
+
+[sub_resource type="RectangleShape2D" id="DecoShape7"]
+size = Vector2(67, 22)
+
+[sub_resource type="RectangleShape2D" id="DecoShape8"]
+size = Vector2(67, 22)
+
+[sub_resource type="RectangleShape2D" id="DecoShape9"]
+size = Vector2(67, 22)
+
+[sub_resource type="RectangleShape2D" id="DecoShape10"]
+size = Vector2(98, 22)
+
+[sub_resource type="RectangleShape2D" id="DecoShape11"]
+size = Vector2(98, 22)
+
+[sub_resource type="RectangleShape2D" id="DecoShape12"]
+size = Vector2(61, 22)
+
+[sub_resource type="RectangleShape2D" id="DecoShape13"]
+size = Vector2(61, 22)
+
+[node name="Floreria" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(768, 512)
+texture = ExtResource("t_bg")
+
+[node name="WallNorth" type="StaticBody2D" parent="."]
+position = Vector2(768, 150)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallNorth"]
+shape = SubResource("WN")
+
+[node name="WallSouthLeft" type="StaticBody2D" parent="."]
+position = Vector2(320, 1024)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallSouthLeft"]
+shape = SubResource("WSL")
+
+[node name="WallSouthRight" type="StaticBody2D" parent="."]
+position = Vector2(1216, 1024)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallSouthRight"]
+shape = SubResource("WSR")
+
+[node name="WallWest" type="StaticBody2D" parent="."]
+position = Vector2(0, 512)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallWest"]
+shape = SubResource("WW")
+
+[node name="WallEast" type="StaticBody2D" parent="."]
+position = Vector2(1536, 512)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallEast"]
+shape = SubResource("WE")
+
+[node name="ShelfA" type="Sprite2D" parent="."]
+position = Vector2(250, 335)
+texture = ExtResource("t_shelfa")
+offset = Vector2(0, -92)
+
+
+[node name="ShelfABody" type="StaticBody2D" parent="."]
+position = Vector2(250, 315)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShelfABody"]
+shape = SubResource("ShelfBody")
+
+[node name="ShelfB" type="Sprite2D" parent="."]
+position = Vector2(1286, 335)
+texture = ExtResource("t_shelfb")
+offset = Vector2(0, -92)
+
+
+[node name="ShelfBBody" type="StaticBody2D" parent="."]
+position = Vector2(1286, 315)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ShelfBBody"]
+shape = SubResource("ShelfBody")
+
+[node name="Counter" type="Sprite2D" parent="."]
+position = Vector2(768, 500)
+texture = ExtResource("t_counter")
+offset = Vector2(0, -80)
+
+
+[node name="CounterBody" type="StaticBody2D" parent="."]
+position = Vector2(768, 480)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CounterBody"]
+shape = SubResource("CounterBody")
+
+[node name="Table1" type="Sprite2D" parent="."]
+position = Vector2(1090, 720)
+texture = ExtResource("t_table")
+offset = Vector2(0, -52)
+
+
+[node name="Table2" type="Sprite2D" parent="."]
+position = Vector2(420, 560)
+texture = ExtResource("t_table")
+offset = Vector2(0, -52)
+
+
+[node name="Plant1" type="Sprite2D" parent="."]
+position = Vector2(90, 340)
+texture = ExtResource("t_plant")
+offset = Vector2(0, -52)
+
+
+[node name="Plant2" type="Sprite2D" parent="."]
+position = Vector2(1450, 340)
+texture = ExtResource("t_plant")
+offset = Vector2(0, -52)
+
+
+[node name="Plant3" type="Sprite2D" parent="."]
+position = Vector2(100, 900)
+texture = ExtResource("t_plant")
+offset = Vector2(0, -52)
+
+
+[node name="Plant4" type="Sprite2D" parent="."]
+position = Vector2(1440, 900)
+texture = ExtResource("t_plant")
+offset = Vector2(0, -52)
+
+
+[node name="Deco0" type="StaticBody2D" parent="."]
+position = Vector2(90, 470)
+[node name="Sprite" type="Sprite2D" parent="Deco0"]
+texture = ExtResource("t_prop_cubeta_rosa_roja")
+offset = Vector2(0, -62)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco0"]
+position = Vector2(0, -10)
+shape = SubResource("DecoShape0")
+
+[node name="Deco1" type="StaticBody2D" parent="."]
+position = Vector2(90, 600)
+[node name="Sprite" type="Sprite2D" parent="Deco1"]
+texture = ExtResource("t_prop_cubeta_girasol")
+offset = Vector2(0, -62)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco1"]
+position = Vector2(0, -10)
+shape = SubResource("DecoShape1")
+
+[node name="Deco2" type="StaticBody2D" parent="."]
+position = Vector2(90, 760)
+[node name="Sprite" type="Sprite2D" parent="Deco2"]
+texture = ExtResource("t_prop_cubeta_tulipan")
+offset = Vector2(0, -62)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco2"]
+position = Vector2(0, -10)
+shape = SubResource("DecoShape2")
+
+[node name="Deco3" type="StaticBody2D" parent="."]
+position = Vector2(1446, 470)
+[node name="Sprite" type="Sprite2D" parent="Deco3"]
+texture = ExtResource("t_prop_cubeta_lirio")
+offset = Vector2(0, -62)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco3"]
+position = Vector2(0, -10)
+shape = SubResource("DecoShape3")
+
+[node name="Deco4" type="StaticBody2D" parent="."]
+position = Vector2(1446, 600)
+[node name="Sprite" type="Sprite2D" parent="Deco4"]
+texture = ExtResource("t_prop_cubeta_gerbera")
+offset = Vector2(0, -62)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco4"]
+position = Vector2(0, -10)
+shape = SubResource("DecoShape4")
+
+[node name="Deco5" type="StaticBody2D" parent="."]
+position = Vector2(1446, 760)
+[node name="Sprite" type="Sprite2D" parent="Deco5"]
+texture = ExtResource("t_prop_cubeta_clavel")
+offset = Vector2(0, -62)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco5"]
+position = Vector2(0, -10)
+shape = SubResource("DecoShape5")
+
+[node name="Deco6" type="StaticBody2D" parent="."]
+position = Vector2(300, 880)
+[node name="Sprite" type="Sprite2D" parent="Deco6"]
+texture = ExtResource("t_prop_cubeta_margarita")
+offset = Vector2(0, -62)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco6"]
+position = Vector2(0, -10)
+shape = SubResource("DecoShape6")
+
+[node name="Deco7" type="StaticBody2D" parent="."]
+position = Vector2(420, 880)
+[node name="Sprite" type="Sprite2D" parent="Deco7"]
+texture = ExtResource("t_prop_cubeta_lavanda")
+offset = Vector2(0, -62)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco7"]
+position = Vector2(0, -10)
+shape = SubResource("DecoShape7")
+
+[node name="Deco8" type="StaticBody2D" parent="."]
+position = Vector2(1120, 880)
+[node name="Sprite" type="Sprite2D" parent="Deco8"]
+texture = ExtResource("t_prop_cubeta_hortensia")
+offset = Vector2(0, -62)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco8"]
+position = Vector2(0, -10)
+shape = SubResource("DecoShape8")
+
+[node name="Deco9" type="StaticBody2D" parent="."]
+position = Vector2(1240, 880)
+[node name="Sprite" type="Sprite2D" parent="Deco9"]
+texture = ExtResource("t_prop_cubeta_rosa_blanca")
+offset = Vector2(0, -62)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco9"]
+position = Vector2(0, -10)
+shape = SubResource("DecoShape9")
+
+[node name="Deco10" type="StaticBody2D" parent="."]
+position = Vector2(250, 760)
+[node name="Sprite" type="Sprite2D" parent="Deco10"]
+texture = ExtResource("t_prop_exhibidor")
+offset = Vector2(0, -80)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco10"]
+position = Vector2(0, -10)
+shape = SubResource("DecoShape10")
+
+[node name="Deco11" type="StaticBody2D" parent="."]
+position = Vector2(1290, 760)
+[node name="Sprite" type="Sprite2D" parent="Deco11"]
+texture = ExtResource("t_prop_exhibidor_b")
+offset = Vector2(0, -80)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco11"]
+position = Vector2(0, -10)
+shape = SubResource("DecoShape11")
+
+[node name="Deco12" type="StaticBody2D" parent="."]
+position = Vector2(600, 370)
+[node name="Sprite" type="Sprite2D" parent="Deco12"]
+texture = ExtResource("t_prop_planta_grande")
+offset = Vector2(0, -70)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco12"]
+position = Vector2(0, -10)
+shape = SubResource("DecoShape12")
+
+[node name="Deco13" type="StaticBody2D" parent="."]
+position = Vector2(940, 370)
+[node name="Sprite" type="Sprite2D" parent="Deco13"]
+texture = ExtResource("t_prop_planta_grande")
+offset = Vector2(0, -70)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco13"]
+position = Vector2(0, -10)
+shape = SubResource("DecoShape13")
+
+[node name="Player" parent="." instance=ExtResource("s_player")]
+position = Vector2(768, 896)
+
+[node name="DoorSalida" parent="." instance=ExtResource("s_door")]
+position = Vector2(768, 1010)
+target_scene = "res://scenes/main/Main.tscn"
+target_spawn = Vector2(1145, 500)
+
+[node name="MostradorTrigger" type="Area2D" parent="."]
+position = Vector2(768, 585)
+script = ExtResource("c_most")
+bouquet_panel_path = NodePath("../UI/BouquetPanel")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MostradorTrigger"]
+shape = SubResource("MostShape")
+
+[node name="PedidoEspecial" type="Area2D" parent="."]
+position = Vector2(250, 450)
+script = ExtResource("c_pedido")
+bouquet_panel_path = NodePath("../UI/BouquetPanel")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PedidoEspecial"]
+shape = SubResource("TrigShape")
+
+[node name="ProyectoFinal" type="Area2D" parent="."]
+position = Vector2(1286, 450)
+script = ExtResource("c_final")
+panel_path = NodePath("../UI/ProyectoFinalPanel")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ProyectoFinal"]
+shape = SubResource("TrigShape")
+
+[node name="StarMostrador" type="Sprite2D" parent="."]
+position = Vector2(768, 388)
+texture = ExtResource("t_star")
+offset = Vector2(0, -14)
+z_index = 20
+script = ExtResource("c_bob")
+
+[node name="LabelMostrador" type="Label" parent="."]
+z_index = 20
+offset_left = 658.0
+offset_top = 346.0
+offset_right = 878.0
+offset_bottom = 376.0
+theme_override_colors/font_color = Color(1, 0.82, 0.31, 1)
+theme_override_colors/font_outline_color = Color(0.1, 0.06, 0.15, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 20
+text = "Ramos"
+horizontal_alignment = 1
+
+[node name="StarPedido" type="Sprite2D" parent="."]
+position = Vector2(250, 385)
+texture = ExtResource("t_star")
+offset = Vector2(0, -14)
+z_index = 20
+modulate = Color(1, 0.6, 0.2, 1)
+script = ExtResource("c_bob")
+challenge_id = "reto_floreria_1"
+
+[node name="LabelPedido" type="Label" parent="."]
+script = ExtResource("c_hide")
+challenge_id = "reto_floreria_1"
+z_index = 20
+offset_left = 140.0
+offset_top = 343.0
+offset_right = 360.0
+offset_bottom = 373.0
+theme_override_colors/font_color = Color(1, 0.7, 0.3, 1)
+theme_override_colors/font_outline_color = Color(0.1, 0.06, 0.15, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 18
+text = "Pedido Especial"
+horizontal_alignment = 1
+
+[node name="StarFinal" type="Sprite2D" parent="."]
+position = Vector2(1286, 385)
+texture = ExtResource("t_star")
+offset = Vector2(0, -14)
+z_index = 20
+modulate = Color(0.4, 0.95, 1, 1)
+script = ExtResource("c_bob")
+challenge_id = "reto_final"
+
+[node name="LabelFinal" type="Label" parent="."]
+script = ExtResource("c_hide")
+challenge_id = "reto_final"
+z_index = 20
+offset_left = 1176.0
+offset_top = 343.0
+offset_right = 1396.0
+offset_bottom = 373.0
+theme_override_colors/font_color = Color(0.4, 0.95, 1, 1)
+theme_override_colors/font_outline_color = Color(0.1, 0.06, 0.15, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 18
+text = "Proyecto Final"
+horizontal_alignment = 1
+
+[node name="DonaFlora" type="Area2D" parent="."]
+position = Vector2(1000, 470)
+script = ExtResource("c_npc")
+portrait = ExtResource("p_flora")
+npc_name = "Doña Flora"
+voice = "voice_flora"
+lines = Array[String](["¡Hola! Bienvenida a la Florería Bautista.", "Aquí armamos ramos para nuestros clientes. Acércate al mostrador para ver qué pedido tenemos hoy.", "Si armas un ramo correctamente, te pago por tu trabajo. ¡Mucho éxito con tu turno!"])
+
+[node name="Sprite" type="Sprite2D" parent="DonaFlora"]
+scale = Vector2(0.47, 0.47)
+texture = ExtResource("t_flora")
+offset = Vector2(0, -120)
+
+[node name="Label" type="Label" parent="DonaFlora"]
+z_index = 20
+offset_left = -70.0
+offset_top = -150.0
+offset_right = 70.0
+offset_bottom = -120.0
+theme_override_colors/font_color = Color(1, 0.82, 0.31, 1)
+theme_override_colors/font_outline_color = Color(0.1, 0.06, 0.15, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 18
+text = "Doña Flora"
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DonaFlora"]
+position = Vector2(0, -40)
+shape = SubResource("NpcShape")
+
+[node name="UI" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="BouquetPanel" parent="UI" instance=ExtResource("s_bp")]
+
+[node name="ProyectoFinalPanel" parent="UI" instance=ExtResource("s_pf")]
+
+[node name="Wardrobe" type="Sprite2D" parent="."]
+position = Vector2(520, 335)
+texture = ExtResource("t_ward")
+offset = Vector2(0, -76)
+
+[node name="WardrobeBody" type="StaticBody2D" parent="."]
+position = Vector2(520, 318)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WardrobeBody"]
+shape = SubResource("WardBody")
+
+[node name="Ropero" type="Area2D" parent="."]
+position = Vector2(520, 415)
+script = ExtResource("c_ropero")
+outfit_panel_path = NodePath("../UI/OutfitPanel")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ropero"]
+shape = SubResource("WardTrig")
+
+[node name="StarRopero" type="Sprite2D" parent="."]
+z_index = 20
+position = Vector2(520, 368)
+modulate = Color(0.75, 0.6, 1, 1)
+texture = ExtResource("t_star")
+offset = Vector2(0, -14)
+script = ExtResource("c_bob")
+
+[node name="LabelRopero" type="Label" parent="."]
+z_index = 20
+offset_left = 410.0
+offset_top = 326.0
+offset_right = 630.0
+offset_bottom = 356.0
+theme_override_colors/font_color = Color(0.85, 0.75, 1, 1)
+theme_override_colors/font_outline_color = Color(0.1, 0.06, 0.15, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 20
+text = "Ropero"
+horizontal_alignment = 1
+
+[node name="OutfitPanel" parent="UI" instance=ExtResource("s_outfit")]
+
+[node name="Music" type="Node" parent="."]
+script = ExtResource("c_music")
+track = "floreria"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CodeBug" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/code_bug.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+codigo = Array[String](["nombre = \"Aby\"", "edad = 20", "print(edd)"])
+linea_incorrecta = 2
+pista = "Fijate si el nombre de la variable está bien escrito al usarla."
+explicacion = "La variable se llama 'edad', pero en el print se escribió 'edd' (mal escrita)."

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+enunciado = "¿Para qué sirve un sistema de control de versiones como Git?"
+opciones = Array[String](["Para guardar el historial de cambios del código", "Para diseñar interfaces", "Para enviar correos", "Para hacer presentaciones"])
+respuesta_correcta = 0
+explicacion = "Git permite registrar y controlar los cambios realizados en el código a lo largo del tiempo."
+puntos = 10

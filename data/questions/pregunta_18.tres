@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+enunciado = "Verdadero o falso: Probar el software antes de entregarlo es una pérdida de tiempo."
+opciones = Array[String](["Verdadero", "Falso"])
+respuesta_correcta = 1
+explicacion = "Falso: las pruebas detectan errores antes de que lleguen al usuario."
+puntos = 10

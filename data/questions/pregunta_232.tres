@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Bases de Datos"
+tipo = "Pregunta"
+enunciado = "Si la columna carrera tiene esos valores, ¿qué devuelve la consulta?"
+codigo = "-- carrera: TI, TI, ADM, TI, ADM\nSELECT carrera, COUNT(*)\nFROM alumnos\nGROUP BY carrera;"
+opciones = Array[String](["ADM 2 y TI 3", "TI 5", "ADM 1 y TI 1", "Solo un 5"])
+respuesta_correcta = 0
+explicacion = "GROUP BY junta las filas por carrera y COUNT(*) cuenta cuántas hay en cada grupo: 3 de TI y 2 de ADM."
+puntos = 10

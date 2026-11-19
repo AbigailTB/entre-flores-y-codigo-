@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Metodologías Ágiles"
+tipo = "Pregunta"
+enunciado = "¿Qué práctica de XP consiste en que dos programadores trabajen en una misma computadora?"
+opciones = Array[String](["Daily Scrum", "Retrospectiva", "Planning Poker", "Programación en pareja"])
+respuesta_correcta = 3
+explicacion = "En pair programming uno escribe y el otro revisa, y se turnan."
+puntos = 10

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Redes de Computadoras"
+tipo = "Pregunta"
+enunciado = "Según netstat, ¿qué servicio probablemente escucha en el puerto 3306?"
+codigo = "> netstat -an\n    Proto  Dirección local   Estado\n    TCP    0.0.0.0:3306      LISTENING\n    TCP    0.0.0.0:80        LISTENING"
+opciones = Array[String](["Servidor web HTTP", "MySQL", "SSH", "DNS"])
+respuesta_correcta = 1
+explicacion = "3306 es el puerto por defecto de MySQL/MariaDB. El 80 de la otra línea es el servidor web HTTP."
+puntos = 10

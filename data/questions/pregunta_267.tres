@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Análisis y Documentación"
+tipo = "Pregunta"
+enunciado = "En esta historia de usuario, ¿cuál es el BENEFICIO que busca el usuario?"
+codigo = "Como alumno de TI\nquiero consultar mis calificaciones\npara saber si apruebo el cuatrimestre"
+opciones = Array[String](["Ser alumno de TI", "Consultar sus calificaciones", "Saber si aprueba el cuatrimestre", "Diseñar la base de datos"])
+respuesta_correcta = 2
+explicacion = "El formato es Como <rol> quiero <acción> para <beneficio>. El beneficio es lo que va después de \"para\"; consultar es la acción."
+puntos = 10

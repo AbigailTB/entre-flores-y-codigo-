@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Metodología de la Investigación"
+tipo = "Pregunta"
+enunciado = "¿Qué elemento de una investigación plantea una respuesta tentativa al problema?"
+opciones = Array[String](["El marco teórico", "La lista de referencias", "El índice", "La hipótesis"])
+respuesta_correcta = 3
+explicacion = "La hipótesis es una posible respuesta que la investigación busca comprobar."
+puntos = 10

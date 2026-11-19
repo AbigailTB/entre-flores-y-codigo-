@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Web"
+tipo = "Pregunta"
+enunciado = "¿Qué etiqueta semántica de HTML5 se usa para el menú de navegación?"
+opciones = Array[String](["<span>", "<b>", "<nav>", "<div>"])
+respuesta_correcta = 2
+explicacion = "<nav> indica un bloque de enlaces de navegación principal."
+puntos = 10

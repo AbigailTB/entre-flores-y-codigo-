@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+enunciado = "Verdadero o falso: SQL es un lenguaje de programación para diseñar páginas web."
+opciones = Array[String](["Verdadero", "Falso"])
+respuesta_correcta = 1
+explicacion = "Falso: SQL es un lenguaje para consultar y administrar bases de datos."
+puntos = 10

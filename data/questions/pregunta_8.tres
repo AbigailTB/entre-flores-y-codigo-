@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+enunciado = "¿Qué instrucción SQL se usa para obtener datos de una tabla?"
+opciones = Array[String](["SELECT", "DELETE", "PRINT", "COPY"])
+respuesta_correcta = 0
+explicacion = "SELECT es la instrucción SQL usada para consultar datos de una tabla."
+puntos = 10

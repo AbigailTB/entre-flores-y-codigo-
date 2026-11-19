@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Inglés Técnico"
+enunciado = "How do you say 'contraseña' in English?"
+opciones = Array[String](["Password", "Username", "Folder", "Screen"])
+respuesta_correcta = 0
+explicacion = "'Password' es la palabra en inglés para 'contraseña'."
+puntos = 10

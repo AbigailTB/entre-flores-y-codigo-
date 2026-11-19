@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Web"
+tipo = "Acertijo"
+enunciado = "Esta lista HTML se ve rara en el navegador. ¿En qué línea está el error?"
+codigo = "<ul>\n    <li>Inicio</li>\n    <li>Carreras<li>\n    <li>Contacto</li>\n</ul>"
+opciones = Array[String](["Línea 4", "Línea 3", "Línea 2", "Línea 1"])
+respuesta_correcta = 1
+explicacion = "En la línea 3 la etiqueta de cierre no tiene diagonal: escribe <li> en vez de </li>, así que abre un elemento nuevo en lugar de cerrarlo."
+puntos = 15

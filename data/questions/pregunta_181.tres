@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Redes de Computadoras"
+tipo = "Pregunta"
+enunciado = "¿Qué dispositivo conecta redes distintas y decide por dónde enviar los paquetes?"
+opciones = Array[String](["Repetidor", "Switch", "Router", "Hub"])
+respuesta_correcta = 2
+explicacion = "El router trabaja en la capa 3 y enruta entre redes."
+puntos = 10

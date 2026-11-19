@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Redes de Computadoras"
+tipo = "Acertijo"
+enunciado = "Escribo una máscara como /26. ¿Cómo me veo en decimal punteado?"
+opciones = Array[String](["255.255.255.192", "255.255.255.240", "255.255.255.128", "255.255.255.224"])
+respuesta_correcta = 0
+explicacion = "26 bits en 1: el último octeto es 11000000 = 192."
+puntos = 15

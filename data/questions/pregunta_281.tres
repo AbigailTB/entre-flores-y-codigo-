@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Cálculo"
+tipo = "Pregunta"
+enunciado = "¿Qué imprime este código (diferencia central)?"
+codigo = "def f(x):\n    return x ** 3\nh = 0.01\nd = (f(2 + h) - f(2 - h)) / (2 * h)\nprint(round(d, 2))"
+opciones = Array[String](["12.0", "4.0", "8.0", "6.0"])
+respuesta_correcta = 0
+explicacion = "Aproxima la derivada de x³, que es 3x². En x = 2: 3*4 = 12. El 8 sería f(2), el valor de la función, no de su derivada."
+puntos = 10

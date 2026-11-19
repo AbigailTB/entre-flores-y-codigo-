@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Matemáticas"
+tipo = "Acertijo"
+enunciado = "La profa. Heidy lanza dos monedas al aire. ¿Qué probabilidad hay de que caigan dos águilas?"
+opciones = Array[String](["1/3", "3/4", "1/4", "1/2"])
+respuesta_correcta = 2
+explicacion = "Hay 4 resultados igual de probables y solo uno es águila-águila."
+puntos = 15

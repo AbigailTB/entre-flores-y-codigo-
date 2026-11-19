@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación"
+tipo = "Pregunta"
+enunciado = "¿Qué imprime este código?"
+codigo = "edad = 17\nif edad >= 18:\n    print(\"Adulto\")\nelif edad >= 15:\n    print(\"Joven\")\nelse:\n    print(\"Niño\")"
+opciones = Array[String](["Joven y Niño", "Niño", "Joven", "Adulto"])
+respuesta_correcta = 2
+explicacion = "17 no es >= 18, así que se revisa el elif: 17 >= 15 es verdadero e imprime Joven. Al cumplirse uno, los demás se saltan."
+puntos = 10

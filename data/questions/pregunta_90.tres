@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Metodología de la Investigación"
+tipo = "Pregunta"
+enunciado = "¿Cómo se ordena la lista de referencias en APA 7?"
+opciones = Array[String](["Por orden de aparición en el texto", "Por número de páginas", "Alfabéticamente por apellido del primer autor", "Por año, del más reciente al más antiguo"])
+respuesta_correcta = 2
+explicacion = "Las referencias se ordenan alfabéticamente por el apellido del primer autor."
+puntos = 10

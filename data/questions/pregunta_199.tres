@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Desarrollo de Software"
+tipo = "Pregunta"
+enunciado = "¿Qué es una prueba unitaria?"
+opciones = Array[String](["Revisa la documentación", "Mide el sistema bajo carga extrema", "Prueba todo el sistema con usuarios reales", "Verifica una pieza pequeña de código de forma aislada"])
+respuesta_correcta = 3
+explicacion = "La prueba unitaria valida una función o clase de manera aislada."
+puntos = 10

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Estructuras de Datos"
+enunciado = "¿Cuál de estas es una estructura de datos lineal?"
+opciones = Array[String](["Lista enlazada", "Árbol", "Grafo", "Base de datos"])
+respuesta_correcta = 0
+explicacion = "Una lista enlazada organiza los elementos uno detrás de otro, de forma lineal."
+puntos = 10

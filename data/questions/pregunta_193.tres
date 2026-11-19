@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Bases de Datos"
+tipo = "Acertijo"
+enunciado = "Richi tiene la tabla papitas con precios 15, 20 y 25. ¿Qué devuelve SELECT AVG(precio) FROM papitas;?"
+opciones = Array[String](["25", "15", "60", "20"])
+respuesta_correcta = 3
+explicacion = "El promedio es (15 + 20 + 25) / 3 = 20."
+puntos = 15

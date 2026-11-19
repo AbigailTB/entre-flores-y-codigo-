@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Redes de Computadoras"
+tipo = "Pregunta"
+enunciado = "¿Qué protocolo de transporte es orientado a conexión y confirma la entrega?"
+opciones = Array[String](["TCP", "UDP", "ICMP", "ARP"])
+respuesta_correcta = 0
+explicacion = "TCP establece conexión y garantiza entrega ordenada; UDP no."
+puntos = 10

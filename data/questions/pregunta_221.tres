@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Web"
+tipo = "Acertijo"
+enunciado = "¿Qué muestra la consola?"
+codigo = "let x = \"3\" + 2;\nlet y = \"3\" - 2;\nconsole.log(x, y);"
+opciones = Array[String](["5 1", "32 NaN", "32 1", "5 5"])
+respuesta_correcta = 2
+explicacion = "Con + y un texto, JavaScript concatena: \"32\". El operador - solo funciona con números, así que convierte \"3\" a 3 y da 1."
+puntos = 15

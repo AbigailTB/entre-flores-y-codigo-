@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Redes de Computadoras"
+tipo = "Pregunta"
+enunciado = "¿Qué puerto usa HTTPS por defecto?"
+opciones = Array[String](["80", "25", "443", "21"])
+respuesta_correcta = 2
+explicacion = "HTTPS usa 443; HTTP usa 80."
+puntos = 10

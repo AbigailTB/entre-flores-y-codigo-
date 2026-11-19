@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Inglés Técnico"
+enunciado = "Complete: \"The program ___ successfully.\""
+opciones = Array[String](["ran", "runned", "running", "runs to"])
+respuesta_correcta = 0
+explicacion = "El pasado del verbo irregular 'run' es 'ran'."
+puntos = 10

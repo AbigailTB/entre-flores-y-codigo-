@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Bases de Datos"
+tipo = "Pregunta"
+enunciado = "¿Qué hace esta consulta?"
+codigo = "SELECT nombre\nFROM alumnos\nWHERE promedio >= 9\nORDER BY nombre;"
+opciones = Array[String](["Nombres con promedio 9 o más, en orden A-Z", "Todos los alumnos ordenados por promedio", "Nombres con promedio menor a 9", "El promedio más alto de los alumnos"])
+respuesta_correcta = 0
+explicacion = "WHERE filtra solo a quienes tienen promedio >= 9 (el 9 sí entra) y ORDER BY nombre los ordena alfabéticamente."
+puntos = 10

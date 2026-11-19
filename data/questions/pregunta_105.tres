@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Móvil"
+tipo = "Acertijo"
+enunciado = "Kotlin: val nombre: String? = null; println(nombre?.length ?: 0). ¿Qué imprime?"
+opciones = Array[String](["0", "NullPointerException", "null", "Error de compilación"])
+respuesta_correcta = 0
+explicacion = "?. devuelve null y el operador Elvis ?: lo reemplaza por 0."
+puntos = 15

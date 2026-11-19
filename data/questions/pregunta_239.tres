@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Redes de Computadoras"
+tipo = "Pregunta"
+enunciado = "Según esta salida de ipconfig, ¿cuál es la dirección del router?"
+codigo = "Adaptador de Ethernet:\n    Dirección IPv4: 192.168.1.45\n    Máscara de subred: 255.255.255.0\n    Puerta de enlace: 192.168.1.254"
+opciones = Array[String](["192.168.1.0", "192.168.1.254", "255.255.255.0", "192.168.1.45"])
+respuesta_correcta = 1
+explicacion = "La puerta de enlace predeterminada (gateway) es el router que saca el tráfico a otras redes. La IPv4 es la del propio equipo."
+puntos = 10

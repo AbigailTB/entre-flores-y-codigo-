@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Web"
+tipo = "Pregunta"
+enunciado = "¿Qué muestra la consola?"
+codigo = "console.log(5 == \"5\");\nconsole.log(5 === \"5\");"
+opciones = Array[String](["true y true", "true y luego false", "false y luego true", "false y false"])
+respuesta_correcta = 1
+explicacion = "== convierte el texto \"5\" a número antes de comparar (true). === también compara el tipo: number no es string (false)."
+puntos = 10

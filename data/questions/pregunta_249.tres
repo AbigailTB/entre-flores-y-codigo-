@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Seguridad Informática"
+tipo = "Pregunta"
+enunciado = "¿En qué línea se expone un dato sensible?"
+codigo = "import mysql.connector\ndb = mysql.connector.connect(\n    host=\"localhost\",\n    user=\"admin\",\n    password=\"Admin123\"\n)"
+opciones = Array[String](["Línea 2", "Línea 4", "Línea 3", "Línea 5"])
+respuesta_correcta = 3
+explicacion = "La contraseña está escrita en el código y termina en Git a la vista de todos. Debe leerse de una variable de entorno o archivo .env."
+puntos = 10

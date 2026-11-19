@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Metodología de la Investigación"
+tipo = "Acertijo"
+enunciado = "Si tengo menos de 40 palabras voy entre comillas dentro del párrafo. Si paso de 40, ¿cómo me escribes en APA 7?"
+opciones = Array[String](["En cursiva y entre comillas", "En negritas dentro del párrafo", "En bloque aparte, con sangría y sin comillas", "Como nota al pie"])
+respuesta_correcta = 2
+explicacion = "Las citas de 40 palabras o más van en bloque con sangría y sin comillas."
+puntos = 15

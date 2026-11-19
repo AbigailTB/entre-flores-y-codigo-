@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Desarrollo de Software"
+tipo = "Pregunta"
+enunciado = "¿Qué resultado da esta prueba unitaria?"
+codigo = "def sumar(a, b):\n    return a - b\ndef test_sumar():\n    assert sumar(2, 3) == 5"
+opciones = Array[String](["No se ejecuta: falta un print", "Pasa, porque 2 + 3 = 5", "Falla: sumar(2, 3) devuelve -1", "Marca error de sintaxis"])
+respuesta_correcta = 2
+explicacion = "La función resta en vez de sumar: 2 - 3 = -1, y -1 no es 5, así que el assert falla. Para eso sirven las pruebas: detectan el bug."
+puntos = 10

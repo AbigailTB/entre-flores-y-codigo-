@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Matemáticas"
+tipo = "Pregunta"
+enunciado = "Debería imprimir 7.5 pero imprime 10.0. ¿En qué línea está el error?"
+codigo = "a = 5\nb = 10\nprom = a + b / 2\nprint(prom)"
+opciones = Array[String](["Línea 3", "Línea 1", "Línea 2", "Línea 4"])
+respuesta_correcta = 0
+explicacion = "La división va antes que la suma: se calcula 5 + (10/2) = 10.0. Hay que agrupar: prom = (a + b) / 2."
+puntos = 10

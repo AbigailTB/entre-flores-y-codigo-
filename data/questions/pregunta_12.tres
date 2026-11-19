@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+enunciado = "¿Qué es una función en programación?"
+opciones = Array[String](["Un bloque de código reutilizable que realiza una tarea", "Un color de la interfaz", "Un archivo de imagen", "Un tipo de base de datos"])
+respuesta_correcta = 0
+explicacion = "Una función agrupa instrucciones para reutilizarlas cuantas veces sea necesario."
+puntos = 10

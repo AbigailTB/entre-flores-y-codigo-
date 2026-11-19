@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Matemáticas"
+tipo = "Acertijo"
+enunciado = "En binario me escribo 1011. ¿Qué número soy en decimal?"
+opciones = Array[String](["9", "11", "1011", "13"])
+respuesta_correcta = 1
+explicacion = "1·8 + 0·4 + 1·2 + 1·1 = 11."
+puntos = 15

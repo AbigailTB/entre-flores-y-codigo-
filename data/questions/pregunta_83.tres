@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación"
+tipo = "Acertijo"
+enunciado = "El profe Luis te reta: ¿qué imprime? x = 2; x += 3; x *= 2; print(x)"
+opciones = Array[String](["10", "8", "12", "7"])
+respuesta_correcta = 0
+explicacion = "x pasa de 2 a 5 y luego se duplica: 10."
+puntos = 15

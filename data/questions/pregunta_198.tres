@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Desarrollo de Software"
+tipo = "Pregunta"
+enunciado = "¿Qué hace el comando git commit?"
+opciones = Array[String](["Sube los cambios a GitHub", "Borra una rama", "Descarga el repositorio remoto", "Guarda una instantánea de los cambios preparados"])
+respuesta_correcta = 3
+explicacion = "commit registra en el repo local lo que se preparó con git add."
+puntos = 10

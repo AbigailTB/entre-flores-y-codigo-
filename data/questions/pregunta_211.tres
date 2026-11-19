@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación"
+tipo = "Acertijo"
+enunciado = "¿Qué imprime este código?"
+codigo = "palabra = \"codigo\"\nprint(palabra[1:4])"
+opciones = Array[String](["cod", "odig", "odi", "codi"])
+respuesta_correcta = 2
+explicacion = "El slicing [1:4] toma los índices 1, 2 y 3 (el 4 no se incluye). Como se cuenta desde 0: o-d-i."
+puntos = 15

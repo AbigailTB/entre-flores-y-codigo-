@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Cálculo"
+tipo = "Pregunta"
+enunciado = "¿A qué valor se acerca lo que imprime este código?"
+codigo = "def f(x):\n    return x ** 2\nh = 0.001\nx = 3\nprint((f(x + h) - f(x)) / h)"
+opciones = Array[String](["Aproximadamente 6", "Aproximadamente 0", "Aproximadamente 3", "Aproximadamente 9"])
+respuesta_correcta = 0
+explicacion = "Es el cociente de diferencias, que aproxima la derivada. Si f(x) = x², f'(x) = 2x, y en x = 3 vale 6 (imprime 6.000999...)."
+puntos = 10

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Metodología de la Investigación"
+tipo = "Pregunta"
+enunciado = "En APA 7, ¿cómo se cita en el texto (cita parentética) una obra de un solo autor?"
+opciones = Array[String](["(García, 2020)", "García - 2020 - p.", "(2020, García)", "[García 2020]"])
+respuesta_correcta = 0
+explicacion = "APA 7 usa apellido y año separados por coma entre paréntesis."
+puntos = 10

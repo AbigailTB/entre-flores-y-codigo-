@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Web"
+tipo = "Pregunta"
+enunciado = "En el mapa conceptual de JS del profe Carlos, ¿qué método convierte un objeto a texto JSON?"
+opciones = Array[String](["JSON.stringify()", "JSON.parse()", "eval()", "toString()"])
+respuesta_correcta = 0
+explicacion = "JSON.stringify serializa; JSON.parse hace lo contrario."
+puntos = 10

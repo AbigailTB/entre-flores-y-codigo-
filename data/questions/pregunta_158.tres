@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Administración de Proyectos"
+tipo = "Pregunta"
+enunciado = "¿Qué muestra un diagrama de Gantt?"
+opciones = Array[String](["Las clases del software", "Actividades como barras en una línea de tiempo", "El organigrama de la empresa", "El flujo de datos del sistema"])
+respuesta_correcta = 1
+explicacion = "El Gantt ubica cada actividad con su inicio, fin y duración."
+puntos = 10

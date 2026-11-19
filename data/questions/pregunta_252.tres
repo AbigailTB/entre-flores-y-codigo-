@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Seguridad Informática"
+tipo = "Acertijo"
+enunciado = "¿Qué pasa si un atacante manda archivo=../../etc/passwd?"
+codigo = "nombre = request.args[\"archivo\"]\nruta = \"/var/www/docs/\" + nombre\nreturn open(ruta).read()"
+opciones = Array[String](["Borra el archivo passwd", "Solo puede leer archivos de /var/www/docs", "Marca error y no pasa nada", "Lee un archivo fuera de la carpeta permitida"])
+respuesta_correcta = 3
+explicacion = "Cada ../ sube una carpeta, así que la ruta escapa de /docs (path traversal). Hay que validar el nombre o usar una lista de permitidos."
+puntos = 15

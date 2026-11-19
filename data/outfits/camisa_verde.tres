@@ -1,0 +1,100 @@
+[gd_resource type="SpriteFrames" load_steps=15 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/player_variants/camisa_verde/walk_down_1.png" id="down1"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player_variants/camisa_verde/walk_down_2.png" id="down2"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player_variants/camisa_verde/walk_down_3.png" id="down3"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player_variants/camisa_verde/walk_down_4.png" id="down4"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player_variants/camisa_verde/walk_up_1.png" id="up1"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player_variants/camisa_verde/walk_up_2.png" id="up2"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player_variants/camisa_verde/walk_up_3.png" id="up3"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player_variants/camisa_verde/walk_up_4.png" id="up4"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player_variants/camisa_verde/walk_up_5.png" id="up5"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player_variants/camisa_verde/walk_side_1.png" id="side1"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player_variants/camisa_verde/walk_side_2.png" id="side2"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player_variants/camisa_verde/walk_side_3.png" id="side3"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player_variants/camisa_verde/walk_side_4.png" id="side4"]
+[ext_resource type="Texture2D" path="res://assets/sprites/player_variants/camisa_verde/walk_side_5.png" id="side5"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("down2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("down1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("down3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("down1")
+}],
+"loop": true,
+"name": &"walk_down",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("up1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("up2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("up3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("up4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("up5")
+}],
+"loop": true,
+"name": &"walk_up",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("side1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("side2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("side3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("side4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("side5")
+}],
+"loop": true,
+"name": &"walk_side",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("down1")
+}],
+"loop": true,
+"name": &"idle_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("up1")
+}],
+"loop": true,
+"name": &"idle_up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("side1")
+}],
+"loop": true,
+"name": &"idle_side",
+"speed": 5.0
+}]

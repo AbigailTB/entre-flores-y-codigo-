@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Cálculo"
+tipo = "Acertijo"
+enunciado = "Un carrito se mueve con s(t) = t² − 4t. ¿En qué instante su velocidad es cero?"
+opciones = Array[String](["t = 0", "t = 1", "t = 4", "t = 2"])
+respuesta_correcta = 3
+explicacion = "v(t) = s'(t) = 2t − 4, que vale cero en t = 2."
+puntos = 15

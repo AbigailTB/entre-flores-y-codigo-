@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+enunciado = "¿Qué significa la sigla 'IP' en redes?"
+opciones = Array[String](["Internet Protocol", "Internal Program", "Input Process", "Interface Point"])
+respuesta_correcta = 0
+explicacion = "IP (Internet Protocol) identifica dispositivos dentro de una red."
+puntos = 10

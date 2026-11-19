@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Cálculo"
+tipo = "Pregunta"
+enunciado = "¿Cuál es la derivada de una función constante, por ejemplo f(x) = 7?"
+opciones = Array[String](["7", "x", "1", "0"])
+respuesta_correcta = 3
+explicacion = "Una constante no cambia, por lo que su derivada es 0."
+puntos = 10

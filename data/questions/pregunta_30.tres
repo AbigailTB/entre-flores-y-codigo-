@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Matemáticas"
+enunciado = "¿Qué representa la variable 'x' en una ecuación?"
+opciones = Array[String](["Un valor desconocido a encontrar", "Un número fijo", "Un símbolo decorativo", "Un operador"])
+respuesta_correcta = 0
+explicacion = "Una variable representa un valor desconocido que se busca resolver."
+puntos = 10

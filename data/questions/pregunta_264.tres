@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Análisis y Documentación"
+tipo = "Pregunta"
+enunciado = "¿Qué escribe este pseudocódigo?"
+codigo = "suma <- 0\nPara i <- 1 Hasta 4 Hacer\n    suma <- suma + i\nFinPara\nEscribir suma"
+opciones = Array[String](["10", "4", "15", "6"])
+respuesta_correcta = 0
+explicacion = "En pseudocódigo Para i <- 1 Hasta 4 sí incluye el 4: suma 1 + 2 + 3 + 4 = 10."
+puntos = 10

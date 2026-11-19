@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Móvil"
+tipo = "Acertijo"
+enunciado = "Nazco con onCreate, me hago visible con onStart y paso al primer plano con... ¿qué método?"
+opciones = Array[String](["onDestroy", "onPause", "onStop", "onResume"])
+respuesta_correcta = 3
+explicacion = "Tras onStart se llama onResume, cuando la Activity ya interactúa con el usuario."
+puntos = 15

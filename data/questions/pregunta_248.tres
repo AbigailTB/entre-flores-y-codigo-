@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Seguridad Informática"
+tipo = "Pregunta"
+enunciado = "¿Cuál es la mejor corrección para este código?"
+codigo = "nombre = request.form[\"nombre\"]\nq = f\"SELECT * FROM alumnos WHERE n='{nombre}'\"\ncur.execute(q)"
+opciones = Array[String](["Usar consulta parametrizada: execute(q, (nombre,))", "Quitar espacios con nombre.strip()", "Pasar el nombre a mayúsculas", "Codificar la consulta en base64"])
+respuesta_correcta = 0
+explicacion = "Con parámetros, la base de datos trata el valor como dato y nunca como código SQL. Limpiar espacios o mayúsculas no evita la inyección."
+puntos = 10

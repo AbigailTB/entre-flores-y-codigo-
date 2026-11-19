@@ -1,0 +1,103 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/question_panel.gd" id="1"]
+
+[sub_resource type="StyleBoxFlat" id="CardStyle"]
+bg_color = Color(0.05, 0.07, 0.11, 0.95)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_left = 24
+corner_radius_bottom_right = 24
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.24, 1, 0.54, 0.9)
+
+[sub_resource type="StyleBoxFlat" id="ContinueStyle"]
+bg_color = Color(0.24, 1, 0.54, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_left = 16
+corner_radius_bottom_right = 16
+
+[node name="QuestionPanel" type="ColorRect"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0, 0, 0, 0.45)
+script = ExtResource("1")
+
+[node name="Card" type="Panel" parent="."]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -340.0
+offset_top = -300.0
+offset_right = 340.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("CardStyle")
+
+[node name="VBox" type="VBoxContainer" parent="Card"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = -30.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 14
+
+[node name="Header" type="Label" parent="Card/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.55, 0.85, 1, 1)
+theme_override_font_sizes/font_size = 15
+text = "Pregunta"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Enunciado" type="Label" parent="Card/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.24, 1, 0.54, 1)
+theme_override_font_sizes/font_size = 22
+text = "Enunciado de la pregunta"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Options" type="VBoxContainer" parent="Card/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="Feedback" type="Label" parent="Card/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9, 0.9, 0.9, 1)
+theme_override_font_sizes/font_size = 16
+autowrap_mode = 2
+horizontal_alignment = 1
+
+[node name="SkillBtn" type="Button" parent="Card/VBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 40)
+theme_override_font_sizes/font_size = 15
+text = "Habilidad"
+
+[node name="ContinueBtn" type="Button" parent="Card/VBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 50)
+theme_override_styles/normal = SubResource("ContinueStyle")
+theme_override_styles/hover = SubResource("ContinueStyle")
+theme_override_styles/pressed = SubResource("ContinueStyle")
+theme_override_colors/font_color = Color(0.08, 0.1, 0.12, 1)
+text = "Continuar"

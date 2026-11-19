@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Web"
+tipo = "Acertijo"
+enunciado = "Me registran con navigator.serviceWorker.register('sw.js'). ¿Qué evento mío se usa para precachear archivos la primera vez?"
+opciones = Array[String](["click", "fetch", "load", "install"])
+respuesta_correcta = 3
+explicacion = "En el evento install se suelen guardar los archivos base en la caché."
+puntos = 15

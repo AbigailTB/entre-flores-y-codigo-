@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Móvil"
+tipo = "Pregunta"
+enunciado = "¿Qué lenguaje recomienda Google como preferido para el desarrollo Android nativo?"
+opciones = Array[String](["PHP", "Kotlin", "Swift", "COBOL"])
+respuesta_correcta = 1
+explicacion = "Desde 2019 Google declaró Kotlin como lenguaje preferido para Android."
+puntos = 10

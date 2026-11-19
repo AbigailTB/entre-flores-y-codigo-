@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Redes de Computadoras"
+tipo = "Acertijo"
+enunciado = "Te presto una IP en cuanto te conectas al Wi-Fi, sin que la escribas. ¿Qué protocolo soy?"
+opciones = Array[String](["DNS", "SMTP", "FTP", "DHCP"])
+respuesta_correcta = 3
+explicacion = "DHCP asigna IP, máscara, puerta de enlace y DNS de forma automática."
+puntos = 15

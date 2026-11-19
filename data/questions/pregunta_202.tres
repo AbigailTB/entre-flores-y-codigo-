@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Desarrollo de Software"
+tipo = "Pregunta"
+enunciado = "Con versionado semántico, la versión 2.4.1 recibe un cambio incompatible. ¿Cuál es la nueva versión?"
+opciones = Array[String](["3.0.0", "2.4.2", "2.5.0", "2.4.1-beta"])
+respuesta_correcta = 0
+explicacion = "Un cambio incompatible incrementa el número MAYOR y reinicia los demás."
+puntos = 10

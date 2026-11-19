@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Bases de Datos"
+enunciado = "¿Qué instrucción SQL se usa para insertar un nuevo registro en una tabla?"
+opciones = Array[String](["INSERT", "SELECT", "DELETE", "UPDATE"])
+respuesta_correcta = 0
+explicacion = "INSERT agrega un nuevo registro (fila) a una tabla."
+puntos = 10

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Cálculo"
+tipo = "Pregunta"
+enunciado = "Usando la regla de la cadena, ¿cuál es la derivada de (2x + 1)⁵?"
+opciones = Array[String](["5(2x + 1)⁴", "10(2x + 1)⁴", "10(2x + 1)⁵", "2(2x + 1)⁵"])
+respuesta_correcta = 1
+explicacion = "5(2x+1)⁴ por la derivada interna 2 da 10(2x+1)⁴."
+puntos = 10

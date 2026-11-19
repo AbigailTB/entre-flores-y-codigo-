@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Web"
+tipo = "Pregunta"
+enunciado = "¿Qué archivo define el nombre, íconos y colores de una PWA para poder instalarla?"
+opciones = Array[String](["robots.txt", "El Web App Manifest (manifest.json)", "index.css", "package.json"])
+respuesta_correcta = 1
+explicacion = "El manifest describe cómo se ve y se instala la PWA."
+puntos = 10

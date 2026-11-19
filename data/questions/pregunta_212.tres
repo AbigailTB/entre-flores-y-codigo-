@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación"
+tipo = "Acertijo"
+enunciado = "¿Qué imprime este código? (ojo con la lista por defecto)"
+codigo = "def f(x, lista=[]):\n    lista.append(x)\n    return lista\nf(1)\nprint(f(2))"
+opciones = Array[String](["Marca error", "[2]", "[1]", "[1, 2]"])
+respuesta_correcta = 3
+explicacion = "La lista por defecto se crea UNA sola vez y se reutiliza entre llamadas: f(1) deja [1] y f(2) agrega el 2 a esa misma lista."
+puntos = 15

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Seguridad Informática"
+tipo = "Acertijo"
+enunciado = "¿En qué línea está la debilidad de seguridad?"
+codigo = "import hashlib\ndef guardar(password):\n    h = hashlib.md5(password.encode())\n    db.save(h.hexdigest())"
+opciones = Array[String](["Línea 2", "Línea 1", "Línea 4", "Línea 3"])
+respuesta_correcta = 3
+explicacion = "MD5 es muy rápido y está roto: se crackea con fuerza bruta o tablas. Para contraseñas se usa bcrypt o argon2, que son lentos y llevan sal."
+puntos = 15

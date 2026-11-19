@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Desarrollo de Software"
+tipo = "Acertijo"
+enunciado = "Haces git add . y git commit -m \"x\", y después editas un archivo. ¿Cómo lo reporta git status?"
+opciones = Array[String](["En conflicto", "Ya incluido en el commit", "Modificado, sin preparar", "Borrado"])
+respuesta_correcta = 2
+explicacion = "Los cambios posteriores al commit aparecen como modificados sin preparar (not staged)."
+puntos = 15

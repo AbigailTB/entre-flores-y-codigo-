@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Redes de Computadoras"
+tipo = "Pregunta"
+enunciado = "¿Cuántos hosts utilizables tiene esta subred?"
+codigo = "Red:      192.168.10.0\nMáscara:  /26\nBits de host: 32 - 26"
+opciones = Array[String](["62", "30", "64", "126"])
+respuesta_correcta = 0
+explicacion = "/26 deja 6 bits para hosts: 2^6 = 64 direcciones. Se restan la dirección de red y la de broadcast, así quedan 62 utilizables."
+puntos = 10

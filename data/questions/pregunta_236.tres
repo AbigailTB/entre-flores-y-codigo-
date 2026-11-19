@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Bases de Datos"
+tipo = "Acertijo"
+enunciado = "¿Qué forma normal viola esta tabla?"
+codigo = "Pedido | Cliente | Productos\n101    | Ana     | Mouse, Teclado\n102    | Luis    | Monitor"
+opciones = Array[String](["Primera forma normal (1FN)", "Segunda forma normal (2FN)", "Ninguna, está normalizada", "Tercera forma normal (3FN)"])
+respuesta_correcta = 0
+explicacion = "La celda Productos guarda varios valores juntos (\"Mouse, Teclado\"). La 1FN exige valores atómicos: un producto por fila."
+puntos = 15

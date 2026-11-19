@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Web"
+tipo = "Pregunta"
+enunciado = "¿Qué muestra la consola?"
+codigo = "const nums = [1, 2, 3, 4];\nconst r = nums\n    .filter(n => n % 2 === 0)\n    .map(n => n * 10);\nconsole.log(r);"
+opciones = Array[String](["[2, 4]", "[20, 40]", "[10, 30]", "[10, 20, 30, 40]"])
+respuesta_correcta = 1
+explicacion = "filter deja solo los pares [2, 4] y luego map multiplica cada uno por 10. El orden importa: primero se filtra, luego se transforma."
+puntos = 10

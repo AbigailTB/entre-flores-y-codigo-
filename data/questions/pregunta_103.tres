@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Móvil"
+tipo = "Acertijo"
+enunciado = "En Kotlin: val x = 5 y luego x = 6. ¿Qué pasa?"
+opciones = Array[String](["x vale 6", "x vale 11", "Error de compilación: val no se reasigna", "Error en tiempo de ejecución"])
+respuesta_correcta = 2
+explicacion = "val declara una referencia de solo lectura; reasignarla no compila."
+puntos = 15

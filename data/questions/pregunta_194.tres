@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Bases de Datos"
+tipo = "Acertijo"
+enunciado = "Soy como la papita única de la bolsa de Richi: no me repito y nunca vengo vacía (NULL). ¿Quién soy?"
+opciones = Array[String](["La llave foránea", "Un índice simple", "La llave primaria", "Una vista"])
+respuesta_correcta = 2
+explicacion = "La llave primaria es única y NOT NULL."
+puntos = 15

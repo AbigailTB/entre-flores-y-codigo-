@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Web"
+tipo = "Acertijo"
+enunciado = "Tres reglas CSS pintan el mismo div: #menu, .menu y div. ¿Cuál gana por especificidad?"
+opciones = Array[String]([".menu (selector de clase)", "#menu (selector de id)", "div (selector de etiqueta)", "La última escrita, siempre"])
+respuesta_correcta = 1
+explicacion = "Un id pesa más que una clase, y una clase más que una etiqueta."
+puntos = 15

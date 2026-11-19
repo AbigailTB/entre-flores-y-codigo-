@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Cálculo"
+tipo = "Acertijo"
+enunciado = "Soy la derivada del logaritmo natural ln(x), para x > 0. ¿Quién soy?"
+opciones = Array[String](["x", "ln(x)/x", "eˣ", "1/x"])
+respuesta_correcta = 3
+explicacion = "d/dx ln(x) = 1/x."
+puntos = 15

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Análisis y Documentación"
+enunciado = "¿Qué es un diagrama de flujo?"
+opciones = Array[String](["Una representación gráfica de los pasos de un proceso", "Un tipo de base de datos", "Un lenguaje de programación", "Un archivo de audio"])
+respuesta_correcta = 0
+explicacion = "Un diagrama de flujo muestra gráficamente la secuencia de pasos de un proceso."
+puntos = 10

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Análisis y Documentación"
+tipo = "Pregunta"
+enunciado = "Este algoritmo debe sacar el promedio de 3 números. ¿En qué línea está el error?"
+codigo = "Leer a, b, c\nsuma <- a + b + c\npromedio <- suma / 2\nEscribir promedio"
+opciones = Array[String](["Línea 2", "Línea 3", "Línea 4", "Línea 1"])
+respuesta_correcta = 1
+explicacion = "Se suman 3 números, así que hay que dividir entre 3, no entre 2. Es un error lógico: el algoritmo corre pero da un resultado falso."
+puntos = 10

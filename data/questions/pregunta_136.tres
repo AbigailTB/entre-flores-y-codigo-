@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Análisis y Documentación"
+tipo = "Acertijo"
+enunciado = "Juvencio se sienta con el usuario, le hace preguntas y anota lo que necesita. ¿Qué técnica soy?"
+opciones = Array[String](["Refactorización", "Compilación", "Entrevista", "Despliegue"])
+respuesta_correcta = 2
+explicacion = "La entrevista es una técnica clásica de obtención de requisitos."
+puntos = 15

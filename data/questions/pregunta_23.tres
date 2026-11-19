@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Redes de Computadoras"
+enunciado = "¿Qué dispositivo conecta varias redes y dirige el tráfico entre ellas?"
+opciones = Array[String](["Router", "Teclado", "Monitor", "Impresora"])
+respuesta_correcta = 0
+explicacion = "El router (enrutador) dirige el tráfico de datos entre distintas redes."
+puntos = 10

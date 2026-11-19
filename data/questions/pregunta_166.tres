@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Administración de Proyectos"
+tipo = "Acertijo"
+enunciado = "Soy el documento que da vida oficial al proyecto y nombra a su líder. ¿Quién soy?"
+opciones = Array[String](["El acta de constitución", "El acta de cierre", "El diagrama de Gantt", "Una minuta de reunión"])
+respuesta_correcta = 0
+explicacion = "El acta de constitución autoriza formalmente el proyecto."
+puntos = 15

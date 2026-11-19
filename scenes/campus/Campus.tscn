@@ -1,0 +1,728 @@
+[gd_scene load_steps=41 format=3]
+
+[ext_resource type="Script" path="res://scripts/scene_music.gd" id="c_music"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/campus.png" id="t_bg"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/campus_mapa_ui.png" id="t_mapa"]
+[ext_resource type="PackedScene" path="res://scenes/player/Player.tscn" id="s_player"]
+[ext_resource type="PackedScene" path="res://scenes/door/Door.tscn" id="s_door"]
+[ext_resource type="Script" path="res://scripts/map_kiosk.gd" id="c_kiosk"]
+[ext_resource type="Script" path="res://scripts/npc.gd" id="c_npc"]
+[ext_resource type="Texture2D" path="res://assets/sprites/teachers/cesar.png" id="t_cesar"]
+[ext_resource type="Texture2D" path="res://assets/portraits/cesar.png" id="p_cesar"]
+[ext_resource type="Texture2D" path="res://assets/fx/shadow.png" id="t_shadow"]
+[ext_resource type="Texture2D" path="res://assets/sprites/campus/arbol_0.png" id="t_tree0"]
+[ext_resource type="Texture2D" path="res://assets/sprites/campus/arbol_1.png" id="t_tree1"]
+[ext_resource type="Texture2D" path="res://assets/sprites/campus/arbol_2.png" id="t_tree2"]
+[ext_resource type="Texture2D" path="res://assets/sprites/campus/palmera.png" id="t_palm"]
+[ext_resource type="Texture2D" path="res://assets/sprites/campus/lampara.png" id="t_lamp"]
+[ext_resource type="Texture2D" path="res://assets/sprites/campus/asta_bandera.png" id="t_flag"]
+[ext_resource type="Texture2D" path="res://assets/signs/letrero_programacion.png" id="t_sign_programacion"]
+[ext_resource type="Texture2D" path="res://assets/signs/letrero_metodologia_apa.png" id="t_sign_metodologia_apa"]
+[ext_resource type="Texture2D" path="res://assets/signs/letrero_prog_movil.png" id="t_sign_prog_movil"]
+[ext_resource type="Texture2D" path="res://assets/signs/letrero_calculo.png" id="t_sign_calculo"]
+[ext_resource type="Texture2D" path="res://assets/signs/letrero_matematicas.png" id="t_sign_matematicas"]
+[ext_resource type="Texture2D" path="res://assets/signs/letrero_documentacion.png" id="t_sign_documentacion"]
+[ext_resource type="Texture2D" path="res://assets/signs/letrero_metodologias_agiles.png" id="t_sign_metodologias_agiles"]
+[ext_resource type="Texture2D" path="res://assets/signs/letrero_seguridad.png" id="t_sign_seguridad"]
+[ext_resource type="Texture2D" path="res://assets/signs/letrero_proyectos.png" id="t_sign_proyectos"]
+[ext_resource type="Texture2D" path="res://assets/signs/letrero_web_pwa.png" id="t_sign_web_pwa"]
+[ext_resource type="Texture2D" path="res://assets/signs/letrero_redes.png" id="t_sign_redes"]
+[ext_resource type="Texture2D" path="res://assets/signs/letrero_richi.png" id="t_sign_richi"]
+
+[sub_resource type="RectangleShape2D" id="Wide"]
+size = Vector2(2304, 60)
+[sub_resource type="RectangleShape2D" id="Tall"]
+size = Vector2(60, 1536)
+[sub_resource type="RectangleShape2D" id="BuildingShape"]
+size = Vector2(264, 90)
+[sub_resource type="RectangleShape2D" id="MainShape"]
+size = Vector2(760, 170)
+[sub_resource type="RectangleShape2D" id="FountainShape"]
+size = Vector2(120, 70)
+[sub_resource type="RectangleShape2D" id="FenceShape"]
+size = Vector2(1080, 30)
+[sub_resource type="CircleShape2D" id="Trunk"]
+radius = 10.0
+[sub_resource type="CircleShape2D" id="Pole"]
+radius = 5.0
+[sub_resource type="CircleShape2D" id="DirectorTalk"]
+radius = 70.0
+[sub_resource type="CircleShape2D" id="DirectorBody"]
+radius = 16.0
+[sub_resource type="RectangleShape2D" id="KioskShape"]
+size = Vector2(70, 70)
+
+[node name="Campus" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(1152, 768)
+texture = ExtResource("t_bg")
+
+[node name="BoundTop" type="StaticBody2D" parent="."]
+position = Vector2(1152, 140)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoundTop"]
+shape = SubResource("Wide")
+
+[node name="BoundBottom" type="StaticBody2D" parent="."]
+position = Vector2(1152, 1480)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoundBottom"]
+shape = SubResource("Wide")
+
+[node name="BoundLeft" type="StaticBody2D" parent="."]
+position = Vector2(30, 768)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoundLeft"]
+shape = SubResource("Tall")
+
+[node name="BoundRight" type="StaticBody2D" parent="."]
+position = Vector2(2274, 768)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoundRight"]
+shape = SubResource("Tall")
+
+[node name="Main" type="StaticBody2D" parent="."]
+position = Vector2(1152, 290)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Main"]
+shape = SubResource("MainShape")
+
+[node name="Fountain" type="StaticBody2D" parent="."]
+position = Vector2(1152, 600)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fountain"]
+shape = SubResource("FountainShape")
+
+[node name="FenceLeft" type="StaticBody2D" parent="."]
+position = Vector2(540, 1434)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FenceLeft"]
+shape = SubResource("FenceShape")
+
+[node name="FenceRight" type="StaticBody2D" parent="."]
+position = Vector2(1764, 1434)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FenceRight"]
+shape = SubResource("FenceShape")
+
+[node name="DoorDocencia" parent="." instance=ExtResource("s_door")]
+position = Vector2(1152, 410)
+target_scene = "res://scenes/escuela/Escuela.tscn"
+target_spawn = Vector2(768, 896)
+[node name="LabelDocencia" type="Label" parent="."]
+z_index = 20
+offset_left = 952.0
+offset_top = 298.0
+offset_right = 1352.0
+offset_bottom = 348.0
+theme_override_colors/font_color = Color(1, 0.86, 0.4, 1)
+theme_override_colors/font_outline_color = Color(0.1, 0.06, 0.15, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 17
+text = "Edificio de Docencia\nDesarrollo de Software · Prof. Efrén"
+horizontal_alignment = 1
+
+[node name="Building_programacion" type="StaticBody2D" parent="."]
+position = Vector2(330, 560)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Building_programacion"]
+shape = SubResource("BuildingShape")
+[node name="Sign_programacion" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(330, 505)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("t_sign_programacion")
+[node name="DoorAula_programacion" parent="." instance=ExtResource("s_door")]
+position = Vector2(330, 626)
+target_scene = "res://scenes/campus/Aula_programacion.tscn"
+teacher_id = "luis"
+target_spawn = Vector2(768, 896)
+
+[node name="Building_metodologia_apa" type="StaticBody2D" parent="."]
+position = Vector2(720, 560)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Building_metodologia_apa"]
+shape = SubResource("BuildingShape")
+[node name="Sign_metodologia_apa" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(720, 505)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("t_sign_metodologia_apa")
+[node name="DoorAula_metodologia_apa" parent="." instance=ExtResource("s_door")]
+position = Vector2(720, 626)
+target_scene = "res://scenes/campus/Aula_metodologia_apa.tscn"
+teacher_id = "hermes"
+target_spawn = Vector2(768, 896)
+
+[node name="Building_prog_movil" type="StaticBody2D" parent="."]
+position = Vector2(330, 850)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Building_prog_movil"]
+shape = SubResource("BuildingShape")
+[node name="Sign_prog_movil" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(330, 795)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("t_sign_prog_movil")
+[node name="DoorAula_prog_movil" parent="." instance=ExtResource("s_door")]
+position = Vector2(330, 916)
+target_scene = "res://scenes/campus/Aula_prog_movil.tscn"
+teacher_id = "gadiel"
+target_spawn = Vector2(768, 896)
+
+[node name="Building_calculo" type="StaticBody2D" parent="."]
+position = Vector2(720, 850)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Building_calculo"]
+shape = SubResource("BuildingShape")
+[node name="Sign_calculo" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(720, 795)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("t_sign_calculo")
+[node name="DoorAula_calculo" parent="." instance=ExtResource("s_door")]
+position = Vector2(720, 916)
+target_scene = "res://scenes/campus/Aula_calculo.tscn"
+teacher_id = "yuls"
+target_spawn = Vector2(768, 896)
+
+[node name="Building_matematicas" type="StaticBody2D" parent="."]
+position = Vector2(330, 1140)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Building_matematicas"]
+shape = SubResource("BuildingShape")
+[node name="Sign_matematicas" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(330, 1085)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("t_sign_matematicas")
+[node name="DoorAula_matematicas" parent="." instance=ExtResource("s_door")]
+position = Vector2(330, 1206)
+target_scene = "res://scenes/campus/Aula_matematicas.tscn"
+teacher_id = "heidy"
+target_spawn = Vector2(768, 896)
+
+[node name="Building_documentacion" type="StaticBody2D" parent="."]
+position = Vector2(720, 1140)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Building_documentacion"]
+shape = SubResource("BuildingShape")
+[node name="Sign_documentacion" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(720, 1085)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("t_sign_documentacion")
+[node name="DoorAula_documentacion" parent="." instance=ExtResource("s_door")]
+position = Vector2(720, 1206)
+target_scene = "res://scenes/campus/Aula_documentacion.tscn"
+teacher_id = "juvencio"
+target_spawn = Vector2(768, 896)
+
+[node name="Building_metodologias_agiles" type="StaticBody2D" parent="."]
+position = Vector2(1584, 560)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Building_metodologias_agiles"]
+shape = SubResource("BuildingShape")
+[node name="Sign_metodologias_agiles" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(1584, 505)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("t_sign_metodologias_agiles")
+[node name="DoorAula_metodologias_agiles" parent="." instance=ExtResource("s_door")]
+position = Vector2(1584, 626)
+target_scene = "res://scenes/campus/Aula_metodologias_agiles.tscn"
+teacher_id = "gladis"
+target_spawn = Vector2(768, 896)
+
+[node name="Building_seguridad" type="StaticBody2D" parent="."]
+position = Vector2(1974, 560)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Building_seguridad"]
+shape = SubResource("BuildingShape")
+[node name="Sign_seguridad" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(1974, 505)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("t_sign_seguridad")
+[node name="DoorAula_seguridad" parent="." instance=ExtResource("s_door")]
+position = Vector2(1974, 626)
+target_scene = "res://scenes/campus/Aula_seguridad.tscn"
+teacher_id = "ana"
+target_spawn = Vector2(768, 896)
+
+[node name="Building_proyectos" type="StaticBody2D" parent="."]
+position = Vector2(1584, 850)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Building_proyectos"]
+shape = SubResource("BuildingShape")
+[node name="Sign_proyectos" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(1584, 795)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("t_sign_proyectos")
+[node name="DoorAula_proyectos" parent="." instance=ExtResource("s_door")]
+position = Vector2(1584, 916)
+target_scene = "res://scenes/campus/Aula_proyectos.tscn"
+teacher_id = "bety"
+target_spawn = Vector2(768, 896)
+
+[node name="Building_web_pwa" type="StaticBody2D" parent="."]
+position = Vector2(1974, 850)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Building_web_pwa"]
+shape = SubResource("BuildingShape")
+[node name="Sign_web_pwa" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(1974, 795)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("t_sign_web_pwa")
+[node name="DoorAula_web_pwa" parent="." instance=ExtResource("s_door")]
+position = Vector2(1974, 916)
+target_scene = "res://scenes/campus/Aula_web_pwa.tscn"
+teacher_id = "carlos"
+target_spawn = Vector2(768, 896)
+
+[node name="Building_redes" type="StaticBody2D" parent="."]
+position = Vector2(1584, 1140)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Building_redes"]
+shape = SubResource("BuildingShape")
+[node name="Sign_redes" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(1584, 1085)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("t_sign_redes")
+[node name="DoorAula_redes" parent="." instance=ExtResource("s_door")]
+position = Vector2(1584, 1206)
+target_scene = "res://scenes/campus/Aula_redes.tscn"
+teacher_id = "jose"
+target_spawn = Vector2(768, 896)
+
+[node name="Building_richi" type="StaticBody2D" parent="."]
+position = Vector2(1974, 1140)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Building_richi"]
+shape = SubResource("BuildingShape")
+[node name="Sign_richi" type="Sprite2D" parent="."]
+z_index = 5
+position = Vector2(1974, 1085)
+scale = Vector2(0.28, 0.28)
+texture = ExtResource("t_sign_richi")
+[node name="DoorAula_richi" parent="." instance=ExtResource("s_door")]
+position = Vector2(1974, 1206)
+target_scene = "res://scenes/campus/Aula_richi.tscn"
+teacher_id = "richi"
+target_spawn = Vector2(768, 896)
+
+[node name="Deco0" type="StaticBody2D" parent="."]
+position = Vector2(525, 600)
+[node name="Sprite" type="Sprite2D" parent="Deco0"]
+texture = ExtResource("t_tree2")
+offset = Vector2(0, -56)
+[node name="Shadow" type="Sprite2D" parent="Deco0"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -2)
+scale = Vector2(0.3, 0.14)
+texture = ExtResource("t_shadow")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco0"]
+shape = SubResource("Trunk")
+
+[node name="Deco1" type="StaticBody2D" parent="."]
+position = Vector2(1779, 600)
+[node name="Sprite" type="Sprite2D" parent="Deco1"]
+texture = ExtResource("t_tree0")
+offset = Vector2(0, -56)
+[node name="Shadow" type="Sprite2D" parent="Deco1"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -2)
+scale = Vector2(0.3, 0.14)
+texture = ExtResource("t_shadow")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco1"]
+shape = SubResource("Trunk")
+
+[node name="Deco2" type="StaticBody2D" parent="."]
+position = Vector2(80, 580)
+[node name="Sprite" type="Sprite2D" parent="Deco2"]
+texture = ExtResource("t_palm")
+offset = Vector2(0, -60)
+[node name="Shadow" type="Sprite2D" parent="Deco2"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -2)
+scale = Vector2(0.3, 0.14)
+texture = ExtResource("t_shadow")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco2"]
+shape = SubResource("Trunk")
+
+[node name="Deco3" type="StaticBody2D" parent="."]
+position = Vector2(2224, 580)
+[node name="Sprite" type="Sprite2D" parent="Deco3"]
+texture = ExtResource("t_palm")
+offset = Vector2(0, -60)
+[node name="Shadow" type="Sprite2D" parent="Deco3"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -2)
+scale = Vector2(0.3, 0.14)
+texture = ExtResource("t_shadow")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco3"]
+shape = SubResource("Trunk")
+
+[node name="Deco4" type="StaticBody2D" parent="."]
+position = Vector2(525, 890)
+[node name="Sprite" type="Sprite2D" parent="Deco4"]
+texture = ExtResource("t_tree1")
+offset = Vector2(0, -56)
+[node name="Shadow" type="Sprite2D" parent="Deco4"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -2)
+scale = Vector2(0.3, 0.14)
+texture = ExtResource("t_shadow")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco4"]
+shape = SubResource("Trunk")
+
+[node name="Deco5" type="StaticBody2D" parent="."]
+position = Vector2(1779, 890)
+[node name="Sprite" type="Sprite2D" parent="Deco5"]
+texture = ExtResource("t_tree2")
+offset = Vector2(0, -56)
+[node name="Shadow" type="Sprite2D" parent="Deco5"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -2)
+scale = Vector2(0.3, 0.14)
+texture = ExtResource("t_shadow")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco5"]
+shape = SubResource("Trunk")
+
+[node name="Deco6" type="StaticBody2D" parent="."]
+position = Vector2(80, 870)
+[node name="Sprite" type="Sprite2D" parent="Deco6"]
+texture = ExtResource("t_palm")
+offset = Vector2(0, -60)
+[node name="Shadow" type="Sprite2D" parent="Deco6"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -2)
+scale = Vector2(0.3, 0.14)
+texture = ExtResource("t_shadow")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco6"]
+shape = SubResource("Trunk")
+
+[node name="Deco7" type="StaticBody2D" parent="."]
+position = Vector2(2224, 870)
+[node name="Sprite" type="Sprite2D" parent="Deco7"]
+texture = ExtResource("t_palm")
+offset = Vector2(0, -60)
+[node name="Shadow" type="Sprite2D" parent="Deco7"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -2)
+scale = Vector2(0.3, 0.14)
+texture = ExtResource("t_shadow")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco7"]
+shape = SubResource("Trunk")
+
+[node name="Deco8" type="StaticBody2D" parent="."]
+position = Vector2(525, 1180)
+[node name="Sprite" type="Sprite2D" parent="Deco8"]
+texture = ExtResource("t_tree0")
+offset = Vector2(0, -56)
+[node name="Shadow" type="Sprite2D" parent="Deco8"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -2)
+scale = Vector2(0.3, 0.14)
+texture = ExtResource("t_shadow")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco8"]
+shape = SubResource("Trunk")
+
+[node name="Deco9" type="StaticBody2D" parent="."]
+position = Vector2(1779, 1180)
+[node name="Sprite" type="Sprite2D" parent="Deco9"]
+texture = ExtResource("t_tree1")
+offset = Vector2(0, -56)
+[node name="Shadow" type="Sprite2D" parent="Deco9"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -2)
+scale = Vector2(0.3, 0.14)
+texture = ExtResource("t_shadow")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco9"]
+shape = SubResource("Trunk")
+
+[node name="Deco10" type="StaticBody2D" parent="."]
+position = Vector2(80, 1160)
+[node name="Sprite" type="Sprite2D" parent="Deco10"]
+texture = ExtResource("t_palm")
+offset = Vector2(0, -60)
+[node name="Shadow" type="Sprite2D" parent="Deco10"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -2)
+scale = Vector2(0.3, 0.14)
+texture = ExtResource("t_shadow")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco10"]
+shape = SubResource("Trunk")
+
+[node name="Deco11" type="StaticBody2D" parent="."]
+position = Vector2(2224, 1160)
+[node name="Sprite" type="Sprite2D" parent="Deco11"]
+texture = ExtResource("t_palm")
+offset = Vector2(0, -60)
+[node name="Shadow" type="Sprite2D" parent="Deco11"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -2)
+scale = Vector2(0.3, 0.14)
+texture = ExtResource("t_shadow")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco11"]
+shape = SubResource("Trunk")
+
+[node name="Deco12" type="StaticBody2D" parent="."]
+position = Vector2(330, 735)
+[node name="Sprite" type="Sprite2D" parent="Deco12"]
+texture = ExtResource("t_tree1")
+offset = Vector2(0, -56)
+[node name="Shadow" type="Sprite2D" parent="Deco12"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -2)
+scale = Vector2(0.3, 0.14)
+texture = ExtResource("t_shadow")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco12"]
+shape = SubResource("Trunk")
+
+[node name="Deco13" type="StaticBody2D" parent="."]
+position = Vector2(1974, 735)
+[node name="Sprite" type="Sprite2D" parent="Deco13"]
+texture = ExtResource("t_tree2")
+offset = Vector2(0, -56)
+[node name="Shadow" type="Sprite2D" parent="Deco13"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -2)
+scale = Vector2(0.3, 0.14)
+texture = ExtResource("t_shadow")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco13"]
+shape = SubResource("Trunk")
+
+[node name="Deco14" type="StaticBody2D" parent="."]
+position = Vector2(330, 1025)
+[node name="Sprite" type="Sprite2D" parent="Deco14"]
+texture = ExtResource("t_tree1")
+offset = Vector2(0, -56)
+[node name="Shadow" type="Sprite2D" parent="Deco14"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -2)
+scale = Vector2(0.3, 0.14)
+texture = ExtResource("t_shadow")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco14"]
+shape = SubResource("Trunk")
+
+[node name="Deco15" type="StaticBody2D" parent="."]
+position = Vector2(1974, 1025)
+[node name="Sprite" type="Sprite2D" parent="Deco15"]
+texture = ExtResource("t_tree2")
+offset = Vector2(0, -56)
+[node name="Shadow" type="Sprite2D" parent="Deco15"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -2)
+scale = Vector2(0.3, 0.14)
+texture = ExtResource("t_shadow")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco15"]
+shape = SubResource("Trunk")
+
+[node name="Deco16" type="StaticBody2D" parent="."]
+position = Vector2(922, 410)
+[node name="Sprite" type="Sprite2D" parent="Deco16"]
+texture = ExtResource("t_palm")
+offset = Vector2(0, -60)
+[node name="Shadow" type="Sprite2D" parent="Deco16"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -2)
+scale = Vector2(0.3, 0.14)
+texture = ExtResource("t_shadow")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco16"]
+shape = SubResource("Trunk")
+
+[node name="Deco17" type="StaticBody2D" parent="."]
+position = Vector2(1402, 410)
+[node name="Sprite" type="Sprite2D" parent="Deco17"]
+texture = ExtResource("t_palm")
+offset = Vector2(0, -60)
+[node name="Shadow" type="Sprite2D" parent="Deco17"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -2)
+scale = Vector2(0.3, 0.14)
+texture = ExtResource("t_shadow")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco17"]
+shape = SubResource("Trunk")
+
+[node name="Deco18" type="StaticBody2D" parent="."]
+position = Vector2(1077, 630)
+[node name="Sprite" type="Sprite2D" parent="Deco18"]
+texture = ExtResource("t_lamp")
+offset = Vector2(0, -40)
+[node name="Shadow" type="Sprite2D" parent="Deco18"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -2)
+scale = Vector2(0.3, 0.14)
+texture = ExtResource("t_shadow")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco18"]
+shape = SubResource("Pole")
+
+[node name="Deco19" type="StaticBody2D" parent="."]
+position = Vector2(1227, 630)
+[node name="Sprite" type="Sprite2D" parent="Deco19"]
+texture = ExtResource("t_lamp")
+offset = Vector2(0, -40)
+[node name="Shadow" type="Sprite2D" parent="Deco19"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -2)
+scale = Vector2(0.3, 0.14)
+texture = ExtResource("t_shadow")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco19"]
+shape = SubResource("Pole")
+
+[node name="Deco20" type="StaticBody2D" parent="."]
+position = Vector2(1077, 920)
+[node name="Sprite" type="Sprite2D" parent="Deco20"]
+texture = ExtResource("t_lamp")
+offset = Vector2(0, -40)
+[node name="Shadow" type="Sprite2D" parent="Deco20"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -2)
+scale = Vector2(0.3, 0.14)
+texture = ExtResource("t_shadow")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco20"]
+shape = SubResource("Pole")
+
+[node name="Deco21" type="StaticBody2D" parent="."]
+position = Vector2(1227, 920)
+[node name="Sprite" type="Sprite2D" parent="Deco21"]
+texture = ExtResource("t_lamp")
+offset = Vector2(0, -40)
+[node name="Shadow" type="Sprite2D" parent="Deco21"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -2)
+scale = Vector2(0.3, 0.14)
+texture = ExtResource("t_shadow")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco21"]
+shape = SubResource("Pole")
+
+[node name="Deco22" type="StaticBody2D" parent="."]
+position = Vector2(1077, 1210)
+[node name="Sprite" type="Sprite2D" parent="Deco22"]
+texture = ExtResource("t_lamp")
+offset = Vector2(0, -40)
+[node name="Shadow" type="Sprite2D" parent="Deco22"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -2)
+scale = Vector2(0.3, 0.14)
+texture = ExtResource("t_shadow")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco22"]
+shape = SubResource("Pole")
+
+[node name="Deco23" type="StaticBody2D" parent="."]
+position = Vector2(1227, 1210)
+[node name="Sprite" type="Sprite2D" parent="Deco23"]
+texture = ExtResource("t_lamp")
+offset = Vector2(0, -40)
+[node name="Shadow" type="Sprite2D" parent="Deco23"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -2)
+scale = Vector2(0.3, 0.14)
+texture = ExtResource("t_shadow")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco23"]
+shape = SubResource("Pole")
+
+[node name="Deco24" type="StaticBody2D" parent="."]
+position = Vector2(942, 510)
+[node name="Sprite" type="Sprite2D" parent="Deco24"]
+texture = ExtResource("t_flag")
+offset = Vector2(28, -96)
+[node name="Shadow" type="Sprite2D" parent="Deco24"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -2)
+scale = Vector2(0.3, 0.14)
+texture = ExtResource("t_shadow")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Deco24"]
+shape = SubResource("Pole")
+
+[node name="Director" type="Area2D" parent="."]
+position = Vector2(990, 1330)
+script = ExtResource("c_npc")
+npc_name = "Director César"
+lines = Array[String](["¡Bienvenido a la UTHH! Soy César, el director.", "Aquí vas a estudiar la carrera de Tecnologías de la Información, cuatrimestre por cuatrimestre.", "En cada cuatrimestre hay profes que te van a retar con preguntas de su materia. Aprueba con 7 o más para avanzar.", "Si no sabes a qué edificio ir, revisa el mapa que está aquí junto a la entrada.", "Y no olvides la Florería Bautista: lo que aprendas aquí también sirve allá. ¡Mucho éxito!"])
+portrait = ExtResource("p_cesar")
+voice = "voice_teacher_c"
+[node name="Sprite" type="Sprite2D" parent="Director"]
+scale = Vector2(0.53, 0.53)
+texture = ExtResource("t_cesar")
+offset = Vector2(0, -126)
+[node name="Shadow" type="Sprite2D" parent="Director"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -2)
+scale = Vector2(0.26, 0.12)
+texture = ExtResource("t_shadow")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Director"]
+position = Vector2(0, -20)
+shape = SubResource("DirectorTalk")
+[node name="Body" type="StaticBody2D" parent="Director"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Director/Body"]
+shape = SubResource("DirectorBody")
+[node name="Label" type="Label" parent="Director"]
+z_index = 20
+offset_left = -120.0
+offset_top = -172.0
+offset_right = 120.0
+offset_bottom = -126.0
+theme_override_colors/font_color = Color(1, 0.82, 0.31, 1)
+theme_override_colors/font_outline_color = Color(0.1, 0.06, 0.15, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 17
+text = "Director César"
+horizontal_alignment = 1
+
+[node name="Player" parent="." instance=ExtResource("s_player")]
+position = Vector2(1152, 1360)
+
+[node name="DoorToMain" parent="." instance=ExtResource("s_door")]
+position = Vector2(1152, 1450)
+target_scene = "res://scenes/main/Main.tscn"
+target_spawn = Vector2(604, 405)
+
+[node name="MapKiosk" type="Area2D" parent="."]
+position = Vector2(1332, 1370)
+script = ExtResource("c_kiosk")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MapKiosk"]
+shape = SubResource("KioskShape")
+[node name="Label" type="Label" parent="MapKiosk"]
+z_index = 20
+offset_left = -70.0
+offset_top = -70.0
+offset_right = 70.0
+offset_bottom = -40.0
+theme_override_colors/font_color = Color(1, 0.82, 0.31, 1)
+theme_override_colors/font_outline_color = Color(0.1, 0.06, 0.15, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 16
+text = "Mapa"
+horizontal_alignment = 1
+[node name="Overlay" type="CanvasLayer" parent="MapKiosk"]
+layer = 15
+[node name="Dim" type="ColorRect" parent="MapKiosk/Overlay"]
+color = Color(0, 0, 0, 0.6)
+offset_right = 1280.0
+offset_bottom = 720.0
+[node name="TextureRect" type="TextureRect" parent="MapKiosk/Overlay"]
+texture = ExtResource("t_mapa")
+offset_left = 30.0
+offset_top = 20.0
+offset_right = 1250.0
+offset_bottom = 700.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Music" type="Node" parent="."]
+script = ExtResource("c_music")
+track = "mapa"

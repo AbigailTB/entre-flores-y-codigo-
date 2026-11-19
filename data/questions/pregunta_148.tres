@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Seguridad Informática"
+tipo = "Pregunta"
+enunciado = "¿Cuál de estas contraseñas es la más segura?"
+opciones = Array[String](["uthh2024", "123456", "M1g@to-Come_Fl0res!27", "password"])
+respuesta_correcta = 2
+explicacion = "Una contraseña larga y con mezcla de caracteres resiste mejor los ataques."
+puntos = 10

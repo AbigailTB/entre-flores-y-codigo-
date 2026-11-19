@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Desarrollo de Software"
+tipo = "Acertijo"
+enunciado = "Bajo del repositorio remoto y me fusiono con tu rama en un solo paso. ¿Qué comando soy?"
+opciones = Array[String](["git push", "git pull", "git clone", "git status"])
+respuesta_correcta = 1
+explicacion = "git pull equivale a git fetch seguido de git merge."
+puntos = 15

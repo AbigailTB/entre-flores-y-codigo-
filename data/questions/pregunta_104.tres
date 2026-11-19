@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Móvil"
+tipo = "Acertijo"
+enunciado = "Me llaman Hot Reload y Gadiel me usa a diario en Flutter. ¿Qué hago?"
+opciones = Array[String](["Publico la app en la tienda", "Aplico cambios de código sin reiniciar la app", "Borro la caché del teléfono", "Compilo la app en modo release"])
+respuesta_correcta = 1
+explicacion = "Hot Reload inyecta el código nuevo y conserva el estado de la app."
+puntos = 15

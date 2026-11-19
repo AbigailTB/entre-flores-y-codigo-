@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Análisis y Documentación"
+tipo = "Pregunta"
+enunciado = "¿Cuál de estos es un requisito NO funcional?"
+opciones = Array[String](["El usuario podrá imprimir su boleta", "El sistema registrará alumnos", "El admin dará de alta materias", "El sistema responderá en menos de 2 segundos"])
+respuesta_correcta = 3
+explicacion = "Los no funcionales describen cualidades como rendimiento, no funciones."
+puntos = 10

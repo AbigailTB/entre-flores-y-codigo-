@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Seguridad Informática"
+tipo = "Acertijo"
+enunciado = "Soy una función de un solo sentido: conviertes \"hola\" en una cadena fija y no puedes regresar. Me usan para guardar contraseñas. ¿Quién soy?"
+opciones = Array[String](["Base64", "El cifrado César", "Compresión ZIP", "Un hash"])
+respuesta_correcta = 3
+explicacion = "Un hash es unidireccional; Base64 y ZIP sí se pueden revertir."
+puntos = 15

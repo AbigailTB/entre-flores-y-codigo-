@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación"
+tipo = "Pregunta"
+enunciado = "¿Qué complejidad tiene la búsqueda binaria en un arreglo ordenado?"
+opciones = Array[String](["O(n)", "O(1)", "O(n²)", "O(log n)"])
+respuesta_correcta = 3
+explicacion = "La búsqueda binaria divide el espacio a la mitad en cada paso: O(log n)."
+puntos = 10

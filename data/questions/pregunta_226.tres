@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Móvil"
+tipo = "Pregunta"
+enunciado = "¿Qué imprime este código Dart?"
+codigo = "void main() {\n    var lista = [1, 2, 3];\n    lista.add(4);\n    print(lista.length);\n}"
+opciones = Array[String](["Error: lista es fija", "4", "[1, 2, 3, 4]", "3"])
+respuesta_correcta = 1
+explicacion = "add agrega el 4 al final, así que la lista queda con 4 elementos. length devuelve la cantidad, no el contenido."
+puntos = 10

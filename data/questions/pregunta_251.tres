@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Seguridad Informática"
+tipo = "Pregunta"
+enunciado = "¿Qué ataque permite este código JavaScript?"
+codigo = "const c = new URLSearchParams(location.search)\n    .get(\"comentario\");\ndocument.getElementById(\"caja\")\n    .innerHTML = c;"
+opciones = Array[String](["Robo de contraseña por fuerza bruta", "Denegación de servicio", "XSS (Cross-Site Scripting)", "Inyección SQL"])
+respuesta_correcta = 2
+explicacion = "innerHTML interpreta el texto como HTML, así que un <script> en la URL se ejecuta. Usar textContent lo muestra como texto plano."
+puntos = 10

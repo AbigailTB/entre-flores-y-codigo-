@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Metodología de la Investigación"
+enunciado = "Al citar una fuente dentro del texto en formato APA, ¿qué se incluye normalmente?"
+opciones = Array[String](["Apellido del autor y año de publicación", "El número de página del libro completo", "El nombre de la editorial", "El color de la portada"])
+respuesta_correcta = 0
+explicacion = "Una cita APA dentro del texto incluye el apellido del autor y el año de publicación."
+puntos = 10

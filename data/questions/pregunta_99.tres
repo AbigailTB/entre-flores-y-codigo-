@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Móvil"
+tipo = "Pregunta"
+enunciado = "En React Native, ¿con qué se construye la interfaz?"
+opciones = Array[String](["Solo archivos XML de Android", "Componentes JavaScript/TypeScript con JSX", "HTML puro dentro de un WebView", "Storyboards de iOS"])
+respuesta_correcta = 1
+explicacion = "React Native usa componentes con JSX que se traducen a vistas nativas."
+puntos = 10

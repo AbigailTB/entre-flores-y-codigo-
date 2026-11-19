@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Metodologías Ágiles"
+tipo = "Pregunta"
+enunciado = "¿Quién es responsable de maximizar el valor del producto y ordenar el Product Backlog?"
+opciones = Array[String](["Scrum Master", "Product Owner", "Developers", "El cliente final"])
+respuesta_correcta = 1
+explicacion = "El Product Owner gestiona y ordena el Product Backlog."
+puntos = 10

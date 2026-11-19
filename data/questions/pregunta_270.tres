@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Análisis y Documentación"
+tipo = "Acertijo"
+enunciado = "¿Qué relación UML representa este código?"
+codigo = "class Persona:\n    nombre: str\nclass Alumno(Persona):\n    matricula: str\nclass Docente(Persona):\n    num_empleado: str"
+opciones = Array[String](["Agregación", "Asociación de muchos a muchos", "Composición", "Herencia (generalización)"])
+respuesta_correcta = 3
+explicacion = "Alumno y Docente heredan de Persona: son un tipo de Persona y reciben su nombre. En UML se dibuja con flecha de triángulo vacío."
+puntos = 15

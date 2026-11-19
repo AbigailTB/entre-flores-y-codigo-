@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Matemáticas"
+tipo = "Pregunta"
+enunciado = "¿Cuál es la negación de \"Todos los alumnos aprobaron\"?"
+opciones = Array[String](["Al menos un alumno no aprobó", "Todos los alumnos reprobaron", "Ningún alumno aprobó", "Algunos alumnos aprobaron"])
+respuesta_correcta = 0
+explicacion = "Negar un \"para todo\" da \"existe al menos uno que no\"."
+puntos = 10

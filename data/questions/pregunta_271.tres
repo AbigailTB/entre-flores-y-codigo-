@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Matemáticas"
+tipo = "Pregunta"
+enunciado = "¿Qué imprime este código Python?"
+codigo = "a = 17\nb = 5\nprint(a // b, a % b)"
+opciones = Array[String](["3 0.4", "2 3", "3.4 2", "3 2"])
+respuesta_correcta = 3
+explicacion = "// es división entera: 17 entre 5 cabe 3 veces. % da el residuo: 17 - 15 = 2. No confundas // con / (que daría 3.4)."
+puntos = 10

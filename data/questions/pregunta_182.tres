@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Redes de Computadoras"
+tipo = "Pregunta"
+enunciado = "¿Cuál de estas direcciones IPv4 es privada?"
+opciones = Array[String](["8.8.8.8", "200.1.1.1", "192.168.1.10", "172.32.0.1"])
+respuesta_correcta = 2
+explicacion = "192.168.0.0/16 es privada; el rango 172 privado solo va de 172.16 a 172.31."
+puntos = 10

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Análisis y Documentación"
+enunciado = "¿Para qué sirve documentar un sistema?"
+opciones = Array[String](["Para que otras personas entiendan cómo funciona y puedan darle mantenimiento", "Para que el programa corra más rápido", "Para ocupar menos espacio en disco", "Para evitar usar bases de datos"])
+respuesta_correcta = 0
+explicacion = "La documentación permite que otras personas comprendan y mantengan el sistema en el futuro."
+puntos = 10

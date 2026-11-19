@@ -1,0 +1,569 @@
+[gd_scene load_steps=43 format=3]
+
+[ext_resource type="Script" path="res://scripts/scene_music.gd" id="c_music"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/salones/salon_calculo.png" id="t_bg"]
+[ext_resource type="Texture2D" path="res://assets/sprites/school2/mesa_calc.png" id="t_mesa"]
+[ext_resource type="Texture2D" path="res://assets/sprites/school2/mesa_laptops.png" id="t_mesa_p"]
+[ext_resource type="Texture2D" path="res://assets/sprites/school2/silla_azul.png" id="t_silla"]
+[ext_resource type="Texture2D" path="res://assets/sprites/students/sentados/silla_vacia.png" id="t_silla_v"]
+[ext_resource type="Texture2D" path="res://assets/sprites/school2/escritorio_profe.png" id="t_tdesk"]
+[ext_resource type="Texture2D" path="res://assets/sprites/school2/planta.png" id="t_plant"]
+[ext_resource type="Texture2D" path="res://assets/sprites/school/star.png" id="t_star"]
+[ext_resource type="Texture2D" path="res://assets/fx/shadow.png" id="t_shadow"]
+[ext_resource type="Texture2D" path="res://assets/sprites/teachers/yuls.png" id="t_teacher"]
+[ext_resource type="Texture2D" path="res://assets/portraits/yuls.png" id="p_teacher"]
+[ext_resource type="PackedScene" path="res://scenes/player/Player.tscn" id="s_player"]
+[ext_resource type="PackedScene" path="res://scenes/door/Door.tscn" id="s_door"]
+[ext_resource type="PackedScene" path="res://scenes/ui/QuestionPanel.tscn" id="s_qp"]
+[ext_resource type="Script" path="res://scripts/practica_materia.gd" id="c_practica"]
+[ext_resource type="Script" path="res://scripts/teacher_npc.gd" id="c_teacher"]
+[ext_resource type="Script" path="res://scripts/student_walker.gd" id="c_walker"]
+[ext_resource type="Script" path="res://scripts/bob.gd" id="c_bob"]
+[ext_resource type="Texture2D" path="res://assets/sprites/students/sentados/alumno_00.png" id="t_st0"]
+[ext_resource type="Texture2D" path="res://assets/sprites/students/sentados/alumno_01.png" id="t_st1"]
+[ext_resource type="Texture2D" path="res://assets/sprites/students/sentados/alumno_02.png" id="t_st2"]
+[ext_resource type="Texture2D" path="res://assets/sprites/students/sentados/alumno_03.png" id="t_st3"]
+[ext_resource type="Texture2D" path="res://assets/sprites/students/sentados/alumno_04.png" id="t_st4"]
+[ext_resource type="Texture2D" path="res://assets/sprites/students/sentados/alumno_05.png" id="t_st5"]
+[ext_resource type="Texture2D" path="res://assets/sprites/students/sentados/alumno_06.png" id="t_st6"]
+[ext_resource type="Texture2D" path="res://assets/sprites/students/sentados/alumno_07.png" id="t_st7"]
+[ext_resource type="Texture2D" path="res://assets/sprites/students/sentados/alumno_08.png" id="t_st8"]
+[ext_resource type="Texture2D" path="res://assets/sprites/students/sentados/alumno_09.png" id="t_st9"]
+[ext_resource type="Texture2D" path="res://assets/sprites/students/sentados/alumno_10.png" id="t_st10"]
+[ext_resource type="Texture2D" path="res://assets/sprites/students/sentados/alumno_11.png" id="t_st11"]
+[ext_resource type="SpriteFrames" path="res://data/npc_frames/alumna_b.tres" id="f_alumna_b"]
+[ext_resource type="SpriteFrames" path="res://data/npc_frames/alumno_a.tres" id="f_alumno_a"]
+
+[sub_resource type="RectangleShape2D" id="WN"]
+size = Vector2(1580, 300)
+
+[sub_resource type="RectangleShape2D" id="WS"]
+size = Vector2(690, 50)
+
+[sub_resource type="RectangleShape2D" id="WW"]
+size = Vector2(50, 1080)
+
+[sub_resource type="RectangleShape2D" id="Mesa"]
+size = Vector2(164, 74)
+
+[sub_resource type="RectangleShape2D" id="TDesk"]
+size = Vector2(200, 50)
+
+[sub_resource type="RectangleShape2D" id="Practice"]
+size = Vector2(170, 150)
+
+[sub_resource type="RectangleShape2D" id="TeacherShape"]
+size = Vector2(150, 120)
+
+[sub_resource type="CircleShape2D" id="WalkerTalk"]
+radius = 34.0
+
+[sub_resource type="RectangleShape2D" id="Notifier"]
+size = Vector2(80, 140)
+
+[node name="Aula" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(768, 512)
+texture = ExtResource("t_bg")
+
+[node name="WallNorth" type="StaticBody2D" parent="."]
+position = Vector2(768, 146)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallNorth"]
+shape = SubResource("WN")
+
+[node name="WallSouthLeft" type="StaticBody2D" parent="."]
+position = Vector2(320, 1024)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallSouthLeft"]
+shape = SubResource("WS")
+
+[node name="WallSouthRight" type="StaticBody2D" parent="."]
+position = Vector2(1216, 1024)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallSouthRight"]
+shape = SubResource("WS")
+
+[node name="WallWest" type="StaticBody2D" parent="."]
+position = Vector2(0, 512)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallWest"]
+shape = SubResource("WW")
+
+[node name="WallEast" type="StaticBody2D" parent="."]
+position = Vector2(1536, 512)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallEast"]
+shape = SubResource("WW")
+
+[node name="TeacherDesk" type="Sprite2D" parent="."]
+position = Vector2(250, 400)
+texture = ExtResource("t_tdesk")
+offset = Vector2(0, -58)
+[node name="Shadow" type="Sprite2D" parent="TeacherDesk"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -4)
+scale = Vector2(0.68, 0.22)
+texture = ExtResource("t_shadow")
+[node name="Body" type="StaticBody2D" parent="TeacherDesk"]
+position = Vector2(0, -25)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TeacherDesk/Body"]
+shape = SubResource("TDesk")
+
+[node name="Plant0" type="Sprite2D" parent="."]
+position = Vector2(92, 372)
+texture = ExtResource("t_plant")
+offset = Vector2(0, -50)
+
+[node name="Plant1" type="Sprite2D" parent="."]
+position = Vector2(1460, 990)
+texture = ExtResource("t_plant")
+offset = Vector2(0, -50)
+
+[node name="Mesa_0_0" type="Sprite2D" parent="."]
+position = Vector2(330, 518)
+texture = ExtResource("t_mesa")
+offset = Vector2(0, -60)
+[node name="Shadow" type="Sprite2D" parent="Mesa_0_0"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -6)
+scale = Vector2(0.6, 0.2)
+texture = ExtResource("t_shadow")
+[node name="Body" type="StaticBody2D" parent="Mesa_0_0"]
+position = Vector2(0, -14)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa_0_0/Body"]
+shape = SubResource("Mesa")
+
+[node name="Alumno_0_0L" type="Sprite2D" parent="."]
+position = Vector2(292, 544)
+texture = ExtResource("t_st2")
+offset = Vector2(0, -44)
+
+[node name="Alumno_0_0R" type="Sprite2D" parent="."]
+position = Vector2(368, 544)
+texture = ExtResource("t_st11")
+offset = Vector2(0, -44)
+
+[node name="Mesa_0_1" type="Sprite2D" parent="."]
+position = Vector2(560, 518)
+texture = ExtResource("t_mesa")
+offset = Vector2(0, -60)
+[node name="Shadow" type="Sprite2D" parent="Mesa_0_1"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -6)
+scale = Vector2(0.6, 0.2)
+texture = ExtResource("t_shadow")
+[node name="Body" type="StaticBody2D" parent="Mesa_0_1"]
+position = Vector2(0, -14)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa_0_1/Body"]
+shape = SubResource("Mesa")
+
+[node name="Alumno_0_1L" type="Sprite2D" parent="."]
+position = Vector2(522, 544)
+texture = ExtResource("t_st7")
+offset = Vector2(0, -44)
+
+[node name="Alumno_0_1R" type="Sprite2D" parent="."]
+position = Vector2(598, 544)
+texture = ExtResource("t_st0")
+offset = Vector2(0, -44)
+
+[node name="Mesa_0_2" type="Sprite2D" parent="."]
+position = Vector2(976, 518)
+texture = ExtResource("t_mesa")
+offset = Vector2(0, -60)
+[node name="Shadow" type="Sprite2D" parent="Mesa_0_2"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -6)
+scale = Vector2(0.6, 0.2)
+texture = ExtResource("t_shadow")
+[node name="Body" type="StaticBody2D" parent="Mesa_0_2"]
+position = Vector2(0, -14)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa_0_2/Body"]
+shape = SubResource("Mesa")
+
+[node name="Silla_0_2L" type="Sprite2D" parent="."]
+position = Vector2(938, 544)
+texture = ExtResource("t_silla_v")
+offset = Vector2(0, -44)
+
+[node name="Alumno_0_2R" type="Sprite2D" parent="."]
+position = Vector2(1014, 544)
+texture = ExtResource("t_st3")
+offset = Vector2(0, -44)
+
+[node name="Mesa_0_3" type="Sprite2D" parent="."]
+position = Vector2(1206, 518)
+texture = ExtResource("t_mesa")
+offset = Vector2(0, -60)
+[node name="Shadow" type="Sprite2D" parent="Mesa_0_3"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -6)
+scale = Vector2(0.6, 0.2)
+texture = ExtResource("t_shadow")
+[node name="Body" type="StaticBody2D" parent="Mesa_0_3"]
+position = Vector2(0, -14)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa_0_3/Body"]
+shape = SubResource("Mesa")
+
+[node name="Silla_0_3L" type="Sprite2D" parent="."]
+position = Vector2(1168, 544)
+texture = ExtResource("t_silla_v")
+offset = Vector2(0, -44)
+
+[node name="Alumno_0_3R" type="Sprite2D" parent="."]
+position = Vector2(1244, 544)
+texture = ExtResource("t_st1")
+offset = Vector2(0, -44)
+
+[node name="Mesa_1_0" type="Sprite2D" parent="."]
+position = Vector2(330, 678)
+texture = ExtResource("t_mesa")
+offset = Vector2(0, -60)
+[node name="Shadow" type="Sprite2D" parent="Mesa_1_0"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -6)
+scale = Vector2(0.6, 0.2)
+texture = ExtResource("t_shadow")
+[node name="Body" type="StaticBody2D" parent="Mesa_1_0"]
+position = Vector2(0, -14)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa_1_0/Body"]
+shape = SubResource("Mesa")
+
+[node name="Alumno_1_0L" type="Sprite2D" parent="."]
+position = Vector2(292, 704)
+texture = ExtResource("t_st9")
+offset = Vector2(0, -44)
+
+[node name="Alumno_1_0R" type="Sprite2D" parent="."]
+position = Vector2(368, 704)
+texture = ExtResource("t_st5")
+offset = Vector2(0, -44)
+
+[node name="Mesa_1_1" type="Sprite2D" parent="."]
+position = Vector2(560, 678)
+texture = ExtResource("t_mesa")
+offset = Vector2(0, -60)
+[node name="Shadow" type="Sprite2D" parent="Mesa_1_1"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -6)
+scale = Vector2(0.6, 0.2)
+texture = ExtResource("t_shadow")
+[node name="Body" type="StaticBody2D" parent="Mesa_1_1"]
+position = Vector2(0, -14)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa_1_1/Body"]
+shape = SubResource("Mesa")
+
+[node name="Silla_1_1L" type="Sprite2D" parent="."]
+position = Vector2(522, 704)
+texture = ExtResource("t_silla_v")
+offset = Vector2(0, -44)
+
+[node name="Silla_1_1R" type="Sprite2D" parent="."]
+position = Vector2(598, 704)
+texture = ExtResource("t_silla_v")
+offset = Vector2(0, -44)
+
+[node name="Mesa_1_2" type="Sprite2D" parent="."]
+position = Vector2(976, 678)
+texture = ExtResource("t_mesa")
+offset = Vector2(0, -60)
+[node name="Shadow" type="Sprite2D" parent="Mesa_1_2"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -6)
+scale = Vector2(0.6, 0.2)
+texture = ExtResource("t_shadow")
+[node name="Body" type="StaticBody2D" parent="Mesa_1_2"]
+position = Vector2(0, -14)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa_1_2/Body"]
+shape = SubResource("Mesa")
+
+[node name="Alumno_1_2L" type="Sprite2D" parent="."]
+position = Vector2(938, 704)
+texture = ExtResource("t_st4")
+offset = Vector2(0, -44)
+
+[node name="Alumno_1_2R" type="Sprite2D" parent="."]
+position = Vector2(1014, 704)
+texture = ExtResource("t_st10")
+offset = Vector2(0, -44)
+
+[node name="Mesa_1_3" type="Sprite2D" parent="."]
+position = Vector2(1206, 678)
+texture = ExtResource("t_mesa")
+offset = Vector2(0, -60)
+[node name="Shadow" type="Sprite2D" parent="Mesa_1_3"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -6)
+scale = Vector2(0.6, 0.2)
+texture = ExtResource("t_shadow")
+[node name="Body" type="StaticBody2D" parent="Mesa_1_3"]
+position = Vector2(0, -14)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa_1_3/Body"]
+shape = SubResource("Mesa")
+
+[node name="Alumno_1_3L" type="Sprite2D" parent="."]
+position = Vector2(1168, 704)
+texture = ExtResource("t_st8")
+offset = Vector2(0, -44)
+
+[node name="Alumno_1_3R" type="Sprite2D" parent="."]
+position = Vector2(1244, 704)
+texture = ExtResource("t_st6")
+offset = Vector2(0, -44)
+
+[node name="Mesa_2_0" type="Sprite2D" parent="."]
+position = Vector2(330, 838)
+texture = ExtResource("t_mesa")
+offset = Vector2(0, -60)
+[node name="Shadow" type="Sprite2D" parent="Mesa_2_0"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -6)
+scale = Vector2(0.6, 0.2)
+texture = ExtResource("t_shadow")
+[node name="Body" type="StaticBody2D" parent="Mesa_2_0"]
+position = Vector2(0, -14)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa_2_0/Body"]
+shape = SubResource("Mesa")
+
+[node name="Alumno_2_0L" type="Sprite2D" parent="."]
+position = Vector2(292, 864)
+texture = ExtResource("t_st2")
+offset = Vector2(0, -44)
+
+[node name="Alumno_2_0R" type="Sprite2D" parent="."]
+position = Vector2(368, 864)
+texture = ExtResource("t_st11")
+offset = Vector2(0, -44)
+
+[node name="Mesa_2_1" type="Sprite2D" parent="."]
+position = Vector2(560, 838)
+texture = ExtResource("t_mesa")
+offset = Vector2(0, -60)
+[node name="Shadow" type="Sprite2D" parent="Mesa_2_1"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -6)
+scale = Vector2(0.6, 0.2)
+texture = ExtResource("t_shadow")
+[node name="Body" type="StaticBody2D" parent="Mesa_2_1"]
+position = Vector2(0, -14)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa_2_1/Body"]
+shape = SubResource("Mesa")
+
+[node name="Alumno_2_1L" type="Sprite2D" parent="."]
+position = Vector2(522, 864)
+texture = ExtResource("t_st7")
+offset = Vector2(0, -44)
+
+[node name="Alumno_2_1R" type="Sprite2D" parent="."]
+position = Vector2(598, 864)
+texture = ExtResource("t_st0")
+offset = Vector2(0, -44)
+
+[node name="Mesa_2_2" type="Sprite2D" parent="."]
+position = Vector2(976, 838)
+texture = ExtResource("t_mesa")
+offset = Vector2(0, -60)
+[node name="Shadow" type="Sprite2D" parent="Mesa_2_2"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -6)
+scale = Vector2(0.6, 0.2)
+texture = ExtResource("t_shadow")
+[node name="Body" type="StaticBody2D" parent="Mesa_2_2"]
+position = Vector2(0, -14)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa_2_2/Body"]
+shape = SubResource("Mesa")
+
+[node name="Silla_2_2L" type="Sprite2D" parent="."]
+position = Vector2(938, 864)
+texture = ExtResource("t_silla_v")
+offset = Vector2(0, -44)
+
+[node name="Alumno_2_2R" type="Sprite2D" parent="."]
+position = Vector2(1014, 864)
+texture = ExtResource("t_st3")
+offset = Vector2(0, -44)
+
+[node name="Mesa_2_3" type="Sprite2D" parent="."]
+position = Vector2(1206, 838)
+texture = ExtResource("t_mesa")
+offset = Vector2(0, -60)
+[node name="Shadow" type="Sprite2D" parent="Mesa_2_3"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -6)
+scale = Vector2(0.6, 0.2)
+texture = ExtResource("t_shadow")
+[node name="Body" type="StaticBody2D" parent="Mesa_2_3"]
+position = Vector2(0, -14)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mesa_2_3/Body"]
+shape = SubResource("Mesa")
+
+[node name="Silla_2_3L" type="Sprite2D" parent="."]
+position = Vector2(1168, 864)
+texture = ExtResource("t_silla_v")
+offset = Vector2(0, -44)
+
+[node name="Alumno_2_3R" type="Sprite2D" parent="."]
+position = Vector2(1244, 864)
+texture = ExtResource("t_st1")
+offset = Vector2(0, -44)
+
+[node name="MesaPractica" type="Sprite2D" parent="."]
+position = Vector2(768, 600)
+texture = ExtResource("t_mesa_p")
+offset = Vector2(0, -60)
+[node name="Shadow" type="Sprite2D" parent="MesaPractica"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -6)
+scale = Vector2(0.6, 0.2)
+texture = ExtResource("t_shadow")
+[node name="Silla" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(768, 622)
+texture = ExtResource("t_silla")
+offset = Vector2(0, -26)
+[node name="Practica" type="Area2D" parent="."]
+position = Vector2(768, 640)
+script = ExtResource("c_practica")
+materia = "Cálculo"
+question_panel_path = NodePath("../UI/QuestionPanel")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Practica"]
+shape = SubResource("Practice")
+[node name="Star" type="Sprite2D" parent="Practica"]
+z_index = 20
+position = Vector2(0, -150)
+modulate = Color(1, 0.9, 0.5, 1)
+texture = ExtResource("t_star")
+script = ExtResource("c_bob")
+[node name="Label" type="Label" parent="Practica"]
+z_index = 20
+offset_left = -90.0
+offset_top = -138.0
+offset_right = 90.0
+offset_bottom = -110.0
+theme_override_colors/font_color = Color(1, 0.92, 0.6, 1)
+theme_override_colors/font_outline_color = Color(0.1, 0.06, 0.15, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 16
+text = "Practicar"
+horizontal_alignment = 1
+
+[node name="Teacher" type="Area2D" parent="."]
+position = Vector2(440, 405)
+script = ExtResource("c_teacher")
+teacher_id = "yuls"
+npc_name = "Profa. Yuls"
+materia = "Cálculo"
+lines = Array[String](["Hola, soy la profesora Yuls.", "El cálculo da miedo al principio, pero con práctica sale.", "Vamos a practicar un poco de cálculo."])
+portrait = ExtResource("p_teacher")
+voice = "voice_teacher_d"
+question_panel_path = NodePath("../UI/QuestionPanel")
+[node name="Sprite" type="Sprite2D" parent="Teacher"]
+scale = Vector2(0.380, 0.380)
+texture = ExtResource("t_teacher")
+offset = Vector2(0, -174)
+[node name="Shadow" type="Sprite2D" parent="Teacher"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -2)
+scale = Vector2(0.26, 0.12)
+texture = ExtResource("t_shadow")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Teacher"]
+position = Vector2(0, -20)
+shape = SubResource("TeacherShape")
+[node name="Label" type="Label" parent="Teacher"]
+z_index = 20
+offset_left = -120.0
+offset_top = -172.0
+offset_right = 120.0
+offset_bottom = -126.0
+theme_override_colors/font_color = Color(1, 0.82, 0.31, 1)
+theme_override_colors/font_outline_color = Color(0.1, 0.06, 0.15, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 17
+text = "Profa. Yuls\nCálculo"
+horizontal_alignment = 1
+
+[node name="Walker0" type="Node2D" parent="."]
+script = ExtResource("c_walker")
+npc_name = "Alumna"
+speed = 84.0
+waypoints = PackedVector2Array(150, 470, 150, 960, 560, 960, 976, 960, 1390, 960, 1390, 470)
+edges = PackedInt32Array(0, 1, 1, 2, 2, 3, 3, 4, 4, 5)
+lines = Array[String](["La UTHH se ve bonita con los cerros de fondo, ¿no?", "Ya casi es hora del receso, ¡tengo hambre!", "Me falta una firma para la integradora... ¡ánimo!"])
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Walker0"]
+scale = Vector2(0.35, 0.35)
+sprite_frames = ExtResource("f_alumna_b")
+animation = &"idle_down"
+offset = Vector2(0, -170)
+[node name="Shadow" type="Sprite2D" parent="Walker0"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -3)
+scale = Vector2(0.2, 0.12)
+texture = ExtResource("t_shadow")
+[node name="TalkArea" type="Area2D" parent="Walker0"]
+collision_layer = 0
+position = Vector2(0, -20)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walker0/TalkArea"]
+shape = SubResource("WalkerTalk")
+[node name="OnScreen" type="VisibleOnScreenEnabler2D" parent="Walker0"]
+position = Vector2(0, -60)
+rect = Rect2(-50, -80, 100, 160)
+enable_node_path = NodePath("..")
+
+[node name="Walker1" type="Node2D" parent="."]
+script = ExtResource("c_walker")
+npc_name = "Alumno"
+speed = 83.0
+waypoints = PackedVector2Array(150, 470, 150, 960, 560, 960, 976, 960, 1390, 960, 1390, 470)
+edges = PackedInt32Array(0, 1, 1, 2, 2, 3, 3, 4, 4, 5)
+lines = Array[String](["La UTHH se ve bonita con los cerros de fondo, ¿no?", "Dicen que este profe hace acertijos bien difíciles...", "Si respondes bien, el profe te da puntos extra."])
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Walker1"]
+scale = Vector2(0.35, 0.35)
+sprite_frames = ExtResource("f_alumno_a")
+animation = &"idle_down"
+offset = Vector2(0, -170)
+[node name="Shadow" type="Sprite2D" parent="Walker1"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -3)
+scale = Vector2(0.2, 0.12)
+texture = ExtResource("t_shadow")
+[node name="TalkArea" type="Area2D" parent="Walker1"]
+collision_layer = 0
+position = Vector2(0, -20)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walker1/TalkArea"]
+shape = SubResource("WalkerTalk")
+[node name="OnScreen" type="VisibleOnScreenEnabler2D" parent="Walker1"]
+position = Vector2(0, -60)
+rect = Rect2(-50, -80, 100, 160)
+enable_node_path = NodePath("..")
+
+[node name="Player" parent="." instance=ExtResource("s_player")]
+position = Vector2(768, 896)
+
+[node name="DoorSalida" parent="." instance=ExtResource("s_door")]
+position = Vector2(768, 1010)
+target_scene = "res://scenes/campus/Campus.tscn"
+target_spawn = Vector2(720, 1000)
+
+[node name="UI" type="CanvasLayer" parent="."]
+layer = 10
+[node name="QuestionPanel" parent="UI" instance=ExtResource("s_qp")]
+
+[node name="Music" type="Node" parent="."]
+script = ExtResource("c_music")
+track = "escuela"

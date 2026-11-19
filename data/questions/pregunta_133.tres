@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Análisis y Documentación"
+tipo = "Acertijo"
+enunciado = "Soy una relación UML con rombo relleno: si el todo desaparece, las partes desaparecen con él. ¿Quién soy?"
+opciones = Array[String](["Composición", "Dependencia", "Agregación", "Herencia"])
+respuesta_correcta = 0
+explicacion = "La composición es una relación todo-parte fuerte; el rombo vacío es agregación."
+puntos = 15

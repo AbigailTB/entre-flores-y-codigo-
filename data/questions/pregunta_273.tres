@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Matemáticas"
+tipo = "Pregunta"
+enunciado = "¿Qué imprime este código Python?"
+codigo = "print(bin(13))\nprint(int(\"1010\", 2))\nprint(hex(255))"
+opciones = Array[String](["0b1101 / 1010 / 0xff", "0b1101 / 10 / 0xff", "0b1101 / 10 / 0xfe", "0b1011 / 10 / 0xff"])
+respuesta_correcta = 1
+explicacion = "13 = 8+4+1 = 1101 en binario; 1010 en base 2 vale 8+2 = 10; 255 en hexadecimal es ff (15*16 + 15)."
+puntos = 10

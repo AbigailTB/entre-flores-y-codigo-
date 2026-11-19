@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Cálculo"
+enunciado = "¿Cuál es la derivada de x²?"
+opciones = Array[String](["2x", "x", "2", "x²"])
+respuesta_correcta = 0
+explicacion = "Aplicando la regla de la potencia, la derivada de x² es 2x."
+puntos = 10

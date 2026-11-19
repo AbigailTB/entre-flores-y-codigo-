@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación"
+tipo = "Acertijo"
+enunciado = "Soy un molde: de mí nacen objetos, pero yo no soy uno de ellos. ¿Qué soy?"
+opciones = Array[String](["Una clase", "Un bucle", "Un parámetro", "Una variable"])
+respuesta_correcta = 0
+explicacion = "La clase es la plantilla a partir de la cual se crean objetos (instancias)."
+puntos = 15

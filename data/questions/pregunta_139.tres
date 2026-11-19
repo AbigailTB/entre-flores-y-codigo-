@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Metodologías Ágiles"
+tipo = "Pregunta"
+enunciado = "En Kanban, ¿para qué sirve el límite WIP?"
+opciones = Array[String](["Contar los bugs del sistema", "Fijar el salario del equipo", "Limitar el trabajo en curso por columna", "Definir la duración del Sprint"])
+respuesta_correcta = 2
+explicacion = "El WIP limita las tareas simultáneas para evitar cuellos de botella."
+puntos = 10

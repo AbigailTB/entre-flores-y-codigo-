@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Administración de Proyectos"
+tipo = "Pregunta"
+enunciado = "¿Qué es la EDT (WBS) de un proyecto?"
+opciones = Array[String](["Una lista de precios", "El contrato con el cliente", "Un diagrama de red de computadoras", "La descomposición jerárquica del trabajo"])
+respuesta_correcta = 3
+explicacion = "La EDT divide el alcance en entregables y paquetes de trabajo."
+puntos = 10

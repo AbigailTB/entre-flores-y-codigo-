@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Redes de Computadoras"
+tipo = "Acertijo"
+enunciado = "Soy la capa 3 del modelo OSI: trabajo con direcciones IP y routers. ¿Quién soy?"
+opciones = Array[String](["Capa de transporte", "Capa de red", "Capa de enlace de datos", "Capa física"])
+respuesta_correcta = 1
+explicacion = "La capa de red se encarga del direccionamiento lógico y el enrutamiento."
+puntos = 15

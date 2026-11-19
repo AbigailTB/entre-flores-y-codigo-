@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Cálculo"
+tipo = "Acertijo"
+enunciado = "Se busca el límite de sin(x)/x cuando x tiende a 0, pero el programa falla. ¿Qué línea lo causa?"
+codigo = "import math\ndef g(x):\n    return math.sin(x) / x\nprint(g(0))"
+opciones = Array[String](["Línea 1", "Línea 4", "Línea 2", "Línea 3"])
+respuesta_correcta = 1
+explicacion = "Evaluar justo en 0 provoca ZeroDivisionError. Un límite se aproxima con valores cercanos, como g(0.001), que da casi 1."
+puntos = 15

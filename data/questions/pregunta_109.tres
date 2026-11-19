@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Cálculo"
+tipo = "Pregunta"
+enunciado = "Calcula el límite cuando x → 2 de (x² − 4)/(x − 2)."
+opciones = Array[String](["0", "4", "No existe", "2"])
+respuesta_correcta = 1
+explicacion = "Se factoriza: (x−2)(x+2)/(x−2) = x+2, que en x = 2 vale 4."
+puntos = 10

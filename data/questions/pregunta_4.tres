@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+enunciado = "¿Qué es un 'bug' en programación?"
+opciones = Array[String](["Un error en el código", "Un tipo de variable", "Un lenguaje de programación", "Una base de datos"])
+respuesta_correcta = 0
+explicacion = "Un bug es un error o falla que hace que el programa no funcione como se espera."
+puntos = 10

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Redes de Computadoras"
+tipo = "Acertijo"
+enunciado = "En este tracert, ¿qué significa la línea con asteriscos?"
+codigo = "> tracert uthh.edu.mx\n    1     1 ms   192.168.0.1\n    2     9 ms   10.20.0.1\n    3    15 ms   189.203.5.9\n    4     *      Tiempo agotado\n    5    31 ms   148.204.1.10"
+opciones = Array[String](["Ahí está el servidor destino", "Se cayó la conexión a Internet", "Ese router no respondió, pero el tráfico siguió", "La dirección se escribió mal"])
+respuesta_correcta = 2
+explicacion = "Muchos routers no contestan a tracert por seguridad y salen con *. Como el salto 5 sí responde, el camino sigue funcionando."
+puntos = 15

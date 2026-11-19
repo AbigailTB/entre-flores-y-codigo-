@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Análisis y Documentación"
+tipo = "Acertijo"
+enunciado = "¿Qué línea NO es un criterio de aceptación verificable?"
+codigo = "Historia: Como usuario quiero iniciar sesión\nCriterio: Con datos correctos entra al menú\nCriterio: Con clave mala ve un aviso de error\nCriterio: El sistema debe verse bonito"
+opciones = Array[String](["Línea 1", "Línea 4", "Línea 2", "Línea 3"])
+respuesta_correcta = 1
+explicacion = "\"Verse bonito\" es subjetivo y no se puede probar con PASS o FAIL. Un criterio debe ser medible, por ejemplo: carga en menos de 2 s."
+puntos = 15

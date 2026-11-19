@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Metodologías Ágiles"
+tipo = "Pregunta"
+enunciado = "El Manifiesto Ágil valora más a los individuos e interacciones sobre..."
+opciones = Array[String](["Procesos y herramientas", "Colaboración con el cliente", "Respuesta ante el cambio", "Software funcionando"])
+respuesta_correcta = 0
+explicacion = "Primer valor: individuos e interacciones sobre procesos y herramientas."
+puntos = 10

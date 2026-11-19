@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Administración de Proyectos"
+enunciado = "¿Qué es un cronograma en un proyecto?"
+opciones = Array[String](["Una planificación de tiempos y actividades", "Un tipo de base de datos", "Un lenguaje de programación", "Un dispositivo de red"])
+respuesta_correcta = 0
+explicacion = "El cronograma organiza cuándo se realizará cada actividad del proyecto."
+puntos = 10

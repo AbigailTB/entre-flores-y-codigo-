@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Metodologías Ágiles"
+tipo = "Acertijo"
+enunciado = "El equipo de la profa. Gladis tiene una velocidad de 20 puntos por Sprint y el backlog suma 100. ¿Cuántos Sprints necesita?"
+opciones = Array[String](["4", "10", "20", "5"])
+respuesta_correcta = 3
+explicacion = "100 ÷ 20 = 5 Sprints, si la velocidad se mantiene."
+puntos = 15

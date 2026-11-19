@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación"
+tipo = "Pregunta"
+enunciado = "En POO, ¿qué principio oculta los detalles internos de una clase y expone solo lo necesario?"
+opciones = Array[String](["Compilación", "Encapsulamiento", "Herencia", "Polimorfismo"])
+respuesta_correcta = 1
+explicacion = "El encapsulamiento protege el estado interno y expone una interfaz controlada."
+puntos = 10

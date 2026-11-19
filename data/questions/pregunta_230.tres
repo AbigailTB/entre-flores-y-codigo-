@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Móvil"
+tipo = "Acertijo"
+enunciado = "En un StatefulWidget de Flutter, ¿para qué sirve setState aquí?"
+codigo = "int contador = 0;\nvoid sumar() {\n    setState(() {\n        contador++;\n    });\n}"
+opciones = Array[String](["Guarda el valor en una base de datos", "Avisa a Flutter que redibuje la pantalla", "Reinicia el contador a cero", "Convierte el widget en StatelessWidget"])
+respuesta_correcta = 1
+explicacion = "setState cambia el valor y le avisa a Flutter que el estado cambió para que vuelva a llamar build. Sin él, la pantalla no se actualiza."
+puntos = 15

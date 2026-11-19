@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación"
+tipo = "Pregunta"
+enunciado = "¿Qué estructura de control repite un bloque mientras una condición sea verdadera?"
+opciones = Array[String](["return", "while", "if", "switch"])
+respuesta_correcta = 1
+explicacion = "El ciclo while repite su bloque mientras la condición se cumpla."
+puntos = 10

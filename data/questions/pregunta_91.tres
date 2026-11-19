@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Metodología de la Investigación"
+tipo = "Pregunta"
+enunciado = "¿Qué sangría lleva cada entrada de la lista de referencias en APA 7?"
+opciones = Array[String](["Sangría solo en la primera línea", "Sangría francesa de 1.27 cm", "Sin sangría", "Texto centrado"])
+respuesta_correcta = 1
+explicacion = "Cada referencia usa sangría francesa: la segunda línea en adelante se recorre 1.27 cm."
+puntos = 10

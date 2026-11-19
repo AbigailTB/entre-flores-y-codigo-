@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Bases de Datos"
+tipo = "Acertijo"
+enunciado = "Con esos datos en telefono, ¿qué devuelve la consulta?"
+codigo = "-- telefono: '7711234567', NULL, NULL\nSELECT COUNT(*), COUNT(telefono)\nFROM contactos;"
+opciones = Array[String](["3 y 1", "3 y 3", "1 y 1", "3 y 2"])
+respuesta_correcta = 0
+explicacion = "COUNT(*) cuenta todas las filas (3), pero COUNT(columna) ignora los NULL, así que solo cuenta el teléfono que sí existe (1)."
+puntos = 15

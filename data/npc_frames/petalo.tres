@@ -1,0 +1,151 @@
+[gd_resource type="SpriteFrames" load_steps=23 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/sprites/petalo/walk_down_1.png" id="r1"]
+[ext_resource type="Texture2D" path="res://assets/sprites/petalo/walk_down_2.png" id="r2"]
+[ext_resource type="Texture2D" path="res://assets/sprites/petalo/walk_down_3.png" id="r3"]
+[ext_resource type="Texture2D" path="res://assets/sprites/petalo/walk_down_4.png" id="r4"]
+[ext_resource type="Texture2D" path="res://assets/sprites/petalo/walk_down_5.png" id="r5"]
+[ext_resource type="Texture2D" path="res://assets/sprites/petalo/walk_down_6.png" id="r6"]
+[ext_resource type="Texture2D" path="res://assets/sprites/petalo/walk_down_7.png" id="r7"]
+[ext_resource type="Texture2D" path="res://assets/sprites/petalo/walk_down_8.png" id="r8"]
+[ext_resource type="Texture2D" path="res://assets/sprites/petalo/walk_down_9.png" id="r9"]
+[ext_resource type="Texture2D" path="res://assets/sprites/petalo/walk_side_1.png" id="r10"]
+[ext_resource type="Texture2D" path="res://assets/sprites/petalo/walk_side_2.png" id="r11"]
+[ext_resource type="Texture2D" path="res://assets/sprites/petalo/walk_side_3.png" id="r12"]
+[ext_resource type="Texture2D" path="res://assets/sprites/petalo/walk_side_4.png" id="r13"]
+[ext_resource type="Texture2D" path="res://assets/sprites/petalo/walk_side_5.png" id="r14"]
+[ext_resource type="Texture2D" path="res://assets/sprites/petalo/walk_side_6.png" id="r15"]
+[ext_resource type="Texture2D" path="res://assets/sprites/petalo/walk_side_7.png" id="r16"]
+[ext_resource type="Texture2D" path="res://assets/sprites/petalo/walk_side_8.png" id="r17"]
+[ext_resource type="Texture2D" path="res://assets/sprites/petalo/walk_side_9.png" id="r18"]
+[ext_resource type="Texture2D" path="res://assets/sprites/petalo/walk_up_1.png" id="r19"]
+[ext_resource type="Texture2D" path="res://assets/sprites/petalo/walk_up_2.png" id="r20"]
+[ext_resource type="Texture2D" path="res://assets/sprites/petalo/walk_up_3.png" id="r21"]
+[ext_resource type="Texture2D" path="res://assets/sprites/petalo/walk_up_4.png" id="r22"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("r1")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("r2")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("r3")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("r4")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("r5")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("r6")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("r7")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("r8")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("r9")
+}],
+"loop": true,
+"name": &"walk_down",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("r10")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("r11")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("r12")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("r13")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("r14")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("r15")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("r16")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("r17")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("r18")
+}],
+"loop": true,
+"name": &"walk_side",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("r19")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("r20")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("r21")
+},
+{
+"duration": 1.0,
+"texture": ExtResource("r22")
+}],
+"loop": true,
+"name": &"walk_up",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("r1")
+}],
+"loop": true,
+"name": &"idle_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("r10")
+}],
+"loop": true,
+"name": &"idle_side",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("r19")
+}],
+"loop": true,
+"name": &"idle_up",
+"speed": 5.0
+}]

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Redes de Computadoras"
+tipo = "Acertijo"
+enunciado = "El profe José te da una red /24. ¿Cuántos hosts utilizables tiene?"
+opciones = Array[String](["254", "24", "255", "256"])
+respuesta_correcta = 0
+explicacion = "2⁸ = 256 direcciones, menos red y broadcast: 254 hosts."
+puntos = 15

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Desarrollo de Software"
+tipo = "Acertijo"
+enunciado = "¿Cuál es la mejor refactorización de este código? (es_admin es booleano)"
+codigo = "if es_admin == True:\n    return True\nelse:\n    return False"
+opciones = Array[String](["return not es_admin", "return es_admin", "return True", "if es_admin: pass"])
+respuesta_correcta = 1
+explicacion = "Si es_admin ya es True o False, el if solo devuelve el mismo valor. return es_admin hace lo mismo en una línea y se lee mejor."
+puntos = 15

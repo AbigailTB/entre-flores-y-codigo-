@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Análisis y Documentación"
+tipo = "Pregunta"
+enunciado = "¿Cómo se llama el documento que especifica los requisitos del software (estándar IEEE 830)?"
+opciones = Array[String](["Manual de usuario", "ERS / SRS", "Acta de cierre", "Diagrama de Gantt"])
+respuesta_correcta = 1
+explicacion = "La Especificación de Requisitos de Software (ERS o SRS) sigue el IEEE 830."
+puntos = 10

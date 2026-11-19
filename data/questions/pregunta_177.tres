@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Redes de Computadoras"
+tipo = "Pregunta"
+enunciado = "¿Cuántas capas tiene el modelo OSI?"
+opciones = Array[String](["8", "7", "4", "5"])
+respuesta_correcta = 1
+explicacion = "OSI tiene 7 capas: física, enlace, red, transporte, sesión, presentación y aplicación."
+puntos = 10

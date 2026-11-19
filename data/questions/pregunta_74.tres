@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Metodologías Ágiles"
+enunciado = "¿Qué caracteriza a una metodología ágil?"
+opciones = Array[String](["Trabajar en ciclos cortos con entregas frecuentes", "Planear todo el proyecto sin posibilidad de cambios", "Evitar la comunicación entre el equipo", "Entregar el proyecto solo al final, una vez"])
+respuesta_correcta = 0
+explicacion = "Las metodologías ágiles dividen el trabajo en ciclos cortos con entregas frecuentes y adaptables."
+puntos = 10

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Móvil"
+tipo = "Pregunta"
+enunciado = "Este código Kotlin no compila. ¿En qué línea está el error?"
+codigo = "val puntos = 10\npuntos = puntos + 5\nprintln(puntos)"
+opciones = Array[String](["Línea 3", "Línea 1", "Línea 2", "No hay error"])
+respuesta_correcta = 2
+explicacion = "val declara una variable de solo lectura y no se puede reasignar. Para poder cambiarla hay que declararla con var."
+puntos = 10

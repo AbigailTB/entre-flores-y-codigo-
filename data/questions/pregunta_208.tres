@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación"
+tipo = "Pregunta"
+enunciado = "¿Qué imprime este código?"
+codigo = "for i in range(1, 4):\n    print(i, end=\" \")"
+opciones = Array[String](["0 1 2", "1 2 3", "0 1 2 3", "1 2 3 4"])
+respuesta_correcta = 1
+explicacion = "range(1, 4) empieza en 1 y se detiene ANTES del 4: genera 1, 2 y 3. El error común es pensar que el 4 se incluye."
+puntos = 10

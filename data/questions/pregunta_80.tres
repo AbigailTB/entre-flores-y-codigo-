@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación"
+tipo = "Pregunta"
+enunciado = "En lenguajes como Java, C o Python, ¿cuál es el índice del primer elemento de un arreglo?"
+opciones = Array[String](["1", "Depende del tamaño", "-1", "0"])
+respuesta_correcta = 3
+explicacion = "En esos lenguajes los arreglos inician en el índice 0."
+puntos = 10

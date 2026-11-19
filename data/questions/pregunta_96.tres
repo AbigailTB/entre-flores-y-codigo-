@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Metodología de la Investigación"
+tipo = "Acertijo"
+enunciado = "El profe Hermes encontró una página web sin fecha. ¿Cómo queda la cita en el texto en APA 7 (español)?"
+opciones = Array[String](["(Autor, ?)", "(Autor, 0000)", "(Autor, s.f.)", "(Autor, actual)"])
+respuesta_correcta = 2
+explicacion = "Cuando no hay fecha se escribe s.f. (sin fecha)."
+puntos = 15

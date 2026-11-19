@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Desarrollo de Software"
+tipo = "Pregunta"
+enunciado = "¿Qué resultado da esta prueba con unittest?"
+codigo = "import unittest\nclass TestTexto(unittest.TestCase):\n    def test_mayus(self):\n        r = \"uthh\".upper()\n        self.assertEqual(r, \"UTHH\")"
+opciones = Array[String](["La prueba pasa (OK)", "No hay pruebas que correr", "La prueba falla", "Marca error: falta un return"])
+respuesta_correcta = 0
+explicacion = "\"uthh\".upper() da \"UTHH\" y assertEqual compara que ambos valores sean iguales; como coinciden, la prueba pasa."
+puntos = 10

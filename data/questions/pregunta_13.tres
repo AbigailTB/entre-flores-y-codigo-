@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+enunciado = "¿Cuál de estas opciones es una unidad de almacenamiento de datos?"
+opciones = Array[String](["Disco duro (HDD)", "Teclado", "Mouse", "Monitor"])
+respuesta_correcta = 0
+explicacion = "El disco duro (HDD) almacena datos de forma permanente en la computadora."
+puntos = 10

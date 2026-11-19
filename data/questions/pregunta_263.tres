@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Análisis y Documentación"
+tipo = "Pregunta"
+enunciado = "Si la calificación leída es 8, ¿qué escribe este pseudocódigo?"
+codigo = "Inicio\n    Leer calificacion\n    Si calificacion >= 8 Entonces\n        Escribir \"Aprobado\"\n    SiNo\n        Escribir \"Reprobado\"\n    FinSi\nFin"
+opciones = Array[String](["Nada", "Aprobado", "Aprobado y Reprobado", "Reprobado"])
+respuesta_correcta = 1
+explicacion = "La condición es >= 8 (mayor O IGUAL), así que un 8 sí la cumple. Si fuera > 8, el 8 escribiría Reprobado."
+puntos = 10

@@ -1,0 +1,266 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/proyecto_final_panel.gd" id="1"]
+[ext_resource type="Texture2D" path="res://assets/items/rosa_roja.png" id="2"]
+[ext_resource type="Texture2D" path="res://assets/items/margarita.png" id="3"]
+[ext_resource type="Texture2D" path="res://assets/items/girasol.png" id="4"]
+
+[sub_resource type="StyleBoxFlat" id="CardStyle"]
+bg_color = Color(0.05, 0.07, 0.11, 0.97)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_left = 24
+corner_radius_bottom_right = 24
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.24, 1, 0.54, 0.9)
+
+[node name="ProyectoFinalPanel" type="ColorRect"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0, 0, 0, 0.6)
+script = ExtResource("1")
+
+[node name="Card" type="Panel" parent="."]
+layout_mode = 1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -260.0
+offset_right = 350.0
+offset_bottom = 260.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("CardStyle")
+
+[node name="PageCliente" type="Control" parent="Card"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBox" type="VBoxContainer" parent="Card/PageCliente"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 26.0
+offset_right = -30.0
+offset_bottom = -26.0
+theme_override_constants/separation = 14
+
+[node name="Titulo" type="Label" parent="Card/PageCliente/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.24, 1, 0.54, 1)
+theme_override_font_sizes/font_size = 22
+text = "Proyecto Final: Registrar pedido"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Paso" type="Label" parent="Card/PageCliente/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.13, 0.83, 0.89, 1)
+theme_override_font_sizes/font_size = 18
+text = "Paso 1: Seleccioná el cliente"
+horizontal_alignment = 1
+
+[node name="List" type="VBoxContainer" parent="Card/PageCliente/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="PageTipo" type="Control" parent="Card"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBox" type="VBoxContainer" parent="Card/PageTipo"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 26.0
+offset_right = -30.0
+offset_bottom = -26.0
+theme_override_constants/separation = 14
+
+[node name="Paso" type="Label" parent="Card/PageTipo/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.13, 0.83, 0.89, 1)
+theme_override_font_sizes/font_size = 18
+text = "Paso 2: Seleccioná el tipo de ramo"
+horizontal_alignment = 1
+
+[node name="List" type="VBoxContainer" parent="Card/PageTipo/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="PageFlores" type="Control" parent="Card"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBox" type="VBoxContainer" parent="Card/PageFlores"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 26.0
+offset_right = -30.0
+offset_bottom = -26.0
+theme_override_constants/separation = 12
+
+[node name="Paso" type="Label" parent="Card/PageFlores/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.13, 0.83, 0.89, 1)
+theme_override_font_sizes/font_size = 18
+text = "Pasos 3 y 4: Elegí las flores y la cantidad"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Shelf" type="HBoxContainer" parent="Card/PageFlores/VBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+
+[node name="JarRosa" type="Button" parent="Card/PageFlores/VBox/Shelf"]
+custom_minimum_size = Vector2(150, 110)
+layout_mode = 2
+text = ""
+
+[node name="Icon" type="TextureRect" parent="Card/PageFlores/VBox/Shelf/JarRosa"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("2")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Nombre" type="Label" parent="Card/PageFlores/VBox/Shelf/JarRosa"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 14
+text = "Rosa roja"
+horizontal_alignment = 1
+
+[node name="JarMargarita" type="Button" parent="Card/PageFlores/VBox/Shelf"]
+custom_minimum_size = Vector2(150, 110)
+layout_mode = 2
+text = ""
+
+[node name="Icon" type="TextureRect" parent="Card/PageFlores/VBox/Shelf/JarMargarita"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("3")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Nombre" type="Label" parent="Card/PageFlores/VBox/Shelf/JarMargarita"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 14
+text = "Margarita"
+horizontal_alignment = 1
+
+[node name="JarGirasol" type="Button" parent="Card/PageFlores/VBox/Shelf"]
+custom_minimum_size = Vector2(150, 110)
+layout_mode = 2
+text = ""
+
+[node name="Icon" type="TextureRect" parent="Card/PageFlores/VBox/Shelf/JarGirasol"]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Nombre" type="Label" parent="Card/PageFlores/VBox/Shelf/JarGirasol"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_font_sizes/font_size = 14
+text = "Girasol"
+horizontal_alignment = 1
+
+[node name="RecipeList" type="VBoxContainer" parent="Card/PageFlores/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Feedback" type="Label" parent="Card/PageFlores/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.4, 0.4, 1)
+theme_override_font_sizes/font_size = 15
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="ConfirmBtn" type="Button" parent="Card/PageFlores/VBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 50)
+theme_override_font_sizes/font_size = 16
+text = "Siguiente ▶"
+
+[node name="PageResumen" type="Control" parent="Card"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBox" type="VBoxContainer" parent="Card/PageResumen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 26.0
+offset_right = -30.0
+offset_bottom = -26.0
+theme_override_constants/separation = 16
+
+[node name="Paso" type="Label" parent="Card/PageResumen/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.13, 0.83, 0.89, 1)
+theme_override_font_sizes/font_size = 18
+text = "Paso 5: Confirmar pedido"
+horizontal_alignment = 1
+
+[node name="ResumenLabel" type="Label" parent="Card/PageResumen/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_font_sizes/font_size = 18
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+text = "Cliente: -\nRamo: -"
+
+[node name="ConfirmBtn" type="Button" parent="Card/PageResumen/VBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 55)
+theme_override_font_sizes/font_size = 18
+text = "✅ Confirmar pedido"
+
+[node name="CloseBtn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1180.0
+offset_top = 50.0
+offset_right = 1230.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "✕"

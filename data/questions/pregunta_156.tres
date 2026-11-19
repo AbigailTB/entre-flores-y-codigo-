@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Seguridad Informática"
+tipo = "Acertijo"
+enunciado = "Te llega: \"Tu cuenta será bloqueada en 1 hora, da clic aquí\". ¿Qué técnica usa el atacante?"
+opciones = Array[String](["Un firewall perimetral", "Un respaldo incremental", "Ingeniería social con urgencia falsa", "Cifrado de extremo a extremo"])
+respuesta_correcta = 2
+explicacion = "Crear urgencia es un truco de ingeniería social para que actúes sin pensar."
+puntos = 15

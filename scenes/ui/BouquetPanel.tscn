@@ -1,0 +1,191 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/bouquet_panel.gd" id="1"]
+
+[sub_resource type="StyleBoxFlat" id="ShelfStyle"]
+bg_color = Color(0.15, 0.35, 0.38, 0.94)
+corner_radius_top_left = 22
+corner_radius_top_right = 22
+corner_radius_bottom_left = 22
+corner_radius_bottom_right = 22
+
+[sub_resource type="StyleBoxFlat" id="CardStyle"]
+bg_color = Color(0.97, 0.94, 0.88, 0.97)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_left = 20
+corner_radius_bottom_right = 20
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.24, 1, 0.54, 0.9)
+
+[sub_resource type="StyleBoxFlat" id="AreaStyle"]
+bg_color = Color(0.86, 0.93, 0.88, 0.95)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_left = 20
+corner_radius_bottom_right = 20
+
+[sub_resource type="StyleBoxFlat" id="ConfirmStyle"]
+bg_color = Color(0.24, 1, 0.54, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_left = 16
+corner_radius_bottom_right = 16
+
+[node name="BouquetPanel" type="ColorRect"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+color = Color(0, 0, 0, 0.6)
+script = ExtResource("1")
+
+[node name="Shelf" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 720.0
+offset_bottom = 680.0
+theme_override_styles/panel = SubResource("ShelfStyle")
+
+[node name="VBox" type="VBoxContainer" parent="Shelf"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 14.0
+offset_right = -20.0
+offset_bottom = -14.0
+theme_override_constants/separation = 8
+
+[node name="Titulo" type="Label" parent="Shelf/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.95, 0.8, 1)
+theme_override_font_sizes/font_size = 22
+text = "Almacén de flores"
+horizontal_alignment = 1
+
+[node name="Scroll" type="ScrollContainer" parent="Shelf/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Grid" type="GridContainer" parent="Shelf/VBox/Scroll"]
+layout_mode = 2
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = 12
+columns = 4
+
+[node name="RecipeCard" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 750.0
+offset_top = 40.0
+offset_right = 1240.0
+offset_bottom = 250.0
+theme_override_styles/panel = SubResource("CardStyle")
+
+[node name="VBox" type="VBoxContainer" parent="RecipeCard"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 22.0
+offset_top = 14.0
+offset_right = -22.0
+offset_bottom = -14.0
+theme_override_constants/separation = 6
+
+[node name="Titulo" type="Label" parent="RecipeCard/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3, 0.2, 0.08, 1)
+theme_override_font_sizes/font_size = 20
+text = "Pedido"
+horizontal_alignment = 1
+
+[node name="RecipeList" type="VBoxContainer" parent="RecipeCard/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+theme_override_constants/separation = 4
+
+[node name="BouquetArea" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 750.0
+offset_top = 262.0
+offset_right = 1240.0
+offset_bottom = 520.0
+theme_override_styles/panel = SubResource("AreaStyle")
+
+[node name="View" type="Control" parent="BouquetArea"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+
+[node name="BackPaper" type="Polygon2D" parent="BouquetArea/View"]
+color = Color(0.74, 0.58, 0.38, 1)
+polygon = PackedVector2Array(150, 110, 340, 110, 275, 245, 215, 245)
+
+[node name="Flowers" type="Control" parent="BouquetArea/View"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="FrontPaper" type="Polygon2D" parent="BouquetArea/View"]
+color = Color(0.9, 0.78, 0.55, 1)
+polygon = PackedVector2Array(178, 168, 245, 190, 312, 168, 275, 245, 215, 245)
+
+[node name="Ribbon" type="Polygon2D" parent="BouquetArea/View"]
+color = Color(0.13, 0.7, 0.72, 1)
+polygon = PackedVector2Array(212, 212, 278, 212, 276, 222, 214, 222)
+
+[node name="Buttons" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 750.0
+offset_top = 534.0
+offset_right = 1240.0
+offset_bottom = 594.0
+theme_override_constants/separation = 12
+
+[node name="ResetBtn" type="Button" parent="Buttons"]
+custom_minimum_size = Vector2(110, 52)
+layout_mode = 2
+text = "Reiniciar"
+
+[node name="UndoBtn" type="Button" parent="Buttons"]
+custom_minimum_size = Vector2(110, 52)
+layout_mode = 2
+text = "Quitar última"
+
+[node name="ConfirmBtn" type="Button" parent="Buttons"]
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("ConfirmStyle")
+theme_override_styles/hover = SubResource("ConfirmStyle")
+theme_override_styles/pressed = SubResource("ConfirmStyle")
+theme_override_colors/font_color = Color(0.08, 0.1, 0.12, 1)
+text = "Confirmar ramo"
+
+[node name="Feedback" type="Label" parent="."]
+layout_mode = 0
+offset_left = 750.0
+offset_top = 606.0
+offset_right = 1240.0
+offset_bottom = 676.0
+theme_override_font_sizes/font_size = 17
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="CloseBtn" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1226.0
+offset_top = 4.0
+offset_right = 1270.0
+offset_bottom = 38.0
+text = "✕"

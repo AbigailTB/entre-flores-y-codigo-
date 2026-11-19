@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Metodologías Ágiles"
+tipo = "Pregunta"
+enunciado = "¿Qué evento de Scrum sirve para que el equipo analice cómo trabajó y planee mejoras?"
+opciones = Array[String](["Sprint Planning", "Retrospectiva del Sprint", "Refinamiento del backlog", "Revisión del Sprint"])
+respuesta_correcta = 1
+explicacion = "La retrospectiva inspecciona personas, procesos y herramientas para mejorar."
+puntos = 10

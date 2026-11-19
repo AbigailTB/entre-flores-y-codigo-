@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Seguridad Informática"
+enunciado = "¿Para qué sirve un firewall?"
+opciones = Array[String](["Filtrar el tráfico de red y bloquear accesos no autorizados", "Diseñar interfaces", "Editar bases de datos", "Comprimir archivos"])
+respuesta_correcta = 0
+explicacion = "Un firewall controla qué tráfico de red puede entrar o salir de un sistema."
+puntos = 10

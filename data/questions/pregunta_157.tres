@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Administración de Proyectos"
+tipo = "Pregunta"
+enunciado = "¿Qué es la ruta crítica de un proyecto?"
+opciones = Array[String](["Las tareas sin dependencias", "Las actividades más baratas", "La secuencia más larga, que fija la duración mínima", "La ruta que elige el jefe"])
+respuesta_correcta = 2
+explicacion = "Un retraso en la ruta crítica retrasa todo el proyecto."
+puntos = 10

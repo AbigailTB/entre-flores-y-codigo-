@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Seguridad Informática"
+tipo = "Pregunta"
+enunciado = "¿Qué es el phishing?"
+opciones = Array[String](["Suplantar a alguien confiable para robar datos", "Una actualización del sistema", "Un ataque físico al servidor", "Un virus que borra el disco duro"])
+respuesta_correcta = 0
+explicacion = "El phishing engaña a la víctima haciéndose pasar por una entidad confiable."
+puntos = 10

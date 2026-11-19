@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Redes de Computadoras"
+tipo = "Pregunta"
+enunciado = "Según este ping, ¿qué porcentaje de paquetes se perdió?"
+codigo = "> ping 8.8.8.8\nRespuesta desde 8.8.8.8: tiempo=24ms TTL=117\nRespuesta desde 8.8.8.8: tiempo=25ms TTL=117\nPaquetes: enviados = 4, recibidos = 2"
+opciones = Array[String](["25%", "2%", "50%", "0%"])
+respuesta_correcta = 2
+explicacion = "Se enviaron 4 y solo llegaron 2 respuestas: se perdieron 2 de 4, es decir, el 50%. No confundas paquetes perdidos con porcentaje."
+puntos = 10

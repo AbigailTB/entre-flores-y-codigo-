@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Móvil"
+tipo = "Acertijo"
+enunciado = "En esta Activity de Android, ¿cuándo se ejecuta guardarAvance()?"
+codigo = "override fun onCreate(b: Bundle?) {\n    super.onCreate(b)\n    setContentView(R.layout.main)\n}\noverride fun onPause() {\n    super.onPause()\n    guardarAvance()\n}"
+opciones = Array[String](["Solo al crear la actividad", "Cada segundo, en segundo plano", "Cuando la pantalla deja el primer plano", "Solo al desinstalar la app"])
+respuesta_correcta = 2
+explicacion = "onPause se llama cuando la actividad deja de estar al frente (llamada, cambio de app). Es buen lugar para guardar avance."
+puntos = 15

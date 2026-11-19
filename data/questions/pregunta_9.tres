@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+enunciado = "Si a un bloque de código le falta cerrar una llave '}', ¿qué tipo de error se produce?"
+opciones = Array[String](["Error de sintaxis", "Error de red", "Error de base de datos", "Error de hardware"])
+respuesta_correcta = 0
+explicacion = "Un error de sintaxis ocurre cuando el código no sigue las reglas del lenguaje, como llaves sin cerrar."
+puntos = 10

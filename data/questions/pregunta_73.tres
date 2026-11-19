@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Análisis y Documentación"
+enunciado = "¿Qué es el análisis de requerimientos?"
+opciones = Array[String](["Identificar qué necesita el sistema antes de construirlo", "Instalar el sistema en un servidor", "Diseñar el logotipo de la empresa", "Comprimir los archivos finales"])
+respuesta_correcta = 0
+explicacion = "El análisis de requerimientos identifica las necesidades del sistema antes de comenzar a construirlo."
+puntos = 10

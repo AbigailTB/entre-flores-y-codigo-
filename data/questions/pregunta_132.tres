@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Análisis y Documentación"
+tipo = "Pregunta"
+enunciado = "¿Qué diagrama UML muestra el orden en el tiempo de los mensajes entre objetos?"
+opciones = Array[String](["Diagrama de secuencia", "Diagrama de paquetes", "Diagrama de clases", "Diagrama de componentes"])
+respuesta_correcta = 0
+explicacion = "El diagrama de secuencia ordena los mensajes sobre líneas de vida."
+puntos = 10

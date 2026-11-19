@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Matemáticas"
+tipo = "Pregunta"
+enunciado = "Al multiplicar una matriz de 2×3 por una de 3×4, el resultado es de tamaño:"
+opciones = Array[String](["4×2", "3×3", "No se puede multiplicar", "2×4"])
+respuesta_correcta = 3
+explicacion = "Las columnas de la primera (3) coinciden con las filas de la segunda; queda 2×4."
+puntos = 10

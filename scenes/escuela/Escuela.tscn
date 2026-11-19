@@ -1,0 +1,783 @@
+[gd_scene load_steps=50 format=3]
+
+[ext_resource type="Script" path="res://scripts/scene_music.gd" id="c_music"]
+[ext_resource type="Texture2D" path="res://assets/backgrounds/salones/salon_desarrollo.png" id="t_bg"]
+[ext_resource type="Texture2D" path="res://assets/sprites/school2/mesa_cuadernos.png" id="t_desk"]
+[ext_resource type="Texture2D" path="res://assets/sprites/school2/mesa_laptops.png" id="t_deskl"]
+[ext_resource type="Texture2D" path="res://assets/sprites/school2/silla_azul.png" id="t_chair"]
+[ext_resource type="Texture2D" path="res://assets/sprites/school2/planta.png" id="t_plant"]
+[ext_resource type="Texture2D" path="res://assets/sprites/school/bookshelf.png" id="t_shelf"]
+[ext_resource type="Texture2D" path="res://assets/sprites/school2/escritorio_profe.png" id="t_tdesk"]
+[ext_resource type="Texture2D" path="res://assets/sprites/school/star.png" id="t_star"]
+[ext_resource type="Texture2D" path="res://assets/sprites/characters/efren_idle.png" id="t_efren"]
+[ext_resource type="Texture2D" path="res://assets/portraits/efren_normal.png" id="p_efren"]
+[ext_resource type="PackedScene" path="res://scenes/player/Player.tscn" id="s_player"]
+[ext_resource type="PackedScene" path="res://scenes/door/Door.tscn" id="s_door"]
+[ext_resource type="PackedScene" path="res://scenes/ui/QuestionPanel.tscn" id="s_qp"]
+[ext_resource type="PackedScene" path="res://scenes/ui/CodeBugPanel.tscn" id="s_cp"]
+[ext_resource type="Script" path="res://scripts/reto_academico.gd" id="c_reto"]
+[ext_resource type="Script" path="res://scripts/reto_codigo.gd" id="c_codigo"]
+[ext_resource type="Script" path="res://scripts/npc.gd" id="c_npc"]
+[ext_resource type="Script" path="res://scripts/teacher_npc.gd" id="c_teacher"]
+[ext_resource type="Script" path="res://scripts/bob.gd" id="c_bob"]
+[ext_resource type="Texture2D" path="res://assets/portraits/josmar_normal.png" id="p_josmar"]
+[ext_resource type="Script" path="res://scripts/josmar.gd" id="c_josmar"]
+[ext_resource type="Script" path="res://scripts/hide_if_completed.gd" id="c_hide"]
+[ext_resource type="Texture2D" path="res://assets/fx/shadow.png" id="t_shadow"]
+[ext_resource type="SpriteFrames" path="res://data/npc_frames/petalo.tres" id="f_petalo"]
+[ext_resource type="Script" path="res://scripts/patrol_npc.gd" id="c_patrol"]
+[ext_resource type="Texture2D" path="res://assets/sprites/josmar/walk_down_1.png" id="t_josmar_idle"]
+[ext_resource type="Script" path="res://scripts/practica_academica.gd" id="c_practica"]
+
+[ext_resource type="Script" path="res://scripts/student_walker.gd" id="c_walker"]
+[ext_resource type="SpriteFrames" path="res://data/npc_frames/alumno_a.tres" id="f_walker"]
+[ext_resource type="Texture2D" path="res://assets/sprites/students/sentados/alumno_00.png" id="t_st0"]
+[ext_resource type="Texture2D" path="res://assets/sprites/students/sentados/alumno_01.png" id="t_st1"]
+[ext_resource type="Texture2D" path="res://assets/sprites/students/sentados/alumno_02.png" id="t_st2"]
+[ext_resource type="Texture2D" path="res://assets/sprites/students/sentados/alumno_03.png" id="t_st3"]
+[ext_resource type="Texture2D" path="res://assets/sprites/students/sentados/alumno_04.png" id="t_st4"]
+[ext_resource type="Texture2D" path="res://assets/sprites/students/sentados/alumno_05.png" id="t_st5"]
+[ext_resource type="Texture2D" path="res://assets/sprites/students/sentados/alumno_06.png" id="t_st6"]
+[ext_resource type="Texture2D" path="res://assets/sprites/students/sentados/alumno_07.png" id="t_st7"]
+[ext_resource type="Texture2D" path="res://assets/sprites/students/sentados/alumno_08.png" id="t_st8"]
+[ext_resource type="Texture2D" path="res://assets/sprites/students/sentados/alumno_09.png" id="t_st9"]
+[ext_resource type="Texture2D" path="res://assets/sprites/students/sentados/alumno_10.png" id="t_st10"]
+[ext_resource type="Texture2D" path="res://assets/sprites/students/sentados/alumno_11.png" id="t_st11"]
+[ext_resource type="Texture2D" path="res://assets/sprites/school2/mesa_laptop_cuaderno.png" id="t_mesa_b"]
+[sub_resource type="RectangleShape2D" id="WN"]
+size = Vector2(1580, 300)
+
+[sub_resource type="RectangleShape2D" id="WSL"]
+size = Vector2(690, 50)
+
+[sub_resource type="RectangleShape2D" id="WSR"]
+size = Vector2(690, 50)
+
+[sub_resource type="RectangleShape2D" id="WW"]
+size = Vector2(50, 1080)
+
+[sub_resource type="RectangleShape2D" id="WE"]
+size = Vector2(50, 1080)
+
+[sub_resource type="RectangleShape2D" id="DeskBody"]
+size = Vector2(128, 36)
+
+[sub_resource type="RectangleShape2D" id="TDeskBody"]
+size = Vector2(180, 40)
+
+[sub_resource type="RectangleShape2D" id="ShelfBody"]
+size = Vector2(110, 36)
+
+[sub_resource type="RectangleShape2D" id="RetoShape"]
+size = Vector2(205, 180)
+
+[sub_resource type="RectangleShape2D" id="PracticeShape"]
+size = Vector2(160, 140)
+
+[sub_resource type="RectangleShape2D" id="NpcShape"]
+size = Vector2(140, 100)
+
+[sub_resource type="RectangleShape2D" id="MesaB"]
+size = Vector2(164, 74)
+
+[sub_resource type="CircleShape2D" id="WalkerTalk"]
+radius = 34.0
+
+[sub_resource type="CircleShape2D" id="TalkShape"]
+radius = 60
+
+[sub_resource type="CircleShape2D" id="BodyShape"]
+radius = 26
+
+[sub_resource type="CircleShape2D" id="SmallBodyShape"]
+radius = 16
+
+[node name="Escuela" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(768, 512)
+texture = ExtResource("t_bg")
+
+[node name="WallNorth" type="StaticBody2D" parent="."]
+position = Vector2(768, 146)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallNorth"]
+shape = SubResource("WN")
+
+[node name="WallSouthLeft" type="StaticBody2D" parent="."]
+position = Vector2(320, 1024)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallSouthLeft"]
+shape = SubResource("WSL")
+
+[node name="WallSouthRight" type="StaticBody2D" parent="."]
+position = Vector2(1216, 1024)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallSouthRight"]
+shape = SubResource("WSR")
+
+[node name="WallWest" type="StaticBody2D" parent="."]
+position = Vector2(0, 512)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallWest"]
+shape = SubResource("WW")
+
+[node name="WallEast" type="StaticBody2D" parent="."]
+position = Vector2(1536, 512)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallEast"]
+shape = SubResource("WE")
+
+[node name="Desk1" type="Sprite2D" parent="."]
+position = Vector2(448, 480)
+texture = ExtResource("t_deskl")
+offset = Vector2(0, -60)
+[node name="Shadow" type="Sprite2D" parent="."]
+z_index = -5
+z_as_relative = false
+position = Vector2(448, 500)
+scale = Vector2(0.450, 0.244)
+texture = ExtResource("t_shadow")
+
+
+
+[node name="DeskBody1" type="StaticBody2D" parent="."]
+position = Vector2(448, 462)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeskBody1"]
+shape = SubResource("DeskBody")
+
+[node name="Chair1" type="Sprite2D" parent="."]
+position = Vector2(448, 532)
+texture = ExtResource("t_chair")
+offset = Vector2(0, -26)
+
+
+[node name="Desk2" type="Sprite2D" parent="."]
+position = Vector2(768, 480)
+texture = ExtResource("t_desk")
+offset = Vector2(0, -60)
+[node name="Shadow" type="Sprite2D" parent="."]
+z_index = -5
+z_as_relative = false
+position = Vector2(768, 500)
+scale = Vector2(0.450, 0.244)
+texture = ExtResource("t_shadow")
+
+
+
+[node name="DeskBody2" type="StaticBody2D" parent="."]
+position = Vector2(768, 462)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeskBody2"]
+shape = SubResource("DeskBody")
+
+[node name="Chair2" type="Sprite2D" parent="."]
+position = Vector2(768, 532)
+texture = ExtResource("t_chair")
+offset = Vector2(0, -26)
+
+
+[node name="Desk3" type="Sprite2D" parent="."]
+position = Vector2(1088, 480)
+texture = ExtResource("t_deskl")
+offset = Vector2(0, -60)
+[node name="Shadow" type="Sprite2D" parent="."]
+z_index = -5
+z_as_relative = false
+position = Vector2(1088, 500)
+scale = Vector2(0.450, 0.244)
+texture = ExtResource("t_shadow")
+
+
+
+[node name="DeskBody3" type="StaticBody2D" parent="."]
+position = Vector2(1088, 462)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeskBody3"]
+shape = SubResource("DeskBody")
+
+[node name="Chair3" type="Sprite2D" parent="."]
+position = Vector2(1088, 532)
+texture = ExtResource("t_chair")
+offset = Vector2(0, -26)
+
+
+[node name="Desk4" type="Sprite2D" parent="."]
+position = Vector2(448, 660)
+texture = ExtResource("t_deskl")
+offset = Vector2(0, -60)
+[node name="Shadow" type="Sprite2D" parent="."]
+z_index = -5
+z_as_relative = false
+position = Vector2(448, 680)
+scale = Vector2(0.450, 0.244)
+texture = ExtResource("t_shadow")
+
+
+
+[node name="DeskBody4" type="StaticBody2D" parent="."]
+position = Vector2(448, 642)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeskBody4"]
+shape = SubResource("DeskBody")
+
+[node name="Chair4" type="Sprite2D" parent="."]
+position = Vector2(448, 712)
+texture = ExtResource("t_chair")
+offset = Vector2(0, -26)
+
+
+[node name="Desk5" type="Sprite2D" parent="."]
+position = Vector2(768, 660)
+texture = ExtResource("t_deskl")
+offset = Vector2(0, -60)
+[node name="Shadow" type="Sprite2D" parent="."]
+z_index = -5
+z_as_relative = false
+position = Vector2(768, 680)
+scale = Vector2(0.450, 0.244)
+texture = ExtResource("t_shadow")
+
+
+
+[node name="DeskBody5" type="StaticBody2D" parent="."]
+position = Vector2(768, 642)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeskBody5"]
+shape = SubResource("DeskBody")
+
+[node name="Chair5" type="Sprite2D" parent="."]
+position = Vector2(768, 712)
+texture = ExtResource("t_chair")
+offset = Vector2(0, -26)
+
+
+[node name="Desk6" type="Sprite2D" parent="."]
+position = Vector2(1088, 660)
+texture = ExtResource("t_deskl")
+offset = Vector2(0, -60)
+[node name="Shadow" type="Sprite2D" parent="."]
+z_index = -5
+z_as_relative = false
+position = Vector2(1088, 680)
+scale = Vector2(0.450, 0.244)
+texture = ExtResource("t_shadow")
+
+
+
+[node name="DeskBody6" type="StaticBody2D" parent="."]
+position = Vector2(1088, 642)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeskBody6"]
+shape = SubResource("DeskBody")
+
+[node name="Chair6" type="Sprite2D" parent="."]
+position = Vector2(1088, 712)
+texture = ExtResource("t_chair")
+offset = Vector2(0, -26)
+
+
+[node name="TeacherDesk" type="Sprite2D" parent="."]
+position = Vector2(384, 350)
+texture = ExtResource("t_tdesk")
+offset = Vector2(0, -60)
+[node name="Shadow" type="Sprite2D" parent="."]
+z_index = -5
+z_as_relative = false
+position = Vector2(384, 372)
+scale = Vector2(0.600, 0.289)
+texture = ExtResource("t_shadow")
+
+
+
+[node name="TeacherDeskBody" type="StaticBody2D" parent="."]
+position = Vector2(384, 330)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TeacherDeskBody"]
+shape = SubResource("TDeskBody")
+
+[node name="Bookshelf" type="Sprite2D" parent="."]
+position = Vector2(150, 320)
+texture = ExtResource("t_shelf")
+offset = Vector2(0, -60)
+[node name="Shadow" type="Sprite2D" parent="."]
+z_index = -5
+z_as_relative = false
+position = Vector2(150, 340)
+scale = Vector2(0.400, 0.244)
+texture = ExtResource("t_shadow")
+
+
+
+[node name="BookshelfBody" type="StaticBody2D" parent="."]
+position = Vector2(150, 302)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BookshelfBody"]
+shape = SubResource("ShelfBody")
+
+[node name="Plant1" type="Sprite2D" parent="."]
+position = Vector2(1440, 330)
+texture = ExtResource("t_plant")
+offset = Vector2(0, -50)
+[node name="Shadow" type="Sprite2D" parent="."]
+z_index = -5
+z_as_relative = false
+position = Vector2(1440, 350)
+scale = Vector2(0.230, 0.178)
+texture = ExtResource("t_shadow")
+
+
+
+[node name="Plant2" type="Sprite2D" parent="."]
+position = Vector2(100, 880)
+texture = ExtResource("t_plant")
+offset = Vector2(0, -50)
+[node name="Shadow" type="Sprite2D" parent="."]
+z_index = -5
+z_as_relative = false
+position = Vector2(100, 900)
+scale = Vector2(0.230, 0.178)
+texture = ExtResource("t_shadow")
+
+
+
+[node name="Plant3" type="Sprite2D" parent="."]
+position = Vector2(1440, 880)
+texture = ExtResource("t_plant")
+offset = Vector2(0, -50)
+[node name="Shadow" type="Sprite2D" parent="."]
+z_index = -5
+z_as_relative = false
+position = Vector2(1440, 900)
+scale = Vector2(0.230, 0.178)
+texture = ExtResource("t_shadow")
+
+
+
+[node name="Plant4" type="Sprite2D" parent="."]
+position = Vector2(290, 320)
+texture = ExtResource("t_plant")
+offset = Vector2(0, -50)
+[node name="Shadow" type="Sprite2D" parent="."]
+z_index = -5
+z_as_relative = false
+position = Vector2(290, 340)
+scale = Vector2(0.230, 0.178)
+texture = ExtResource("t_shadow")
+
+
+
+[node name="Player" parent="." instance=ExtResource("s_player")]
+position = Vector2(768, 896)
+
+[node name="DoorSalida" parent="." instance=ExtResource("s_door")]
+position = Vector2(768, 1010)
+target_scene = "res://scenes/campus/Campus.tscn"
+target_spawn = Vector2(1152, 505)
+
+[node name="RetoAcademico" type="Area2D" parent="."]
+position = Vector2(1088, 666)
+script = ExtResource("c_reto")
+question_panel_path = NodePath("../UI/QuestionPanel")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RetoAcademico"]
+shape = SubResource("RetoShape")
+
+[node name="RetoCodigo" type="Area2D" parent="."]
+position = Vector2(768, 666)
+script = ExtResource("c_codigo")
+code_bug_panel_path = NodePath("../UI/CodeBugPanel")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RetoCodigo"]
+shape = SubResource("RetoShape")
+
+[node name="StarReto1" type="Sprite2D" parent="."]
+position = Vector2(1088, 540)
+texture = ExtResource("t_star")
+offset = Vector2(0, -14)
+z_index = 20
+modulate = Color(1, 1, 1, 1)
+script = ExtResource("c_bob")
+challenge_id = "reto_escuela_1"
+
+[node name="StarReto2" type="Sprite2D" parent="."]
+position = Vector2(768, 540)
+texture = ExtResource("t_star")
+offset = Vector2(0, -14)
+z_index = 20
+modulate = Color(0.4, 0.95, 1, 1)
+script = ExtResource("c_bob")
+challenge_id = "reto_escuela_2"
+
+[node name="LabelReto1" type="Label" parent="."]
+script = ExtResource("c_hide")
+challenge_id = "reto_escuela_1"
+z_index = 20
+offset_left = 1018.0
+offset_top = 488.0
+offset_right = 1158.0
+offset_bottom = 518.0
+theme_override_colors/font_color = Color(1, 0.82, 0.31, 1)
+theme_override_colors/font_outline_color = Color(0.1, 0.06, 0.15, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 22
+text = "¡Reto!"
+horizontal_alignment = 1
+
+[node name="LabelReto2" type="Label" parent="."]
+script = ExtResource("c_hide")
+challenge_id = "reto_escuela_2"
+z_index = 20
+offset_left = 698.0
+offset_top = 488.0
+offset_right = 838.0
+offset_bottom = 518.0
+theme_override_colors/font_color = Color(0.4, 0.95, 1, 1)
+theme_override_colors/font_outline_color = Color(0.1, 0.06, 0.15, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 22
+text = "¡Reto 2!"
+horizontal_alignment = 1
+
+[node name="Practica1" type="Area2D" parent="."]
+position = Vector2(448, 392)
+script = ExtResource("c_practica")
+question_panel_path = NodePath("../UI/QuestionPanel")
+code_bug_panel_path = NodePath("../UI/CodeBugPanel")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Practica1"]
+shape = SubResource("PracticeShape")
+
+[node name="Star" type="Sprite2D" parent="Practica1"]
+z_index = 20
+modulate = Color(0.75, 0.78, 0.85, 0.85)
+texture = ExtResource("t_star")
+offset = Vector2(0, -14)
+script = ExtResource("c_bob")
+
+[node name="Label" type="Label" parent="Practica1"]
+z_index = 20
+offset_left = -70.0
+offset_top = -42.0
+offset_right = 70.0
+offset_bottom = -12.0
+theme_override_colors/font_color = Color(0.82, 0.85, 0.92, 1)
+theme_override_colors/font_outline_color = Color(0.1, 0.06, 0.15, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 16
+text = "Practicar"
+horizontal_alignment = 1
+
+[node name="Practica2" type="Area2D" parent="."]
+position = Vector2(768, 392)
+script = ExtResource("c_practica")
+question_panel_path = NodePath("../UI/QuestionPanel")
+code_bug_panel_path = NodePath("../UI/CodeBugPanel")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Practica2"]
+shape = SubResource("PracticeShape")
+
+[node name="Star" type="Sprite2D" parent="Practica2"]
+z_index = 20
+modulate = Color(0.75, 0.78, 0.85, 0.85)
+texture = ExtResource("t_star")
+offset = Vector2(0, -14)
+script = ExtResource("c_bob")
+
+[node name="Label" type="Label" parent="Practica2"]
+z_index = 20
+offset_left = -70.0
+offset_top = -42.0
+offset_right = 70.0
+offset_bottom = -12.0
+theme_override_colors/font_color = Color(0.82, 0.85, 0.92, 1)
+theme_override_colors/font_outline_color = Color(0.1, 0.06, 0.15, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 16
+text = "Practicar"
+horizontal_alignment = 1
+
+[node name="Practica3" type="Area2D" parent="."]
+position = Vector2(1088, 392)
+script = ExtResource("c_practica")
+question_panel_path = NodePath("../UI/QuestionPanel")
+code_bug_panel_path = NodePath("../UI/CodeBugPanel")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Practica3"]
+shape = SubResource("PracticeShape")
+
+[node name="Star" type="Sprite2D" parent="Practica3"]
+z_index = 20
+modulate = Color(0.75, 0.78, 0.85, 0.85)
+texture = ExtResource("t_star")
+offset = Vector2(0, -14)
+script = ExtResource("c_bob")
+
+[node name="Label" type="Label" parent="Practica3"]
+z_index = 20
+offset_left = -70.0
+offset_top = -42.0
+offset_right = 70.0
+offset_bottom = -12.0
+theme_override_colors/font_color = Color(0.82, 0.85, 0.92, 1)
+theme_override_colors/font_outline_color = Color(0.1, 0.06, 0.15, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 16
+text = "Practicar"
+horizontal_alignment = 1
+
+[node name="Practica4" type="Area2D" parent="."]
+position = Vector2(448, 572)
+script = ExtResource("c_practica")
+question_panel_path = NodePath("../UI/QuestionPanel")
+code_bug_panel_path = NodePath("../UI/CodeBugPanel")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Practica4"]
+shape = SubResource("PracticeShape")
+
+[node name="Star" type="Sprite2D" parent="Practica4"]
+z_index = 20
+modulate = Color(0.75, 0.78, 0.85, 0.85)
+texture = ExtResource("t_star")
+offset = Vector2(0, -14)
+script = ExtResource("c_bob")
+
+[node name="Label" type="Label" parent="Practica4"]
+z_index = 20
+offset_left = -70.0
+offset_top = -42.0
+offset_right = 70.0
+offset_bottom = -12.0
+theme_override_colors/font_color = Color(0.82, 0.85, 0.92, 1)
+theme_override_colors/font_outline_color = Color(0.1, 0.06, 0.15, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 16
+text = "Practicar"
+horizontal_alignment = 1
+
+[node name="Efren" type="Area2D" parent="."]
+position = Vector2(540, 365)
+script = ExtResource("c_teacher")
+teacher_id = "efren"
+materia = "Desarrollo de Software"
+question_panel_path = NodePath("../UI/QuestionPanel")
+portrait = ExtResource("p_efren")
+npc_name = "Profesor Efrén"
+voice = "voice_efren"
+lines = Array[String](["Buenos días, {p}. Soy el profesor Efrén.", "Cada reto que resuelvas correctamente te da una de mis firmas.", "Reúne al menos 3 firmas y podrás presentar tu proyecto final en la florería.", "Y cuando termines los 4 cuatrimestres, yo te aplico el examen final de la carrera. ¡Ánimo!"])
+
+[node name="Sprite" type="Sprite2D" parent="Efren"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("t_efren")
+offset = Vector2(0, -128)
+
+[node name="Label" type="Label" parent="Efren"]
+z_index = 20
+offset_left = -70.0
+offset_top = -166.0
+offset_right = 70.0
+offset_bottom = -136.0
+theme_override_colors/font_color = Color(1, 0.82, 0.31, 1)
+theme_override_colors/font_outline_color = Color(0.1, 0.06, 0.15, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 18
+text = "Profesor Efrén"
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Efren"]
+position = Vector2(0, -40)
+shape = SubResource("NpcShape")
+
+[node name="Shadow" type="Sprite2D" parent="Efren"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -4)
+scale = Vector2(0.280, 0.222)
+texture = ExtResource("t_shadow")
+
+[node name="Petalo" type="CharacterBody2D" parent="."]
+position = Vector2(930, 600)
+script = ExtResource("c_patrol")
+npc_name = "Pétalo"
+lines = Array[String](["¡Beep! Soy Pétalo, tu asistente de programación.", "Si te trabas en un reto, lee bien el enunciado y pensá paso a paso.", "¡Tú puedes resolverlo!"])
+voice = "voice_petalo"
+bounds = Rect2(160, 280, 1250, 560)
+speed = 55.0
+hover = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Petalo"]
+sprite_frames = ExtResource("f_petalo")
+animation = &"idle_down"
+scale = Vector2(0.5, 0.5)
+offset = Vector2(0, -99)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Petalo"]
+position = Vector2(0, -10)
+shape = SubResource("SmallBodyShape")
+
+[node name="Shadow" type="Sprite2D" parent="Petalo"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, 0)
+scale = Vector2(0.18, 0.12)
+texture = ExtResource("t_shadow")
+
+[node name="Label" type="Label" parent="Petalo"]
+z_index = 20
+offset_left = -70.0
+offset_top = -128.0
+offset_right = 70.0
+offset_bottom = -98.0
+theme_override_colors/font_color = Color(1, 0.82, 0.31, 1)
+theme_override_colors/font_outline_color = Color(0.1, 0.06, 0.15, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 18
+text = "Pétalo"
+horizontal_alignment = 1
+
+[node name="TalkArea" type="Area2D" parent="Petalo"]
+position = Vector2(0, -20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Petalo/TalkArea"]
+shape = SubResource("TalkShape")
+
+[node name="Josmar" type="Area2D" parent="."]
+position = Vector2(1340, 610)
+script = ExtResource("c_josmar")
+portrait = ExtResource("p_josmar")
+
+[node name="Sprite" type="Sprite2D" parent="Josmar"]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("t_josmar_idle")
+offset = Vector2(0, -157.5)
+
+[node name="Label" type="Label" parent="Josmar"]
+z_index = 20
+offset_left = -70.0
+offset_top = -164.0
+offset_right = 70.0
+offset_bottom = -134.0
+theme_override_colors/font_color = Color(1, 0.82, 0.31, 1)
+theme_override_colors/font_outline_color = Color(0.1, 0.06, 0.15, 1)
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 18
+text = "Josmar"
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Josmar"]
+position = Vector2(0, -40)
+shape = SubResource("NpcShape")
+
+[node name="Shadow" type="Sprite2D" parent="Josmar"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -4)
+scale = Vector2(0.280, 0.222)
+texture = ExtResource("t_shadow")
+
+[node name="MesaFondo0" type="Sprite2D" parent="."]
+position = Vector2(330, 838)
+texture = ExtResource("t_mesa_b")
+offset = Vector2(0, -60)
+[node name="Body" type="StaticBody2D" parent="MesaFondo0"]
+position = Vector2(0, -14)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MesaFondo0/Body"]
+shape = SubResource("MesaB")
+
+[node name="Alumno0L" type="Sprite2D" parent="."]
+position = Vector2(292, 864)
+texture = ExtResource("t_st0")
+offset = Vector2(0, -44)
+[node name="Alumno0R" type="Sprite2D" parent="."]
+position = Vector2(368, 864)
+texture = ExtResource("t_st5")
+offset = Vector2(0, -44)
+[node name="MesaFondo1" type="Sprite2D" parent="."]
+position = Vector2(560, 838)
+texture = ExtResource("t_mesa_b")
+offset = Vector2(0, -60)
+[node name="Body" type="StaticBody2D" parent="MesaFondo1"]
+position = Vector2(0, -14)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MesaFondo1/Body"]
+shape = SubResource("MesaB")
+
+[node name="Alumno1L" type="Sprite2D" parent="."]
+position = Vector2(522, 864)
+texture = ExtResource("t_st10")
+offset = Vector2(0, -44)
+[node name="Alumno1R" type="Sprite2D" parent="."]
+position = Vector2(598, 864)
+texture = ExtResource("t_st3")
+offset = Vector2(0, -44)
+[node name="MesaFondo2" type="Sprite2D" parent="."]
+position = Vector2(976, 838)
+texture = ExtResource("t_mesa_b")
+offset = Vector2(0, -60)
+[node name="Body" type="StaticBody2D" parent="MesaFondo2"]
+position = Vector2(0, -14)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MesaFondo2/Body"]
+shape = SubResource("MesaB")
+
+[node name="Alumno2L" type="Sprite2D" parent="."]
+position = Vector2(938, 864)
+texture = ExtResource("t_st8")
+offset = Vector2(0, -44)
+[node name="Alumno2R" type="Sprite2D" parent="."]
+position = Vector2(1014, 864)
+texture = ExtResource("t_st1")
+offset = Vector2(0, -44)
+[node name="MesaFondo3" type="Sprite2D" parent="."]
+position = Vector2(1206, 838)
+texture = ExtResource("t_mesa_b")
+offset = Vector2(0, -60)
+[node name="Body" type="StaticBody2D" parent="MesaFondo3"]
+position = Vector2(0, -14)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MesaFondo3/Body"]
+shape = SubResource("MesaB")
+
+[node name="Alumno3L" type="Sprite2D" parent="."]
+position = Vector2(1168, 864)
+texture = ExtResource("t_st6")
+offset = Vector2(0, -44)
+[node name="Alumno3R" type="Sprite2D" parent="."]
+position = Vector2(1244, 864)
+texture = ExtResource("t_st11")
+offset = Vector2(0, -44)
+[node name="Walker0" type="Node2D" parent="."]
+script = ExtResource("c_walker")
+npc_name = "Alumno"
+speed = 86.0
+waypoints = PackedVector2Array(150, 470, 150, 960, 560, 960, 976, 960, 1390, 960, 1390, 470)
+edges = PackedInt32Array(0, 1, 1, 2, 2, 3, 3, 4, 4, 5)
+lines = Array[String](["El profe Efrén es estricto, pero explica muy bien.", "¿Ya tienes tus firmas? Yo voy por la segunda.", "Pétalo me ayudó con un bug ayer, ¡es un genio!"])
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Walker0"]
+scale = Vector2(0.35, 0.35)
+sprite_frames = ExtResource("f_walker")
+animation = &"idle_down"
+offset = Vector2(0, -170)
+[node name="Shadow" type="Sprite2D" parent="Walker0"]
+z_index = -5
+z_as_relative = false
+position = Vector2(0, -3)
+scale = Vector2(0.2, 0.12)
+texture = ExtResource("t_shadow")
+[node name="TalkArea" type="Area2D" parent="Walker0"]
+collision_layer = 0
+position = Vector2(0, -20)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walker0/TalkArea"]
+shape = SubResource("WalkerTalk")
+[node name="OnScreen" type="VisibleOnScreenEnabler2D" parent="Walker0"]
+position = Vector2(0, -60)
+rect = Rect2(-50, -80, 100, 160)
+
+[node name="UI" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="QuestionPanel" parent="UI" instance=ExtResource("s_qp")]
+
+[node name="CodeBugPanel" parent="UI" instance=ExtResource("s_cp")]
+
+[node name="Music" type="Node" parent="."]
+script = ExtResource("c_music")
+track = "escuela"

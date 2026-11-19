@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación"
+enunciado = "¿Qué es un bucle (loop) en programación?"
+opciones = Array[String](["Una estructura que repite instrucciones mientras se cumpla una condición", "Un tipo de variable", "Un error de sintaxis", "Un archivo de imagen"])
+respuesta_correcta = 0
+explicacion = "Un bucle repite un bloque de instrucciones mientras se cumpla una condición."
+puntos = 10

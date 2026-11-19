@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Estructuras de Datos"
+enunciado = "¿Qué estructura sigue el principio \"el primero en entrar es el primero en salir\"?"
+opciones = Array[String](["Cola (Queue)", "Pila (Stack)", "Árbol", "Grafo"])
+respuesta_correcta = 0
+explicacion = "Una cola (Queue) sigue el principio FIFO: el primero en entrar es el primero en salir."
+puntos = 10

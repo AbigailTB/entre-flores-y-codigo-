@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Matemáticas"
+tipo = "Pregunta"
+enunciado = "¿Qué imprime este código Python?"
+codigo = "x = 2 + 3 * 4 ** 2\ny = (2 + 3) * 4\nprint(x, y)"
+opciones = Array[String](["50 14", "200 20", "50 20", "146 20"])
+respuesta_correcta = 2
+explicacion = "Primero la potencia (4**2 = 16), luego la multiplicación (3*16 = 48) y al final la suma: 50. En y, el paréntesis va primero: 5*4 = 20."
+puntos = 10

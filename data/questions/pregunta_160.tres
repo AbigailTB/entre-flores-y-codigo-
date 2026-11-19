@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Administración de Proyectos"
+tipo = "Pregunta"
+enunciado = "¿Qué elementos forman la triple restricción de un proyecto?"
+opciones = Array[String](["Calidad, código y clientes", "Alcance, tiempo y costo", "Hardware, software y red", "Analizar, diseñar y programar"])
+respuesta_correcta = 1
+explicacion = "Cambiar alcance, tiempo o costo afecta a los otros dos."
+puntos = 10

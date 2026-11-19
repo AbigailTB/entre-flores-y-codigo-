@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Cálculo"
+tipo = "Pregunta"
+enunciado = "Viendo lo que imprime, ¿a qué valor tiende g(x) cuando x se acerca a 1?"
+codigo = "def g(x):\n    return (x**2 - 1) / (x - 1)\nfor x in [0.9, 0.99, 0.999]:\n    print(round(g(x), 3))"
+opciones = Array[String](["2", "1", "0", "No existe (se divide entre 0)"])
+respuesta_correcta = 0
+explicacion = "Imprime 1.9, 1.99 y 1.999. Aunque en x = 1 hay 0/0, el límite existe: (x²-1)/(x-1) = x + 1, que tiende a 2."
+puntos = 10

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Desarrollo de Software"
+tipo = "Acertijo"
+enunciado = "\"Una clase debe tener una sola razón para cambiar\", dice el profe Efrén. ¿Qué letra de SOLID soy?"
+opciones = Array[String](["D", "L", "S", "O"])
+respuesta_correcta = 2
+explicacion = "La S de SOLID es el principio de responsabilidad única."
+puntos = 15

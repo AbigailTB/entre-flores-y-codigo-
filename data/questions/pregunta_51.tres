@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Diseño de Interfaces"
+enunciado = "¿Qué es un wireframe?"
+opciones = Array[String](["Un boceto simple de la estructura de una pantalla", "Un tipo de base de datos", "Un lenguaje de programación", "Un antivirus"])
+respuesta_correcta = 0
+explicacion = "Un wireframe muestra la estructura básica de una pantalla antes del diseño final."
+puntos = 10

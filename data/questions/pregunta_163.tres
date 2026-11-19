@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Administración de Proyectos"
+tipo = "Acertijo"
+enunciado = "Actividades: A (3 días) → B (4) → D (2), y también A → C (6) → D. ¿Cuántos días dura el proyecto?"
+opciones = Array[String](["6", "11", "15", "9"])
+respuesta_correcta = 1
+explicacion = "A-B-D suma 9 y A-C-D suma 11; manda la ruta más larga: 11."
+puntos = 15

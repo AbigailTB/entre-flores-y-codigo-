@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Administración de Proyectos"
+tipo = "Pregunta"
+enunciado = "¿Cuánta holgura tiene una actividad que está en la ruta crítica?"
+opciones = Array[String](["Cero", "Ilimitada", "Un día", "Siempre es negativa"])
+respuesta_correcta = 0
+explicacion = "Las actividades críticas no tienen holgura: no pueden retrasarse."
+puntos = 10

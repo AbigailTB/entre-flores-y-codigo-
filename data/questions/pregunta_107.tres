@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Cálculo"
+tipo = "Pregunta"
+enunciado = "¿Cuál es la derivada de f(x) = x³?"
+opciones = Array[String](["x⁴/4", "3x²", "3x³", "x²"])
+respuesta_correcta = 1
+explicacion = "Por la regla de la potencia: d/dx xⁿ = n·xⁿ⁻¹, así que 3x²."
+puntos = 10

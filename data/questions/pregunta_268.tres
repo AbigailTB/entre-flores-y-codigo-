@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Análisis y Documentación"
+tipo = "Acertijo"
+enunciado = "¿Qué relación UML describe mejor este código?"
+codigo = "class Universidad {\n    carreras: List<Carrera>\n}\nclass Carrera {\n    // no existe sin su Universidad\n}"
+opciones = Array[String](["Dependencia", "Composición", "Realización de interfaz", "Herencia"])
+respuesta_correcta = 1
+explicacion = "Si la parte (Carrera) no puede existir sin el todo (Universidad), es composición: rombo relleno en UML."
+puntos = 15

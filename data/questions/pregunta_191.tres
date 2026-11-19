@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Bases de Datos"
+tipo = "Pregunta"
+enunciado = "¿Qué cláusula filtra los grupos formados por GROUP BY?"
+opciones = Array[String](["ORDER BY", "LIMIT", "WHERE", "HAVING"])
+respuesta_correcta = 3
+explicacion = "WHERE filtra filas antes de agrupar; HAVING filtra los grupos."
+puntos = 10

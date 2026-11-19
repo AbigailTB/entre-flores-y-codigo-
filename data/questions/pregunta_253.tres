@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Seguridad Informática"
+tipo = "Acertijo"
+enunciado = "¿Cuál es el problema de seguridad de esta función?"
+codigo = "def login(usuario, password):\n    log.info(f\"Intento {usuario} {password}\")\n    if verificar(usuario, password):\n        return crear_sesion(usuario)"
+opciones = Array[String](["Guarda contraseñas en texto plano en el log", "No verifica la contraseña", "Crea sesión aunque falle el login", "Usa f-strings, que son inseguros"])
+respuesta_correcta = 0
+explicacion = "Los logs los leen muchas personas y herramientas; escribir ahí la contraseña la expone. Solo se debe registrar el usuario y el resultado."
+puntos = 15

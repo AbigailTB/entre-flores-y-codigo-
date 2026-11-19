@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Cálculo"
+tipo = "Acertijo"
+enunciado = "Esta suma de Riemann aproxima el área bajo f(x) = x entre 0 y 1. ¿Qué imprime?"
+codigo = "n = 4\ndx = 1 / n\narea = 0\nfor i in range(n):\n    area += (i * dx) * dx\nprint(area)"
+opciones = Array[String](["0.625", "0.375", "0.5", "0.25"])
+respuesta_correcta = 1
+explicacion = "Suma por la izquierda: (0 + 0.25 + 0.5 + 0.75) * 0.25 = 0.375. Se queda abajo del área real (0.5); con más rectángulos se acerca."
+puntos = 15

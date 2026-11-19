@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Estadística"
+enunciado = "¿Qué mide el promedio (media) de un conjunto de datos?"
+opciones = Array[String](["El valor central típico de los datos", "El valor más alto", "El valor más bajo", "La cantidad de datos"])
+respuesta_correcta = 0
+explicacion = "El promedio resume el conjunto de datos en un valor central representativo."
+puntos = 10

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación"
+tipo = "Pregunta"
+enunciado = "Este código no corre. ¿En qué línea está el error?"
+codigo = "def saludar(nombre)\n    return \"Hola \" + nombre\nprint(saludar(\"Ana\"))"
+opciones = Array[String](["Línea 1", "Línea 3", "No hay error", "Línea 2"])
+respuesta_correcta = 0
+explicacion = "En Python el def debe terminar con dos puntos: def saludar(nombre): . Sin ellos se produce un SyntaxError en la línea 1."
+puntos = 10

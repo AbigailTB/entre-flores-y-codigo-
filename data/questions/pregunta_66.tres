@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Móvil"
+enunciado = "¿Qué lenguaje se usa comúnmente para desarrollar apps de Android?"
+opciones = Array[String](["Kotlin", "HTML", "SQL", "CSS"])
+respuesta_correcta = 0
+explicacion = "Kotlin es uno de los lenguajes oficiales para desarrollar aplicaciones Android."
+puntos = 10

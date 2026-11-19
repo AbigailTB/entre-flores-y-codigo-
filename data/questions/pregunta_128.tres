@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Análisis y Documentación"
+tipo = "Pregunta"
+enunciado = "En un diagrama de casos de uso, ¿qué representa un actor?"
+opciones = Array[String](["Un método de una clase", "Un servidor físico", "Una tabla de la base de datos", "Un rol externo que interactúa con el sistema"])
+respuesta_correcta = 3
+explicacion = "El actor es un rol (persona u otro sistema) fuera del sistema que lo usa."
+puntos = 10

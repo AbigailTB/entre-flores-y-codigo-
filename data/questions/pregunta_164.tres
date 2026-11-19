@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Administración de Proyectos"
+tipo = "Acertijo"
+enunciado = "La profa. Bety usa PERT: optimista 2, más probable 5, pesimista 14 días. Con (O + 4M + P)/6, ¿cuánto estima?"
+opciones = Array[String](["6 días", "8 días", "5 días", "7 días"])
+respuesta_correcta = 0
+explicacion = "(2 + 20 + 14) / 6 = 36 / 6 = 6 días."
+puntos = 15

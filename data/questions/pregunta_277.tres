@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Matemáticas"
+tipo = "Acertijo"
+enunciado = "¿Qué imprime este código Python?"
+codigo = "x = 0b101 + 0x0A\ny = x % 4\nprint(x, y)"
+opciones = Array[String](["15 1", "111 3", "15 3", "1010 2"])
+respuesta_correcta = 2
+explicacion = "0b101 es 5 en binario y 0x0A es 10 en hexadecimal: 5 + 10 = 15. Luego 15 % 4 deja residuo 3 (4*3 = 12)."
+puntos = 15

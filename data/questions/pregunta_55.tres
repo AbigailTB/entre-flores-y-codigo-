@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Estadística"
+enunciado = "¿Para qué sirve una gráfica de barras?"
+opciones = Array[String](["Comparar visualmente cantidades entre categorías", "Cifrar datos", "Compilar código", "Conectar a internet"])
+respuesta_correcta = 0
+explicacion = "Las gráficas de barras permiten comparar valores entre distintas categorías de forma visual."
+puntos = 10

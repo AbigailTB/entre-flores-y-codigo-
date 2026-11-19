@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Matemáticas"
+tipo = "Acertijo"
+enunciado = "La implicación p → q resultó falsa. ¿Qué valores tienen p y q?"
+opciones = Array[String](["p verdadera y q falsa", "Ambas verdaderas", "p falsa y q verdadera", "Ambas falsas"])
+respuesta_correcta = 0
+explicacion = "p → q solo es falsa cuando p es verdadera y q es falsa."
+puntos = 15

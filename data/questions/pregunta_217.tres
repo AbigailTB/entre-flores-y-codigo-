@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Web"
+tipo = "Pregunta"
+enunciado = "Este JavaScript marca error de sintaxis. ¿En qué línea está?"
+codigo = "const btn = document.getElementById(\"enviar\");\nbtn.addEventListener(\"click\", () => {\n    alert(\"Enviado\");\n);"
+opciones = Array[String](["Línea 2", "Línea 3", "Línea 1", "Línea 4"])
+respuesta_correcta = 3
+explicacion = "La función flecha abrió una llave { en la línea 2 que nunca se cierra. La línea 4 debe ser }); para cerrar llave y paréntesis."
+puntos = 10

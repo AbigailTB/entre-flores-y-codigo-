@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Metodología de la Investigación"
+enunciado = "¿Qué es una metodología de investigación?"
+opciones = Array[String](["El conjunto de pasos y técnicas para desarrollar un estudio de forma ordenada", "Un tipo de base de datos", "Un lenguaje de programación", "Un dispositivo electrónico"])
+respuesta_correcta = 0
+explicacion = "La metodología de investigación define los pasos y técnicas que se siguen para realizar un estudio."
+puntos = 10

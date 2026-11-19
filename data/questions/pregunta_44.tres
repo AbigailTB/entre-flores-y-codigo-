@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Inteligencia Artificial"
+enunciado = "¿Qué es el aprendizaje automático (machine learning)?"
+opciones = Array[String](["Un método para que las computadoras aprendan de datos", "Un tipo de base de datos", "Un lenguaje de programación", "Un dispositivo de red"])
+respuesta_correcta = 0
+explicacion = "El machine learning permite que un sistema mejore su desempeño a partir de datos, sin ser programado explícitamente para cada caso."
+puntos = 10

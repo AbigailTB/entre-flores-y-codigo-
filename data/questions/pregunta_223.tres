@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Móvil"
+tipo = "Pregunta"
+enunciado = "¿Qué imprime este código Kotlin?"
+codigo = "val nombre: String? = null\nval largo = nombre?.length ?: 0\nprintln(largo)"
+opciones = Array[String](["null", "Lanza NullPointerException", "0", "No compila"])
+respuesta_correcta = 2
+explicacion = "?. devuelve null en vez de fallar si nombre es null, y el operador Elvis ?: reemplaza ese null por 0."
+puntos = 10

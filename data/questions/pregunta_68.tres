@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Cálculo"
+enunciado = "¿Qué representa la derivada de una función en un punto?"
+opciones = Array[String](["La razón de cambio (pendiente) de la función en ese punto", "El área bajo la curva", "El valor máximo de la función", "El dominio de la función"])
+respuesta_correcta = 0
+explicacion = "La derivada mide qué tan rápido cambia una función en un punto dado, es decir, su pendiente."
+puntos = 10

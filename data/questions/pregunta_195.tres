@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Bases de Datos"
+tipo = "Acertijo"
+enunciado = "La tabla salsas tiene 3 filas y la tabla papitas tiene 4. ¿Cuántas filas da un CROSS JOIN entre ellas?"
+opciones = Array[String](["4", "12", "3", "7"])
+respuesta_correcta = 1
+explicacion = "El CROSS JOIN es un producto cartesiano: 3 × 4 = 12."
+puntos = 15

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Análisis y Documentación"
+tipo = "Acertijo"
+enunciado = "Me escribo así: \"Como alumno quiero consultar mis calificaciones para saber si aprobé\". ¿Qué soy?"
+opciones = Array[String](["Una historia de usuario", "Un caso de prueba", "Un requisito no funcional", "Un diagrama de clases"])
+respuesta_correcta = 0
+explicacion = "La historia de usuario sigue el formato rol, necesidad y beneficio."
+puntos = 15

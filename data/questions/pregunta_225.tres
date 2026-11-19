@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Móvil"
+tipo = "Pregunta"
+enunciado = "¿Qué imprime este código Kotlin?"
+codigo = "val nums = listOf(4, 8, 15)\nval suma = nums.map { it * 2 }.sum()\nprintln(suma)"
+opciones = Array[String](["54", "27", "[8, 16, 30]", "30"])
+respuesta_correcta = 0
+explicacion = "map duplica cada número: [8, 16, 30]; sum() los suma: 8 + 16 + 30 = 54. Dentro de la lambda, it es cada elemento."
+puntos = 10

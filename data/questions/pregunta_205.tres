@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Desarrollo de Software"
+tipo = "Acertijo"
+enunciado = "Soy un bug que ya estaba corregido y volvió tras un cambio nuevo. ¿Qué tipo de prueba me atrapa?"
+opciones = Array[String](["Prueba alfa", "Prueba de regresión", "Prueba de estrés", "Prueba de usabilidad"])
+respuesta_correcta = 1
+explicacion = "La prueba de regresión verifica que lo que ya funcionaba siga funcionando."
+puntos = 15

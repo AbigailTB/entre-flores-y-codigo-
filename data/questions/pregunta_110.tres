@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Cálculo"
+tipo = "Pregunta"
+enunciado = "¿Cuál es la derivada de sen(x)?"
+opciones = Array[String](["cos(x)", "−sen(x)", "tan(x)", "−cos(x)"])
+respuesta_correcta = 0
+explicacion = "La derivada del seno es el coseno."
+puntos = 10

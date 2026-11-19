@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Cálculo"
+tipo = "Pregunta"
+enunciado = "Debería aproximar f'(2) = 5. ¿En qué línea está el error?"
+codigo = "def f(x):\n    return 5 * x\nh = 0.001\nx = 2\nd = (f(x + h) - f(x)) * h\nprint(d)"
+opciones = Array[String](["Línea 3", "Línea 4", "Línea 5", "Línea 2"])
+respuesta_correcta = 2
+explicacion = "El cociente de diferencias DIVIDE entre h: (f(x+h) - f(x)) / h. Al multiplicar da 0.000005 en lugar de 5."
+puntos = 10

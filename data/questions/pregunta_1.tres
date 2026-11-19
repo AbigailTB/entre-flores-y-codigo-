@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+enunciado = "¿Cuál es una etapa del desarrollo de software?"
+opciones = Array[String](["Analizar", "Dormir", "Cocinar", "Decorar"])
+respuesta_correcta = 0
+explicacion = "Analizar es la primera etapa del proceso de desarrollo de software."
+puntos = 10

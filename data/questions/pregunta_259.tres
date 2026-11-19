@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Desarrollo de Software"
+tipo = "Pregunta"
+enunciado = "¿Qué comando prepara ambos archivos para el siguiente commit?"
+codigo = "$ git status\nChanges not staged for commit:\n    modified:   app.py\nUntracked files:\n    notas.txt"
+opciones = Array[String](["git push origin main", "git init", "git commit app.py", "git add app.py notas.txt"])
+respuesta_correcta = 3
+explicacion = "git add pasa archivos modificados o nuevos al área de preparación (staging). Después se hace el commit."
+puntos = 10

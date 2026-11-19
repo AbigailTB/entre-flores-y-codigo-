@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Cálculo"
+tipo = "Acertijo"
+enunciado = "¿Qué imprime este código?"
+codigo = "import math\nh = 0.0001\nd = (math.exp(0 + h) - math.exp(0)) / h\nprint(round(d, 3))"
+opciones = Array[String](["2.718", "0.5", "0.0", "1.0"])
+respuesta_correcta = 3
+explicacion = "Aproxima la derivada de e^x en 0. La derivada de e^x es e^x y e^0 = 1. El 2.718 sería e^1, no la pendiente en 0."
+puntos = 15

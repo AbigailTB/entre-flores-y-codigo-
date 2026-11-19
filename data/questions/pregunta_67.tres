@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Móvil"
+enunciado = "¿Qué es un emulador en el desarrollo de apps móviles?"
+opciones = Array[String](["Un programa que simula un dispositivo móvil en la computadora para probar apps", "Un antivirus para celulares", "Un cable para cargar el teléfono", "Una red social"])
+respuesta_correcta = 0
+explicacion = "Un emulador simula un dispositivo móvil en la computadora, útil para probar apps sin un celular físico."
+puntos = 10

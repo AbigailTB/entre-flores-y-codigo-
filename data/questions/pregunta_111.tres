@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Cálculo"
+tipo = "Pregunta"
+enunciado = "Si f'(x) > 0 en todo un intervalo, la función en ese intervalo es:"
+opciones = Array[String](["Decreciente", "Constante", "Creciente", "Discontinua"])
+respuesta_correcta = 2
+explicacion = "Una derivada positiva indica que la función va en aumento."
+puntos = 10

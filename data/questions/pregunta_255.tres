@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Desarrollo de Software"
+tipo = "Pregunta"
+enunciado = "¿Qué logra esta secuencia de comandos Git?"
+codigo = "git checkout -b login\ngit add .\ngit commit -m \"Agrega login\"\ngit checkout main\ngit merge login"
+opciones = Array[String](["Descarta los cambios de login", "Sube los cambios a GitHub", "Borra la rama main y deja login", "Crea la rama login y luego la une a main"])
+respuesta_correcta = 3
+explicacion = "checkout -b crea la rama y se cambia a ella; add y commit guardan los cambios; al volver a main, merge trae los cambios de login."
+puntos = 10

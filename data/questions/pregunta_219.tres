@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Programación Web"
+tipo = "Pregunta"
+enunciado = "Con este CSS, ¿de qué color se ve el texto del párrafo?"
+codigo = "/* <p id=\"msg\" class=\"aviso\">Hola</p> */\np { color: red; }\n.aviso { color: blue; }\n#msg { color: green; }"
+opciones = Array[String](["Azul", "Rojo", "Negro (no aplica ninguno)", "Verde"])
+respuesta_correcta = 3
+explicacion = "Gana el selector más específico: un id (#msg) pesa más que una clase (.aviso) y que una etiqueta (p), sin importar el orden."
+puntos = 10

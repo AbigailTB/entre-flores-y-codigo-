@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Question" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/question.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+materia = "Cálculo"
+tipo = "Acertijo"
+enunciado = "La profa. Yuls dice: \"Me derivas y me quedo igual, ni un pelo cambio\". ¿Qué función soy?"
+opciones = Array[String](["x²", "sen(x)", "ln(x)", "eˣ"])
+respuesta_correcta = 3
+explicacion = "La derivada de eˣ es la misma eˣ."
+puntos = 15
